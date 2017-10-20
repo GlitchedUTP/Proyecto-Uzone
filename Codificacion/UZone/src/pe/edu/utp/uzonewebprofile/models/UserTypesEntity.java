@@ -6,14 +6,14 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserTypeEntity extends BaseEntity{
+public class UserTypesEntity extends BaseEntity{
 
-    public UserTypeEntity() {
+    public UserTypesEntity() {
         super();
         setTableName("usertypes");
     }
 
-    public UserTypeEntity(Connection connection, String tableName) {
+    public UserTypesEntity(Connection connection, String tableName) {
         super(connection, tableName);
     }
 

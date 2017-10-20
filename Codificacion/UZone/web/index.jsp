@@ -11,6 +11,7 @@
     <title>$Title$</title>
   </head>
   <body>
-  $PROJECT SUCCESFULLY CREATED$
+  $TESTING TABLES$
+  <p><a href="userTypes?action=test">TEST!</a></p>
   </body>
 </html>
