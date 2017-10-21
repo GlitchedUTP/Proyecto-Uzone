@@ -26,18 +26,6 @@
         </c:forEach>
     </table>
 
-    <h1>UserType List</h1>
-    <table>
-        <tr>
-            <th>Id Event</th>
-            <th>Description</th>
-        </tr>
-        <c:forEach var="userType" items="${Event}">
-            <tr>
-                <td><c:out value="${Event.getId()}"/></td>
-                <td><c:out value="${Event.getName()}"/></td>
-            </tr>
-        </c:forEach>
-    </table>
+
 </body>
 </html>
