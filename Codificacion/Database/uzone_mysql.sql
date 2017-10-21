@@ -37,26 +37,26 @@ CREATE TABLE users (
     CONSTRAINT users_informations_info_id FOREIGN KEY (info_id) REFERENCES informations(info_id)
 	);
     
-CREATE TABLE eventzs (
-	event_id CHAR(05) NOT NULL,
+CREATE TABLE evnts (
+	evnt_id CHAR(05) NOT NULL,
     user_id CHAR(05) NOT NULL,
-    event_picture VARCHAR(100),
-    event_date DATETIME NOT NULL,
-    event_datelimit DATETIME NOT NULL,
-    event_description VARCHAR(300),
-    event_category INT(2) NOT NULL,
-    event_salary DECIMAL(10,2) NOT NULL,
-    PRIMARY KEY(event_id),
-	CONSTRAINT events_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id)
+    evnt_picture VARCHAR(100),
+    evnt_date DATETIME NOT NULL,
+    evnt_datelimit DATETIME NOT NULL,
+    evnt_description VARCHAR(300),
+    evnt_category INT(2) NOT NULL,
+    evnt_salary DECIMAL(10,2) NOT NULL,
+    PRIMARY KEY(evnt_id),
+	CONSTRAINT evnts_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
 
 CREATE TABLE postulants (
-	event_id CHAR(05) NOT NULL,
+	evnt_id CHAR(05) NOT NULL,
     postulant_id CHAR(05) NOT NULL,
     user_id CHAR(05) NOT NULL,
     postulant_date DATETIME,
-    PRIMARY KEY(event_id,postulant_id),
-    CONSTRAINT postulants_events_event_id FOREIGN  KEY (event_id) REFERENCES eventzs(event_id),
+    PRIMARY KEY(evnt_id,postulant_id),
+    CONSTRAINT postulants_evnts_event_id FOREIGN  KEY (evnt_id) REFERENCES eventzs(event_id),
     CONSTRAINT postulants_users_user_id FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
@@ -64,6 +64,8 @@ CREATE TABLE posts (
 	post_id CHAR(10) NOT NULL,
     info_id CHAR(5) NOT NULL,
     post_videourl VARCHAR(100),
+    post_title VARCHAR(50),
+    post_description VARCHAR(100),
     PRIMARY KEY(post_id),
     CONSTRAINT posts_informations_info_id FOREIGN KEY (info_id) REFERENCES informations(info_id)
 );
@@ -86,31 +88,12 @@ CREATE TABLE points(
     CONSTRAINT points_users_point_target FOREIGN KEY (point_target) REFERENCES users(user_id)
 );
 
-INSERT INTO usertypes
-VALUES (
-	1,
-	'ARTIST'
-	);
-
-INSERT INTO usertypes
-VALUES (
-	2,
-	'WORKER'
-	);
-
-INSERT INTO usertypes
-VALUES (
-	3,
-	'NORMAL'
-	);
-
-INSERT INTO usertypes
-VALUES (
-	4,
-	'ADMIN'
-	);
-
 COMMIT;
+
+
+
+
+
 
 
 
