@@ -50,8 +50,7 @@ public class UZoneDataStore {
         }
         return informationsEntity;
     }
-<<<<<<< HEAD
-=======
+
     private PostulantsEntity getIPostulantsEntity(){
         if(postulantsEntity==null) {
             postulantsEntity=new PostulantsEntity();
@@ -59,7 +58,6 @@ public class UZoneDataStore {
         }
         return postulantsEntity;
     }
->>>>>>> cecde3f3b61b21c71d4e7f438cccea751d89ecf1
 
     //Public data store methods
     //UserType methods
@@ -74,7 +72,6 @@ public class UZoneDataStore {
         return getInformationsEntity().findAll(getUsersEntity(),getUserTypesEntity());
     }
 
-<<<<<<< HEAD
     //User methods
     public List<User> findAllUsers() {
         if(connection==null) return null;
@@ -85,7 +82,4 @@ public class UZoneDataStore {
         if(connection==null) return null;
         return getUsersEntity().findById(id,getUserTypesEntity());
     }
-=======
->>>>>>> cecde3f3b61b21c71d4e7f438cccea751d89ecf1
-
 }
