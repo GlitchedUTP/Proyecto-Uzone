@@ -6,12 +6,12 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InformationEntity extends BaseEntity{
-    public InformationEntity() {
+public class InformationsEntity extends BaseEntity{
+    public InformationsEntity() {
         super();
         setTableName("Information");
     }
-    public InformationEntity(Connection connection, String tableName) {
+    public InformationsEntity(Connection connection, String tableName) {
         super(connection, tableName);
     }
 

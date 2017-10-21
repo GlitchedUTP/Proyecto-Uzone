@@ -43,7 +43,7 @@ public class UZoneService {
         this.dataStore = dataStore;
     }
 
-    public List<UserType> findAllUserTypes() {
-        return dataStore.findAllUserTypes();
-    }
+    public List<UserType> findAllUserTypes() { return dataStore.findAllUserTypes(); }
+
+    public List<Information> findAllInformations() { return dataStore.findAllInformations(); }
 }

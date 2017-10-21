@@ -4,35 +4,35 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Information {
-    int info_id;
-    String info_description;
-    double info_avgPoints;
-    int info_voteQuantity;
+    private int id;
+    private String description;
+    private double avgPoints;
+    private int voteQuantity;
 
-    public Information(int info_id, String info_description, double info_avgPoints, int info_voteQuantity) {
-        this.info_id = info_id;
-        this.info_description = info_description;
-        this.info_avgPoints = info_avgPoints;
-        this.info_voteQuantity = info_voteQuantity;
+    public Information(int id, String description, double avgPoints, int voteQuantity) {
+        this.id = id;
+        this.description = description;
+        this.avgPoints = avgPoints;
+        this.voteQuantity =voteQuantity;
     }
 
     public Information() {}
 
-    public int getInfo_id() {return info_id; }
+    public int getId() {return id; }
 
-    public void setInfo_id(int info_id) {this.info_id = info_id; }
+    public void setId(int id) {this.id = id; }
 
-    public String getInfo_description() {return info_description; }
+    public String getDescription() { return description; }
 
-    public void setInfo_description(String info_description) {this.info_description = info_description; }
+    public void setDescription(String description) { this.description = description;}
 
-    public double getInfo_avgPoints() {return info_avgPoints; }
+    public double getAvgPoints() {return avgPoints;}
 
-    public void setInfo_avgPoints(double info_avgPoints) {this.info_avgPoints = info_avgPoints; }
+    public void setAvgPoints(double avgPoints) {this.avgPoints = avgPoints; }
 
-    public int getInfo_voteQuantity() {return info_voteQuantity;}
+    public int getVoteQuantity() {return voteQuantity; }
 
-    public void setInfo_voteQuantity(int info_voteQuantity) {this.info_voteQuantity = info_voteQuantity;}
+    public void setVoteQuantity(int voteQuantity) {this.voteQuantity = voteQuantity; }
 
     public static Information from (ResultSet rs) {
         try {

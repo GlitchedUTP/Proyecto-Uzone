@@ -6,6 +6,7 @@ import java.util.List;
 public class UZoneDataStore {
     private Connection connection;
     private UserTypesEntity userTypesEntity;
+    private InformationsEntity informationsEntity;
 
     public UZoneDataStore(Connection connection) {
         this.connection = connection;
@@ -32,10 +33,21 @@ public class UZoneDataStore {
         return userTypesEntity;
     }
 
+    private InformationsEntity getInformationsEntity(){
+        if(informationsEntity==null) {
+            informationsEntity=new InformationsEntity();
+            informationsEntity.setConnection(connection);
+        }
+        return informationsEntity;
+    }
     //Public data store methods
 
     public List<UserType> findAllUserTypes() {
         if(connection==null) return null;
         return getUserTypesEntity().findAll();
+    }
+    public List<Information> findAllInformations() {
+        if(connection==null) return null;
+        return getInformationsEntity().findAll();
     }
 }
