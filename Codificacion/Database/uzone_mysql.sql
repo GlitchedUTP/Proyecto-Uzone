@@ -12,7 +12,7 @@ CREATE TABLE usertypes (
     );
 
 CREATE TABLE informations(
-	info_id CHAR(5) NOT NULL,
+	info_id INT(5) UNSIGNED NOT NULL,
     info_description VARCHAR(100),
     info_avgpoints DECIMAL(2,2),
     info_votequantity INT(10),
@@ -21,7 +21,7 @@ CREATE TABLE informations(
 
 CREATE TABLE users (
 	user_id INT(05) UNSIGNED NOT NULL AUTO_INCREMENT,
-	user_login VARCHAR(20) NOT NULL,
+	user_username VARCHAR(20) NOT NULL,
     user_password VARCHAR(20) NOT NULL,
     user_name VARCHAR(30),
     user_lastname VARCHAR(30),
