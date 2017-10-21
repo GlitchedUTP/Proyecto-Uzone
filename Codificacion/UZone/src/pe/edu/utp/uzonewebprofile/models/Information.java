@@ -45,13 +45,14 @@ public class Information {
     }
 
     public static Information from (ResultSet rs,UsersEntity usersEntity,UserTypesEntity userTypesEntity) {
+        Information info = new Information();
         try {
-            return new Information(
-                    rs.getInt("info_id"),
-                    rs.getString("info_description"),
-                    rs.getDouble("info_avgPoints"),
-                    rs.getInt("info_voteQuantity"),
-                    usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
+                    info.setId(rs.getInt("info_id"));
+                    info.setDescription(rs.getString("info_description"));
+                    info.setAvgPoints(rs.getDouble("info_avgPoints"));
+                    info.setVoteQuantity(rs.getInt("info_voteQuantity"));
+                    info.setUser(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
+                    return info;
         } catch (SQLException e) {
             e.printStackTrace();
         }

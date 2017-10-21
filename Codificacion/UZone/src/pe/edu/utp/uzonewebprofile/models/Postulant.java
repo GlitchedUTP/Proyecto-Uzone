@@ -5,6 +5,7 @@ import java.sql.SQLException;
 
 public class Postulant {
 
+    private Event event_id;
     private int id_postulant;
     private User user_id;
     private String date;
@@ -17,11 +18,11 @@ public class Postulant {
 
     public Postulant() { }
 
-    public int getEvent_id() {return event_id; }
+    public Event getEvent_id() {return event_id; }
 
-    public void setEvent_id(int event_id) {this.event_id = event_id;}
+    public void setEvent_id(Event event_id) {this.event_id = event_id;}
 
-    public int getPostulant_id() {return postulant_id;}
+    public int getPostulant_id() {return id_postulant;}
 
     public void setPostulant_id(int id_postulant) {this.id_postulant = id_postulant;}
 
@@ -33,12 +34,14 @@ public class Postulant {
 
     public void setUser_id(User user_id) {this.user_id = user_id;}
 
-    public static Postulant from(ResultSet rs, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+    public static Postulant from(ResultSet rs, UsersEntity usersEntity, UserTypesEntity userTypesEntity, EventEntity eventEntity) {
+        Postulant postulant = new Postulant();
         try {
-            return new Postulant(
-                    rs.getInt("postulant_id"),
-                    usersEntity.findById(rs.getInt("user_id"),userTypesEntity),
-                    rs.getString("postulant_date"));
+                    postulant.setEvent_id(eventEntity.findById(rs.getInt("evnt_id")));
+                    postulant.setPostulant_id(rs.getInt("postulant_id"));
+                    postulant.setUser_id(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
+                    postulant.setDate(rs.getString("postulant_date"));
+                    return postulant;
         } catch (SQLException e) {
             e.printStackTrace();
         }
