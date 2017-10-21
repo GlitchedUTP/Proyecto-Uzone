@@ -8,6 +8,7 @@ public class UZoneDataStore {
     private UserTypesEntity userTypesEntity;
     private UsersEntity usersEntity;
     private InformationsEntity informationsEntity;
+    private PostulantsEntity postulantsEntity;
 
     public UZoneDataStore(Connection connection) {
         this.connection = connection;
@@ -49,6 +50,14 @@ public class UZoneDataStore {
         }
         return informationsEntity;
     }
+    private PostulantsEntity getIPostulantsEntity(){
+        if(postulantsEntity==null) {
+            postulantsEntity=new PostulantsEntity();
+            postulantsEntity.setConnection(connection);
+        }
+        return postulantsEntity;
+    }
+
     //Public data store methods
     //UserType methods
     public List<UserType> findAllUserTypes() {
@@ -61,4 +70,6 @@ public class UZoneDataStore {
         if(connection==null) return null;
         return getInformationsEntity().findAll(getUsersEntity(),getUserTypesEntity());
     }
+
+
 }

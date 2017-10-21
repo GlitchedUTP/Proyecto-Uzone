@@ -32,5 +32,5 @@ public class PostulantsEntity extends BaseEntity {
         return null;
     }
 
-    
+
 }
