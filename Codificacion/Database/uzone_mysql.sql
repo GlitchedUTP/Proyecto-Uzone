@@ -86,12 +86,31 @@ CREATE TABLE points(
     CONSTRAINT points_users_point_target FOREIGN KEY (point_target) REFERENCES users(user_id)
 );
 
+INSERT INTO usertypes
+VALUES (
+	1,
+	'ARTIST'
+	);
+
+INSERT INTO usertypes
+VALUES (
+	2,
+	'WORKER'
+	);
+
+INSERT INTO usertypes
+VALUES (
+	3,
+	'NORMAL'
+	);
+
+INSERT INTO usertypes
+VALUES (
+	4,
+	'ADMIN'
+	);
+
 COMMIT;
-
-
-
-
-
 
 
 
