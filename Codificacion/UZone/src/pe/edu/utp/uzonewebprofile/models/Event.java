@@ -1,17 +1,18 @@
 package pe.edu.utp.uzonewebprofile.models;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
 
-public class UserType {
+import java.sql.SQLException;
+import java.sql.ResultSet;
+
+public class Event {
     private int id;
     private String name;
 
-    public UserType(int id, String name) {
+    public Event(int id, String name) {
         this.id = id;
         this.name = name;
     }
-    public UserType() {
+    public Event() {
     }
     public int getId() {
         return id;
@@ -29,11 +30,11 @@ public class UserType {
         this.name = name;
     }
 
-    public static UserType from (ResultSet rs) {
+    public static Event from (ResultSet rs) {
         try {
-            return new UserType(
-                    rs.getInt("usertype_id"),
-                    rs.getString("usertype_name"));
+            return new Event(
+                    rs.getInt("evnt_id "),
+                    rs.getString("evnt_description "));
         } catch (SQLException e) {
             e.printStackTrace();
         }
