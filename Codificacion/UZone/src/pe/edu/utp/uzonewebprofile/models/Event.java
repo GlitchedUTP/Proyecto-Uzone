@@ -6,11 +6,13 @@ import java.sql.ResultSet;
 
 public class Event {
     private int id;
-    private String name;
+    private String description;
+    private int id_usu;
 
-    public Event(int id, String name) {
+    public Event(int id, String description, int id_usu) {
         this.id = id;
-        this.name = name;
+        this.description = description;
+        this.id_usu = id_usu;
     }
     public Event() {
     }
@@ -23,18 +25,28 @@ public class Event {
     }
 
     public String getName() {
-        return name;
+        return description;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.description = name;
     }
+
+
+    public int getId_usu(){return id_usu;}
+
+    public void setId_usu(int id_usu){this.id_usu = id_usu;}
+
+
+
+
 
     public static Event from (ResultSet rs) {
         try {
             return new Event(
                     rs.getInt("evnt_id "),
-                    rs.getString("evnt_description "));
+                    rs.getString("evnt_description "),
+                    rs.getInt("user_id "));
         } catch (SQLException e) {
             e.printStackTrace();
         }
