@@ -49,6 +49,7 @@ public class UZoneDataStore {
         }
         return informationsEntity;
     }
+
     //Public data store methods
     //UserType methods
     public List<UserType> findAllUserTypes() {
@@ -61,4 +62,16 @@ public class UZoneDataStore {
         if(connection==null) return null;
         return getInformationsEntity().findAll(getUsersEntity(),getUserTypesEntity());
     }
+
+    //User methods
+    public List<User> findAllUsers() {
+        if(connection==null) return null;
+        return getUsersEntity().findAll(getUserTypesEntity());
+    }
+
+    public User findUserById(int id) {
+        if(connection==null) return null;
+        return getUsersEntity().findById(id,getUserTypesEntity());
+    }
+
 }

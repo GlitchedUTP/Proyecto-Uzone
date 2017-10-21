@@ -125,6 +125,22 @@ VALUES (
     NULL,
     4
 	);
+    
+INSERT INTO users (user_username,user_password,user_name,user_lastname,user_email,user_birthdate,user_genre,user_phone,user_picture,usertype_id)
+VALUES (
+    'Potato',
+    'potato123',
+    'Carlos',
+    'Enrique',
+    'aiuda_012@hotmail.com',
+    STR_TO_DATE('25-FEB-1995', '%d-%M-%Y'),
+    'F',
+    '999069069',
+    NULL,
+    3
+	);
+    
+
 
 COMMIT;
 

@@ -13,5 +13,6 @@
   <body>
   $TESTING TABLES$
   <p><a href="userTypes?action=test">TEST!</a></p>
+  <p><a href="users?action=getUsers">TEST2!</a></p>
   </body>
 </html>

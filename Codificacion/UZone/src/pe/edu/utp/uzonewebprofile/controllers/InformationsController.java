@@ -36,7 +36,7 @@ public class InformationsController extends HttpServlet {
             if(action.equals("test")) {
                 List<Information> information=service.findAllInformations();
                 request.setAttribute("information",information);
-                url="test.jsp";
+                url="listUserType.jsp";
             }
         }
 

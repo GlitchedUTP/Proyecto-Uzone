@@ -1,19 +1,22 @@
 package pe.edu.utp.uzonewebprofile.controllers;
 
 import pe.edu.utp.uzonewebprofile.models.UZoneService;
-import pe.edu.utp.uzonewebprofile.models.UserType;
+import pe.edu.utp.uzonewebprofile.models.User;
 
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@javax.servlet.annotation.WebServlet(name = "UserTypesController",urlPatterns = "/userTypes")
-public class UserTypesController extends javax.servlet.http.HttpServlet {
+@WebServlet(name = "UsersController",urlPatterns = "/users")
+public class UsersController extends HttpServlet {
     UZoneService service;
     String url="";
 
-    public UserTypesController() {
+    public UsersController() {
         super();
         service=new UZoneService();
         url="";
@@ -31,10 +34,10 @@ public class UserTypesController extends javax.servlet.http.HttpServlet {
         String action=request.getParameter("action");
 
         if(method.equals("GET")) {
-            if(action.equals("test")) {
-                List<UserType> userTypes=service.findAllUserTypes();
-                request.setAttribute("userTypes",userTypes);
-                url="listUserType.jsp";
+            if(action.equals("getUsers")) {
+                List<User> users=service.findAllUsers();
+                request.setAttribute("users",users);
+                url="listUser.jsp";
             }
         }
 

@@ -9,7 +9,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Test Successful?</title>
+    <title>List of UserTypes</title>
 </head>
 <body>
     <h1>UserType List</h1>
@@ -22,20 +22,6 @@
             <tr>
                 <td><c:out value="${userType.getId()}"/></td>
                 <td><c:out value="${userType.getName()}"/></td>
-            </tr>
-        </c:forEach>
-    </table>
-
-    <h1>UserType List</h1>
-    <table>
-        <tr>
-            <th>Id Event</th>
-            <th>Description</th>
-        </tr>
-        <c:forEach var="userType" items="${Event}">
-            <tr>
-                <td><c:out value="${Event.getId()}"/></td>
-                <td><c:out value="${Event.getName()}"/></td>
             </tr>
         </c:forEach>
     </table>
