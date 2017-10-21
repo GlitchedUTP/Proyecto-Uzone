@@ -6,6 +6,7 @@ import java.util.List;
 public class UZoneDataStore {
     private Connection connection;
     private UserTypesEntity userTypesEntity;
+    private UsersEntity usersEntity;
     private InformationsEntity informationsEntity;
 
     public UZoneDataStore(Connection connection) {
@@ -33,6 +34,14 @@ public class UZoneDataStore {
         return userTypesEntity;
     }
 
+    private UsersEntity getUsersEntity() {
+        if(usersEntity==null) {
+            usersEntity=new UsersEntity();
+            usersEntity.setConnection(connection);
+        }
+        return usersEntity;
+    }
+
     private InformationsEntity getInformationsEntity(){
         if(informationsEntity==null) {
             informationsEntity=new InformationsEntity();
@@ -48,6 +57,6 @@ public class UZoneDataStore {
     }
     public List<Information> findAllInformations() {
         if(connection==null) return null;
-        return getInformationsEntity().findAll();
+        return getInformationsEntity().findAll(getUsersEntity(),getUserTypesEntity());
     }
 }

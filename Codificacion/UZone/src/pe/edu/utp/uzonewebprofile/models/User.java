@@ -15,12 +15,11 @@ public class User {
     private String phone;
     private String picture;
     private UserType userType;
-    private Information information;
 
     public User() {
     }
 
-    public User(int id, String username, String password, String name, String lastName, String email, String birthDate, char genre, String phone, String picture, UserType userType, Information information) {
+    public User(int id, String username, String password, String name, String lastName, String email, String birthDate, char genre, String phone, String picture, UserType userType) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -32,7 +31,6 @@ public class User {
         this.phone = phone;
         this.picture = picture;
         this.userType = userType;
-        this.information = information;
     }
 
     public int getId() {
@@ -123,15 +121,7 @@ public class User {
         this.userType = userType;
     }
 
-    public Information getInformation() {
-        return information;
-    }
-
-    public void setInformation(Information information) {
-        this.information = information;
-    }
-
-    public static User from (ResultSet rs, UserTypesEntity userTypesEntity, InformationsEntity informationsEntity) {
+    public static User from (ResultSet rs, UserTypesEntity userTypesEntity) {
         User user=new User();
         try {
             user.setId(rs.getInt("user_id"));
@@ -145,7 +135,6 @@ public class User {
             user.setPhone(rs.getString("user_phone"));
             user.setPicture(rs.getString("user_picture"));
             user.setUserType(userTypesEntity.findById(rs.getInt("usertype_id")));
-            user.setInformation(informationsEntity.findById(rs.getInt("info_id")));
             return user;
         } catch (SQLException e) {
             e.printStackTrace();

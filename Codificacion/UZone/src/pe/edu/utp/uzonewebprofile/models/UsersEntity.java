@@ -17,14 +17,14 @@ public class UsersEntity extends BaseEntity{
         super(connection, tableName);
     }
 
-    public List<User> findByCriteria (String criteria, UserTypesEntity userTypesEntity, InformationsEntity informationsEntity) {
+    public List<User> findByCriteria (String criteria, UserTypesEntity userTypesEntity) {
         try {
             ResultSet rs = getConnection()
                     .createStatement()
                     .executeQuery(getBaseStatement().concat(criteria));
             List<User> users = new ArrayList<>();
             while (rs.next()) {
-                users.add(User.from(rs,userTypesEntity,informationsEntity));
+                users.add(User.from(rs,userTypesEntity));
             }
             return users;
         } catch (SQLException e) {
@@ -33,11 +33,11 @@ public class UsersEntity extends BaseEntity{
         return null;
     }
 
-    public List<User> findAll(UserTypesEntity userTypesEntity, InformationsEntity informationsEntity) {
-        return findByCriteria("",userTypesEntity,informationsEntity);
+    public List<User> findAll(UserTypesEntity userTypesEntity) {
+        return findByCriteria("",userTypesEntity);
     }
 
-    public User findById(int id,UserTypesEntity userTypesEntity, InformationsEntity informationsEntity) {
-        return findByCriteria(String.format("WHERE user_id=%d",id),userTypesEntity,informationsEntity).get(0);
+    public User findById(int id,UserTypesEntity userTypesEntity) {
+        return findByCriteria(String.format("WHERE user_id=%d",id),userTypesEntity).get(0);
     }
 }

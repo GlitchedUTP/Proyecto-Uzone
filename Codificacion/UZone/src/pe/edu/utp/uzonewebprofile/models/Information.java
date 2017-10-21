@@ -8,12 +8,14 @@ public class Information {
     private String description;
     private double avgPoints;
     private int voteQuantity;
+    private User user;
 
-    public Information(int id, String description, double avgPoints, int voteQuantity) {
+    public Information(int id, String description, double avgPoints, int voteQuantity, User user) {
         this.id = id;
         this.description = description;
         this.avgPoints = avgPoints;
-        this.voteQuantity =voteQuantity;
+        this.voteQuantity = voteQuantity;
+        this.user = user;
     }
 
     public Information() {}
@@ -34,13 +36,22 @@ public class Information {
 
     public void setVoteQuantity(int voteQuantity) {this.voteQuantity = voteQuantity; }
 
-    public static Information from (ResultSet rs) {
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public static Information from (ResultSet rs,UsersEntity usersEntity,UserTypesEntity userTypesEntity) {
         try {
             return new Information(
                     rs.getInt("info_id"),
                     rs.getString("info_description"),
                     rs.getDouble("info_avgPoints"),
-                    rs.getInt("info_voteQuantity"));
+                    rs.getInt("info_voteQuantity"),
+                    usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
         } catch (SQLException e) {
             e.printStackTrace();
         }
