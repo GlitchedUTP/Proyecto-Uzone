@@ -16,40 +16,23 @@ public class Information {
         this.info_voteQuantity = info_voteQuantity;
     }
 
-    public Information() {
+    public Information() {}
 
-    }
-    public int getInfo_id() {
-        return info_id;
-    }
+    public int getInfo_id() {return info_id; }
 
-    public void setInfo_id(int info_id) {
-        this.info_id = info_id;
-    }
+    public void setInfo_id(int info_id) {this.info_id = info_id; }
 
-    public String getInfo_description() {
-        return info_description;
-    }
+    public String getInfo_description() {return info_description; }
 
-    public void setInfo_description(String info_description) {
-        this.info_description = info_description;
-    }
+    public void setInfo_description(String info_description) {this.info_description = info_description; }
 
-    public double getInfo_avgPoints() {
-        return info_avgPoints;
-    }
+    public double getInfo_avgPoints() {return info_avgPoints; }
 
-    public void setInfo_avgPoints(double info_avgPoints) {
-        this.info_avgPoints = info_avgPoints;
-    }
+    public void setInfo_avgPoints(double info_avgPoints) {this.info_avgPoints = info_avgPoints; }
 
-    public int getInfo_voteQuantity() {
-        return info_voteQuantity;
-    }
+    public int getInfo_voteQuantity() {return info_voteQuantity;}
 
-    public void setInfo_voteQuantity(int info_voteQuantity) {
-        this.info_voteQuantity = info_voteQuantity;
-    }
+    public void setInfo_voteQuantity(int info_voteQuantity) {this.info_voteQuantity = info_voteQuantity;}
 
     public static Information from (ResultSet rs) {
         try {
