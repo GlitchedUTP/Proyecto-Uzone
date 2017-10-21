@@ -12,13 +12,13 @@ CREATE TABLE usertypes (
     );
 
 CREATE TABLE users (
-	user_id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+	user_id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
 	user_username VARCHAR(20) NOT NULL,
     user_password VARCHAR(20) NOT NULL,
     user_name VARCHAR(30),
     user_lastname VARCHAR(30),
     user_email VARCHAR(40) NOT NULL,
-    user_birthdate DATETIME NOT NULL,
+    user_birthdate DATE NOT NULL,
     user_genre CHAR(1) NOT NULL,
     user_phone CHAR(9),
     user_picture VARCHAR(100),
@@ -64,9 +64,9 @@ CREATE TABLE postulants (
 CREATE TABLE posts (
 	post_id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT(5) UNSIGNED NOT NULL ,
-    post_videourl VARCHAR(100),
     post_title VARCHAR(50),
     post_description VARCHAR(100),
+	post_url VARCHAR(100),
     PRIMARY KEY(post_id),
     CONSTRAINT posts_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
@@ -81,10 +81,9 @@ CREATE TABLE comments (
 
 CREATE TABLE points(
 	point_origin INT(5) UNSIGNED NOT NULL,
-    point_id INT(5) UNSIGNED NOT NULL,
     point_target INT(5) UNSIGNED NOT NULL,
     point_quantity INT(2) NOT NULL,
-    PRIMARY KEY(point_origin,point_id),
+    PRIMARY KEY(point_origin,point_target),
     CONSTRAINT points_users_point_origin FOREIGN KEY (point_origin) REFERENCES users(user_id),
     CONSTRAINT points_users_point_target FOREIGN KEY (point_target) REFERENCES users(user_id)
 );
@@ -113,15 +112,22 @@ VALUES (
 	'ADMIN'
 	);
 
+INSERT INTO users (user_username,user_password,user_name,user_lastname,user_email,user_birthdate,user_genre,user_phone,user_picture,usertype_id)
+VALUES (
+    'NicoForce',
+    'nicomax',
+    'Nicolas',
+    'Cordova',
+    'nicomax_008@hotmail.com',
+    STR_TO_DATE('25-JAN-1999', '%d-%M-%Y'),
+    'M',
+    '978066359',
+    NULL,
+    4
+	);
+
 COMMIT;
 
-
-
-
-
-
-
-
-
+select * from users;
 
 

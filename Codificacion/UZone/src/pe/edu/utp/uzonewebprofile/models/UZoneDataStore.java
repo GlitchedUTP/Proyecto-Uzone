@@ -50,11 +50,13 @@ public class UZoneDataStore {
         return informationsEntity;
     }
     //Public data store methods
-
+    //UserType methods
     public List<UserType> findAllUserTypes() {
         if(connection==null) return null;
         return getUserTypesEntity().findAll();
     }
+
+    //Information methods
     public List<Information> findAllInformations() {
         if(connection==null) return null;
         return getInformationsEntity().findAll(getUsersEntity(),getUserTypesEntity());
