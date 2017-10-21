@@ -25,5 +25,10 @@
             </tr>
         </c:forEach>
     </table>
+<<<<<<< HEAD:Codificacion/UZone/web/listUserType.jsp
+=======
+
+
+>>>>>>> cecde3f3b61b21c71d4e7f438cccea751d89ecf1:Codificacion/UZone/web/test.jsp
 </body>
 </html>
