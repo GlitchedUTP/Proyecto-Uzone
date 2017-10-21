@@ -12,12 +12,12 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "InformationController",urlPatterns ="/Information")
-public class InformationController extends HttpServlet {
+@WebServlet(name = "InformationsController",urlPatterns ="/Information")
+public class InformationsController extends HttpServlet {
     UZoneService service;
     String url="";
 
-    public InformationController() {
+    public InformationsController() {
         super();
         service=new UZoneService();
         url="";
