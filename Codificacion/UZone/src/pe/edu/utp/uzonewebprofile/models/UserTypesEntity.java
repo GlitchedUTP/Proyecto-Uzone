@@ -17,11 +17,11 @@ public class UserTypesEntity extends BaseEntity{
         super(connection, tableName);
     }
 
-    public List<UserType> findAll () {
+    public List<UserType> findByCriteria (String criteria) {
         try {
             ResultSet rs = getConnection()
                     .createStatement()
-                    .executeQuery(getBaseStatement());
+                    .executeQuery(getBaseStatement().concat(criteria));
             List<UserType> usertypes = new ArrayList<>();
             while (rs.next()) {
                 usertypes.add(UserType.from(rs));
@@ -31,5 +31,14 @@ public class UserTypesEntity extends BaseEntity{
             e.printStackTrace();
         }
         return null;
+    }
+
+    public List<UserType> findAll() {
+        return findByCriteria("");
+    }
+
+    public UserType findById(int id) {
+        return findByCriteria(
+                String.format("WHERE usertype_id= %d",id)).get(0);
     }
 }

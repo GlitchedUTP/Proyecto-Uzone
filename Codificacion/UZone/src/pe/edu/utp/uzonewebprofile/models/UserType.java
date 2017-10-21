@@ -4,8 +4,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserType {
-    int id;
-    String name;
+    private int id;
+    private String name;
 
     public UserType(int id, String name) {
         this.id = id;

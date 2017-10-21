@@ -3,8 +3,8 @@ package pe.edu.utp.uzonewebprofile.models;
 import java.sql.Connection;
 
 public class BaseEntity {
-    Connection connection;
-    String tableName;
+    private Connection connection;
+    private String tableName;
 
     public BaseEntity(Connection connection, String tableName) {
         this.connection = connection;
