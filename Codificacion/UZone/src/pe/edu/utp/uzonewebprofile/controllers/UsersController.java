@@ -39,6 +39,12 @@ public class UsersController extends HttpServlet {
                 request.setAttribute("users",users);
                 url="listUser.jsp";
             }
+            if(action.equals("goToUser")) {
+                int id=Integer.parseInt(request.getParameter("id"));
+                User user=service.findUserById(id);
+                request.setAttribute("user",user);
+                url="userProfile.jsp";
+            }
         }
 
         if(method.equals("POST")) {

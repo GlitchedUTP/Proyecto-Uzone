@@ -23,7 +23,7 @@
         <tr>
             <td><c:out value="${user.getId()}"/></td>
             <td><c:out value="${user.getUsername()}"/></td>
-            <td><a href="users?action=show&id=${user.getId()}">Show</a></td>
+            <td><a href="users?action=goToUser&id=${user.getId()}">Show</a></td>
         </tr>
     </c:forEach>
 </table>
