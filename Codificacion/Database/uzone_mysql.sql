@@ -20,11 +20,11 @@ CREATE TABLE informations(
 );
 
 CREATE TABLE users (
-	user_id CHAR(05) NOT NULL,
-	user_name VARCHAR(30),
-    user_lastname VARCHAR(30),
-    user_login VARCHAR(20) NOT NULL,
+	user_id INT(05) UNSIGNED NOT NULL AUTO_INCREMENT,
+	user_login VARCHAR(20) NOT NULL,
     user_password VARCHAR(20) NOT NULL,
+    user_name VARCHAR(30),
+    user_lastname VARCHAR(30),
     user_email VARCHAR(40) NOT NULL,
     user_birthdate DATETIME NOT NULL,
     user_genre CHAR(1) NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE users (
     
 CREATE TABLE evnts (
 	evnt_id CHAR(05) NOT NULL,
-    user_id CHAR(05) NOT NULL,
+    user_id INT(05) UNSIGNED NOT NULL,
     evnt_picture VARCHAR(100),
     evnt_date DATETIME NOT NULL,
     evnt_datelimit DATETIME NOT NULL,
@@ -53,10 +53,10 @@ CREATE TABLE evnts (
 CREATE TABLE postulants (
 	evnt_id CHAR(05) NOT NULL,
     postulant_id CHAR(05) NOT NULL,
-    user_id CHAR(05) NOT NULL,
+    user_id INT(05) UNSIGNED NOT NULL,
     postulant_date DATETIME,
     PRIMARY KEY(evnt_id,postulant_id),
-    CONSTRAINT postulants_evnts_event_id FOREIGN  KEY (evnt_id) REFERENCES eventzs(event_id),
+    CONSTRAINT postulants_evnts_event_id FOREIGN  KEY (evnt_id) REFERENCES evnts(evnt_id),
     CONSTRAINT postulants_users_user_id FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
@@ -79,19 +79,40 @@ CREATE TABLE comments (
 );
 
 CREATE TABLE points(
-	point_origin CHAR(5) NOT NULL,
+	point_origin INT(5) UNSIGNED NOT NULL,
     point_id CHAR(5) NOT NULL,
-    point_target CHAR(5) NOT NULL,
+    point_target INT(5) UNSIGNED NOT NULL,
     point_quantity INT(2) NOT NULL,
     PRIMARY KEY(point_origin,point_id),
     CONSTRAINT points_users_point_origin FOREIGN KEY (point_origin) REFERENCES users(user_id),
     CONSTRAINT points_users_point_target FOREIGN KEY (point_target) REFERENCES users(user_id)
 );
 
+INSERT INTO usertypes
+VALUES (
+	1,
+	'ARTIST'
+	);
+    
+INSERT INTO usertypes
+VALUES (
+	2,
+	'WORKER'
+	);
+    
+INSERT INTO usertypes
+VALUES (
+	3,
+	'NORMAL'
+	);
+    
+INSERT INTO usertypes
+VALUES (
+	4,
+	'ADMIN'
+	);
+
 COMMIT;
-
-
-
 
 
 
