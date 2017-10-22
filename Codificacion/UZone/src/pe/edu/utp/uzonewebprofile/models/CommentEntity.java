@@ -22,11 +22,11 @@ public class CommentEntity extends BaseEntity {
             ResultSet rs = getConnection()
                     .createStatement()
                     .executeQuery(getBaseStatement().concat(criteria));
-            List<Comment> Comment = new ArrayList<>();
+            List<Comment> Comments = new ArrayList<>();
             while (rs.next()) {
-                Comment.add(Comment.from(rs));
+                Comments.add(Comment.from(rs));
             }
-            return Comment;
+            return Comments;
         } catch (SQLException e) {
             e.printStackTrace();
         }
