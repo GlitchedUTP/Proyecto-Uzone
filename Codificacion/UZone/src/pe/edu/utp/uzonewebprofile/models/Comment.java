@@ -1,5 +1,8 @@
 package pe.edu.utp.uzonewebprofile.models;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 public class Comment extends BaseEntity {
 
     private int id;
@@ -15,5 +18,15 @@ public class Comment extends BaseEntity {
 
     public void setComment(String comment) { this.comment = comment; }
 
-     
+     public static Comment from (ResultSet rs) throws SQLException {
+         try {
+         return new Comment(
+                 rs.getInt("id_comment"),
+                 rs.getString("id_pub"));
+     } catch (SQLException e) {
+        e.printStackTrace();}
+
+
+         return null;
+     }
 }
