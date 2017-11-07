@@ -2,101 +2,11 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="UZone:war exploded" />
+      <artifact name="Glitched Project Uzone:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5a4d1b0-9d26-4f19-a112-966e164ebaa1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/InformationsController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/UserTypesController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/UsersController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/BaseEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Event.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/EventEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Information.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/InformationsEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Point.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PointsEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Post.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostsEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Postulant.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostulantsEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneDataStore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserType.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserTypesEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UsersEntity.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/Proyecto-Uzone.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/Database/uzone_mysql.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/.idea/artifacts/UZone_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/.idea/dataSources.local.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/.idea/dataSources.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/UZone.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/artifacts/UZone_war_exploded/WEB-INF/classes/pe/edu/utp/uzonewebprofile/controllers/UserTypesController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/artifacts/UZone_war_exploded/WEB-INF/classes/pe/edu/utp/uzonewebprofile/models/BaseEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/artifacts/UZone_war_exploded/WEB-INF/classes/pe/edu/utp/uzonewebprofile/models/UZoneDataStore.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/artifacts/UZone_war_exploded/WEB-INF/classes/pe/edu/utp/uzonewebprofile/models/UZoneService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/artifacts/UZone_war_exploded/WEB-INF/classes/pe/edu/utp/uzonewebprofile/models/UserType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/artifacts/UZone_war_exploded/WEB-INF/classes/pe/edu/utp/uzonewebprofile/models/UserTypesEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/artifacts/UZone_war_exploded/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/artifacts/UZone_war_exploded/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/artifacts/UZone_war_exploded/test.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/production/UZone/pe/edu/utp/uzonewebprofile/controllers/UserTypesController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/production/UZone/pe/edu/utp/uzonewebprofile/models/BaseEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/production/UZone/pe/edu/utp/uzonewebprofile/models/UZoneDataStore.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/production/UZone/pe/edu/utp/uzonewebprofile/models/UZoneService.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/production/UZone/pe/edu/utp/uzonewebprofile/models/UserType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/out/production/UZone/pe/edu/utp/uzonewebprofile/models/UserTypesEntity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/pictures/defaultuser_f.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/pictures/defaultuser_m.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/controllers/InformationsController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/controllers/UserTypesController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/controllers/UsersController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/BaseEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/Event.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/EventEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/Information.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/InformationsEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/Point.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/PointsEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/Post.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/PostsEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/Postulant.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/PostulantsEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/UZoneDataStore.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/UZoneService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/User.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/UserType.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/UserTypesEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/src/pe/edu/utp/uzonewebprofile/models/UsersEntity.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/web/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/web/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/web/listUser.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/web/listUserType.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Codificacion/UZone/web/userProfile.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Hito 1/Diapositivas del Hito 1.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Hito 1/Informe Hito 1.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Hito 1/Link del video de la exposicion.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Hito 1/Resumen y calificación de los participantes de grupo.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Hito 2/Desarrollo Web Integrado.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Hito 2/Informe.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Hito 2/Link del video y github.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Hito 2/Resumen y calificación de los participantes de grupo.docx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Hito 2/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Referencia/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../Documentacion General/Referencia/uxpin_ux_design_process_best_practices.pdf" afterPath="" />
-    </list>
+    <list default="true" id="e300976a-98bf-48d5-88b6-c657d34bf254" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -106,48 +16,19 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UZoneDataStore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneDataStore.java">
+    <leaf>
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="83" column="5" lean-forward="false" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-              <folding>
-                <element signature="e#393#394#0" expanded="true" />
-                <element signature="e#437#438#0" expanded="true" />
-                <element signature="e#515#516#0" expanded="true" />
-                <element signature="e#548#549#0" expanded="true" />
-                <element signature="e#604#605#0" expanded="true" />
-                <element signature="e#648#649#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userProfile.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/userProfile.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
+            <state relative-caret-position="170">
+              <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dataSources.local.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
+      <file leaf-file-name="UZone.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UZone.iml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -156,63 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UZoneService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneService.java">
+      <file leaf-file-name="InformationsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/InformationsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsersController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/UsersController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="44" column="32" lean-forward="false" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserTypesController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/UserTypesController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listUserType.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/listUserType.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="listUser.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/listUser.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="85">
+              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -223,18 +52,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
-        <option value="Jsp File" />
+        <option value="struts_2_5" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>lastname</find>
-    </findStrings>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -244,31 +64,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/UserTypeEntity.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/controllers/UserTypesController.java" />
-        <option value="$PROJECT_DIR$/web/test.jsp" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/UserType.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/BaseEntity.java" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/UserTypesEntity.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/User.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/UsersEntity.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/Information.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/InformationsEntity.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/controllers/InformationController.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/PointsEntity.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/Point.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/Post.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/PostsEntity.java" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/UZoneService.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/web/listUserType.jsp" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/UZoneDataStore.java" />
-        <option value="$PROJECT_DIR$/web/userProfile.jsp" />
-        <option value="$PROJECT_DIR$/web/listUser.jsp" />
-        <option value="$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/controllers/UsersController.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/User.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/UZone.iml" />
       </list>
     </option>
   </component>
@@ -285,14 +82,6 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="713" />
-    <option name="width" value="734" />
-    <option name="height" value="867" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -308,59 +97,64 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UZone" type="462c0819:PsiDirectoryNode" />
+              <item name="Glitched Project Uzone" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UZone" type="462c0819:PsiDirectoryNode" />
+              <item name="Glitched Project Uzone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UZone" type="462c0819:PsiDirectoryNode" />
+              <item name="Glitched Project Uzone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="uzonewebprofile" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UZone" type="462c0819:PsiDirectoryNode" />
+              <item name="Glitched Project Uzone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="uzonewebprofile" type="462c0819:PsiDirectoryNode" />
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UZone" type="462c0819:PsiDirectoryNode" />
+              <item name="Glitched Project Uzone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="uzonewebprofile" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UZone" type="462c0819:PsiDirectoryNode" />
+              <item name="Glitched Project Uzone" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Glitched Project Uzone" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -376,11 +170,12 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="GlassFish Server.GlassFish 4.1.2 Local">
-    <configuration name="GlassFish 4.1.2 Local" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 4.1.2 Local" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+  <component name="RunManager" selected="GlassFish Server.GlassFish 5.0.0 Local">
+    <configuration name="GlassFish 5.0.0 Local" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 5.0.0 Local" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Glitched_Project_Uzone_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="UZone:war exploded">
+        <artifact name="Glitched Project Uzone:war exploded">
           <settings />
         </artifact>
       </deployment>
@@ -444,7 +239,7 @@
       </ConfigurationWrapper>
       <method>
         <option name="BuildArtifacts" enabled="true">
-          <artifact name="UZone:war exploded" />
+          <artifact name="Glitched Project Uzone:war exploded" />
         </option>
       </method>
     </configuration>
@@ -488,6 +283,18 @@
       </option>
       <envs />
       <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Glitched Project Uzone" />
+      <envs />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -535,57 +342,51 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e5a4d1b0-9d26-4f19-a112-966e164ebaa1" name="Default" comment="" />
-      <created>1508444814040</created>
+      <changelist id="e300976a-98bf-48d5-88b6-c657d34bf254" name="Default" comment="" />
+      <created>1510087242976</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1508444814040</updated>
-      <workItem from="1508444817516" duration="3596000" />
-      <workItem from="1508477260786" duration="5926000" />
-      <workItem from="1508525305465" duration="626000" />
-      <workItem from="1508562878199" duration="249000" />
-      <workItem from="1508563160681" duration="7558000" />
-      <workItem from="1508573769055" duration="16296000" />
-      <workItem from="1508651252620" duration="366000" />
+      <updated>1510087242976</updated>
+      <workItem from="1510087247014" duration="364000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34617000" />
+    <option name="totallyTimeSpent" value="364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.50277776" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32110092" sideWeight="0.49722221" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12361111" sideWeight="0.45945945" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12361111" sideWeight="0.5405405" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.327654" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,519 +395,42 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$/../.." />
-    </ignored-roots>
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/src/struts.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/listUserType.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneDataStore.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="38" column="35" lean-forward="false" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-          <folding>
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="170">
+          <caret line="10" column="42" lean-forward="false" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/UserTypesController.java">
+    <entry file="file://$PROJECT_DIR$/UZone.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="33" column="62" lean-forward="false" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserTypesEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/listUserType.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneDataStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="38" column="35" lean-forward="false" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-          <folding>
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/UserTypesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="62" lean-forward="false" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserTypesEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="36" lean-forward="false" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/listUserType.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneDataStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="38" column="35" lean-forward="false" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
-          <folding>
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/UserTypesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="33" column="62" lean-forward="true" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserTypesEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserTypesEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" column="5" lean-forward="true" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="6" column="19" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pe/edu/utp/uzonewebprofile/models/InformationEntity.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" lean-forward="false" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserTypesEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Information.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="57" column="20" lean-forward="false" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/InformationsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="39" column="81" lean-forward="false" selection-start-line="39" selection-start-column="81" selection-end-line="39" selection-end-column="81" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/InformationsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PointsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#295#296#0" expanded="true" />
-            <element signature="e#339#340#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#418#419#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#663#664#0" expanded="true" />
-            <element signature="e#695#696#0" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#811#812#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UsersEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="33" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#419#420#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#576#577#0" expanded="true" />
-            <element signature="e#605#606#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#670#671#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#734#735#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#910#911#0" expanded="true" />
-            <element signature="e#964#965#0" expanded="true" />
-            <element signature="e#1010#1011#0" expanded="true" />
-            <element signature="e#1040#1041#0" expanded="true" />
-            <element signature="e#1066#1067#0" expanded="true" />
-            <element signature="e#1104#1105#0" expanded="true" />
-            <element signature="e#1134#1135#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Postulant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
-          <folding>
-            <marker date="1508651434128" expanded="true" signature="1495:1601" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/UserTypesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="35" column="37" lean-forward="false" selection-start-line="35" selection-start-column="37" selection-end-line="35" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/listUserType.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="12" lean-forward="false" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UZoneDataStore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="83" column="5" lean-forward="false" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
-          <folding>
-            <element signature="e#393#394#0" expanded="true" />
-            <element signature="e#437#438#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/listUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="46" lean-forward="false" selection-start-line="25" selection-start-column="46" selection-end-line="25" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/controllers/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="44" column="32" lean-forward="false" selection-start-line="44" selection-start-column="32" selection-end-line="44" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/userProfile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="85">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1117,7 +441,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>UZone:war exploded</last-edited>
+          <last-edited>Glitched Project Uzone:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1130,7 +454,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Web</last-edited>
+          <last-edited>Web (UZone)|Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1177,6 +501,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Struts 2-2.5.13</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
