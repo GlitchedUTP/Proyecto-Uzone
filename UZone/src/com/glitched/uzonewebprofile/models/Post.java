@@ -1,9 +1,11 @@
 package com.glitched.uzonewebprofile.models;
 
+import com.opensymphony.xwork2.ActionSupport;
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class Post {
+public class Post extends ActionSupport {
     int id;
     User user;
     String title;
@@ -53,8 +55,12 @@ public class Post {
         this.description = description;
     }
 
+
     public String getUrl() {
         return url;
+    }
+    public String execute() {
+        return SUCCESS;
     }
 
     public void setUrl(String url) {
