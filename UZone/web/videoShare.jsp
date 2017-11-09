@@ -8,15 +8,13 @@
     <h2>Envia un video</h2>
     <h1>Haznos llegar todos aquellos vídeos que crees que pueden ser interesantes para publicar. </h1>
     <s:form action="post">
-        <s:label for="title" value="Video Title"/>
-        <s:textfield id="title" name="title" placeholder="Ingresa link del video"/>
-        <s:label for="description" value="Product Description"/>
-        <s:textfield id="description" name="description"/>
-        <s:label for="price" value="Product Price"/>
-        <s:textfield id="price" name="price"/>
-        <s:label for="supplierEmail" value="Supplier Email"/>
-        <s:textfield id="supplierEmail" name="supplierEmail"/>
-        <s:submit value="Save"/>
+        <s:label for="title" value="Titulo*"/>
+        <s:textfield id="title" name="title" placeholder="Dale un titulo a tu video"/>
+        <s:label for="description" value="Descripcion*"/>
+        <s:textfield id="description" name="description" placeholder="Describe tu video" />
+        <s:label for="url" value="URL*"/>
+        <s:textfield id="url" name="url" placeholder="Ingre la url del video"  />
+        <s:submit value="Enviar video"/>
     </s:form>
 </body>
 </html>
