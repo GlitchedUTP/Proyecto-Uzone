@@ -6,8 +6,8 @@
 </head>
 <body>
     <h2>Envia un video</h2>
-    <h1>Haznos llegar todos aquellos vídeos que crees que pueden ser interesantes para publicar. </h1>
-    <s:form action="post">
+    <div>Haznos llegar todos aquellos vídeos que crees que pueden ser interesantes para publicar. </div>
+    <s:form action="dataVideo">
         <s:label for="title" value="Titulo*"/>
         <s:textfield id="title" name="title" placeholder="Dale un titulo a tu video"/>
         <s:label for="description" value="Descripcion*"/>

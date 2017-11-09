@@ -9,5 +9,8 @@
         <action name="index">
             <result>index.jsp</result>
         </action>
+        <action name="dataVideo" class="com.glitched.uzonewebprofile.actions.PostAction">
+            <result name="success">videoData.jsp</result>
+        </action>
     </package>
 </struts>
