@@ -9,5 +9,12 @@
         <action name="index">
             <result>index.jsp</result>
         </action>
+<<<<<<< HEAD
+=======
+        <action name="product" class="pe.edu.utp.struts2sample.actions.ProductAction">
+            <result name="success">showProduct.jsp</result>
+            <result name="input">index.jsp</result>
+        </action>
+>>>>>>> 683f4a11e99791ef10ecefb13dc8e62b572c7189
     </package>
 </struts>
