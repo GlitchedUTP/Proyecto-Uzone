@@ -44,9 +44,9 @@ public class Point {
     public static Point from(ResultSet rs,UsersEntity usersEntity,UserTypesEntity userTypesEntity) {
         Point point=new Point();
         try {
-            point.setOrigin(usersEntity.findById(rs.getInt("point_origin"),userTypesEntity));
-            point.setTarget(usersEntity.findById(rs.getInt("point_target"),userTypesEntity));
-            point.setQuantity(rs.getInt("point_quantity"));
+            point.setOrigin(usersEntity.findById(rs.getInt("origin"),userTypesEntity));
+            point.setTarget(usersEntity.findById(rs.getInt("target"),userTypesEntity));
+            point.setQuantity(rs.getInt("quantity"));
             return point;
         } catch (SQLException e) {
             e.printStackTrace();

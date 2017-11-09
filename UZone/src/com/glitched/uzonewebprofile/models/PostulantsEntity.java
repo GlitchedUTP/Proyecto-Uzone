@@ -16,14 +16,14 @@ public class PostulantsEntity extends BaseEntity {
         setTableName("Postulants");
     }
 
-    public List<Postulant> findByCriteria (String criteria, UsersEntity usersEntity, UserTypesEntity userTypesEntity, EventEntity eventEntity) {
+    public List<Postulant> findByCriteria (String criteria, UsersEntity usersEntity, UserTypesEntity userTypesEntity, EventsEntity eventsEntity) {
         try {
             ResultSet rs = getConnection()
                     .createStatement()
                     .executeQuery(getBaseStatement().concat(criteria));
             List<Postulant> postulant = new ArrayList<>();
             while (rs.next()) {
-                postulant.add(Postulant.from(rs,usersEntity,userTypesEntity,eventEntity));
+                postulant.add(Postulant.from(rs,eventsEntity,usersEntity,userTypesEntity));
             }
             return postulant;
         } catch (SQLException e) {

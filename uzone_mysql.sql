@@ -5,114 +5,114 @@ IF EXISTS uzone;
 
 USE uzone;
 
-CREATE TABLE usertypes (
-	usertype_id INT(2) UNSIGNED NOT NULL,
-    usertype_name VARCHAR(15) NOT NULL,
-    PRIMARY KEY(usertype_id)
+CREATE TABLE user_types (
+	id INT(2) UNSIGNED NOT NULL,
+    name VARCHAR(15) NOT NULL,
+    PRIMARY KEY(id)
     );
 
 CREATE TABLE users (
-	user_id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
-	user_username VARCHAR(20) NOT NULL,
-    user_password VARCHAR(20) NOT NULL,
-    user_name VARCHAR(30),
-    user_lastname VARCHAR(30),
-    user_email VARCHAR(40) NOT NULL,
-    user_birthdate DATE NOT NULL,
-    user_genre CHAR(1) NOT NULL,
-    user_phone CHAR(9),
-    user_picture VARCHAR(100),
-    usertype_id INT(2) UNSIGNED NOT NULL,
-    PRIMARY KEY(user_id),
-    CONSTRAINT users_usertypes_usertype_id FOREIGN KEY (usertype_id) REFERENCES usertypes(usertype_id)
+	id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
+	username VARCHAR(20) NOT NULL,
+    password VARCHAR(20) NOT NULL,
+    name VARCHAR(30),
+    lastname VARCHAR(30),
+    email VARCHAR(40) NOT NULL,
+    birthdate DATE NOT NULL,
+    genre CHAR(1) NOT NULL,
+    phone CHAR(9),
+    picture_url VARCHAR(100),
+    user_type_id INT(2) UNSIGNED NOT NULL,
+    PRIMARY KEY(id),
+    CONSTRAINT users_user_types_user_type_id FOREIGN KEY (user_type_id) REFERENCES user_types(id)
 	);
   
 CREATE TABLE informations(
-	info_id INT(5) UNSIGNED NOT NULL,
-    info_description VARCHAR(100),
-    info_avgpoints DECIMAL(2,2),
-    info_votequantity INT(10),
+	id INT(5) UNSIGNED NOT NULL,
+    description VARCHAR(100),
+    average_points DECIMAL(2,2),
+    vote_quantity INT(10),
     user_id INT(5) UNSIGNED NOT NULL,
-    PRIMARY KEY(info_id),
-    CONSTRAINT informations_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id)
+    PRIMARY KEY(id),
+    CONSTRAINT informations_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
 );
   
   
-CREATE TABLE evnts (
-	evnt_id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE events (
+	id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+    picture_url VARCHAR(100),
+    date DATETIME NOT NULL,
+    date_limit DATETIME NOT NULL,
+    description VARCHAR(300),
+    category INT(2) NOT NULL,
+    salary DECIMAL(10,2) NOT NULL,
     user_id INT(5) UNSIGNED NOT NULL,
-    evnt_picture VARCHAR(100),
-    evnt_date DATETIME NOT NULL,
-    evnt_datelimit DATETIME NOT NULL,
-    evnt_description VARCHAR(300),
-    evnt_category INT(2) NOT NULL,
-    evnt_salary DECIMAL(10,2) NOT NULL,
-    PRIMARY KEY(evnt_id),
-	CONSTRAINT evnts_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id)
+    PRIMARY KEY(id),
+	CONSTRAINT events_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 CREATE TABLE postulants (
-	evnt_id INT(5) UNSIGNED NOT NULL,
-    postulant_id INT(5) UNSIGNED NOT NULL,
+	event_id INT(5) UNSIGNED NOT NULL,
+    id INT(5) UNSIGNED NOT NULL,
     user_id INT(5) UNSIGNED NOT NULL,
-    postulant_date DATETIME,
-    PRIMARY KEY(evnt_id,postulant_id),
-    CONSTRAINT postulants_evnts_event_id FOREIGN  KEY (evnt_id) REFERENCES evnts(evnt_id),
-    CONSTRAINT postulants_users_user_id FOREIGN KEY (user_id) REFERENCES users (user_id)
+    date DATETIME,
+    PRIMARY KEY(event_id,id),
+    CONSTRAINT postulants_events_event_id FOREIGN  KEY (event_id) REFERENCES events(id),
+    CONSTRAINT postulants_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 CREATE TABLE posts (
-	post_id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
+	id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT(5) UNSIGNED NOT NULL ,
-    post_title VARCHAR(50),
-    post_description VARCHAR(100),
-	post_url VARCHAR(100),
-    PRIMARY KEY(post_id),
-    CONSTRAINT posts_users_user_id FOREIGN KEY (user_id) REFERENCES users(user_id)
+    title VARCHAR(50),
+    description VARCHAR(100),
+	url VARCHAR(100),
+    PRIMARY KEY(id),
+    CONSTRAINT posts_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
 );
     
 CREATE TABLE comments (
 	post_id INT(5) UNSIGNED NOT NULL,
-    comment_id INT(5) UNSIGNED NOT NULL,
-    comment_description VARCHAR(100) NOT NULL,
-    PRIMARY KEY(post_id,comment_id),
-    CONSTRAINT comments_posts_post_id FOREIGN KEY (post_id) REFERENCES posts(post_id)
+    id INT(5) UNSIGNED NOT NULL,
+    description VARCHAR(100) NOT NULL,
+    PRIMARY KEY(post_id,id),
+    CONSTRAINT comments_posts_post_id FOREIGN KEY (post_id) REFERENCES posts(id)
 );
 
 CREATE TABLE points(
-	point_origin INT(5) UNSIGNED NOT NULL,
-    point_target INT(5) UNSIGNED NOT NULL,
-    point_quantity INT(2) NOT NULL,
-    PRIMARY KEY(point_origin,point_target),
-    CONSTRAINT points_users_point_origin FOREIGN KEY (point_origin) REFERENCES users(user_id),
-    CONSTRAINT points_users_point_target FOREIGN KEY (point_target) REFERENCES users(user_id)
+	origin INT(5) UNSIGNED NOT NULL,
+    target INT(5) UNSIGNED NOT NULL,
+    quantity INT(2) NOT NULL,
+    PRIMARY KEY(origin,target),
+    CONSTRAINT points_users_origin FOREIGN KEY (origin) REFERENCES users(id),
+    CONSTRAINT points_users_target FOREIGN KEY (target) REFERENCES users(id)
 );
 
-INSERT INTO usertypes
+INSERT INTO user_types
 VALUES (
 	1,
 	'ARTIST'
 	);
     
-INSERT INTO usertypes
+INSERT INTO user_types
 VALUES (
 	2,
 	'WORKER'
 	);
     
-INSERT INTO usertypes
+INSERT INTO user_types
 VALUES (
 	3,
 	'NORMAL'
 	);
     
-INSERT INTO usertypes
+INSERT INTO user_types
 VALUES (
 	4,
 	'ADMIN'
 	);
 
-INSERT INTO users (user_username,user_password,user_name,user_lastname,user_email,user_birthdate,user_genre,user_phone,user_picture,usertype_id)
+INSERT INTO users (username,password,name,lastname,email,birthdate,genre,phone,picture_url,user_type_id)
 VALUES (
     'NicoForce',
     'nicomax',
@@ -126,7 +126,7 @@ VALUES (
     4
 	);
     
-INSERT INTO users (user_username,user_password,user_name,user_lastname,user_email,user_birthdate,user_genre,user_phone,user_picture,usertype_id)
+INSERT INTO users (username,password,name,lastname,email,birthdate,genre,phone,picture_url,user_type_id)
 VALUES (
     'Potato',
     'potato123',
@@ -140,8 +140,6 @@ VALUES (
     3
 	);
     
-
-
 COMMIT;
 
 select * from users;

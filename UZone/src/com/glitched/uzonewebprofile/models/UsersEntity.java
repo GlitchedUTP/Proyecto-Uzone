@@ -38,6 +38,6 @@ public class UsersEntity extends BaseEntity{
     }
 
     public User findById(int id,UserTypesEntity userTypesEntity) {
-        return findByCriteria(String.format("WHERE user_id=%d",id),userTypesEntity).get(0);
+        return findByCriteria(String.format("WHERE id=%d",id),userTypesEntity).get(0);
     }
 }

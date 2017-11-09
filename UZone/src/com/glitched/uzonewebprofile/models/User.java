@@ -13,13 +13,13 @@ public class User {
     private String birthDate;
     private char genre;
     private String phone;
-    private String picture;
+    private String pictureUrl;
     private UserType userType;
 
     public User() {
     }
 
-    public User(int id, String username, String password, String name, String lastName, String email, String birthDate, char genre, String phone, String picture, UserType userType) {
+    public User(int id, String username, String password, String name, String lastName, String email, String birthDate, char genre, String phone, String pictureUrl, UserType userType) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -29,7 +29,7 @@ public class User {
         this.birthDate = birthDate;
         this.genre = genre;
         this.phone = phone;
-        this.picture = picture;
+        this.pictureUrl = pictureUrl;
         this.userType = userType;
     }
 
@@ -105,12 +105,12 @@ public class User {
         this.phone = phone;
     }
 
-    public String getPicture() {
-        return picture;
+    public String getPictureUrl() {
+        return pictureUrl;
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
     }
 
     public UserType getUserType() {
@@ -124,17 +124,17 @@ public class User {
     public static User from (ResultSet rs, UserTypesEntity userTypesEntity) {
         User user=new User();
         try {
-            user.setId(rs.getInt("user_id"));
-            user.setUsername(rs.getString("user_username"));
-            user.setPassword(rs.getString("user_password"));
-            user.setName(rs.getString("user_name"));
-            user.setLastName(rs.getString("user_lastName"));
-            user.setEmail(rs.getString("user_email"));
-            user.setBirthDate(rs.getDate("user_birthdate").toString());
-            user.setGenre(rs.getString("user_genre").charAt(0));
-            user.setPhone(rs.getString("user_phone"));
-            user.setPicture(rs.getString("user_picture"));
-            user.setUserType(userTypesEntity.findById(rs.getInt("usertype_id")));
+            user.setId(rs.getInt("id"));
+            user.setUsername(rs.getString("username"));
+            user.setPassword(rs.getString("password"));
+            user.setName(rs.getString("name"));
+            user.setLastName(rs.getString("lastName"));
+            user.setEmail(rs.getString("email"));
+            user.setBirthDate(rs.getDate("birthdate").toString());
+            user.setGenre(rs.getString("genre").charAt(0));
+            user.setPhone(rs.getString("phone"));
+            user.setPictureUrl(rs.getString("picture_url"));
+            user.setUserType(userTypesEntity.findById(rs.getInt("user_type_id")));
             return user;
         } catch (SQLException e) {
             e.printStackTrace();

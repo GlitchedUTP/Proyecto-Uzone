@@ -1,33 +1,32 @@
 package com.glitched.uzonewebprofile.models;
 
-
 import java.sql.SQLException;
 import java.sql.ResultSet;
 
 public class Event {
     private int id;
-    private int category;
-    private int user;
-    private double salary;
-    private String picture;
-    private String datetime;
-    private String datelimit;
+    private String pictureUrl;
+    private String date;
+    private String dateLimit;
     private String description;
+    private int category;
+    private double salary;
+    private User user;
 
+    public Event() {
+    }
 
-    public Event(int id, int user, String picture, String datetime, String datelimit, String description, int category, double salary ) {
+    public Event(int id, String pictureUrl, String date, String dateLimit, String description, int category, double salary, User user) {
         this.id = id;
-        this.user = user;
-        this.picture = picture;
-        this.datetime   = datetime;
-        this.datelimit = datelimit;
+        this.pictureUrl = pictureUrl;
+        this.date = date;
+        this.dateLimit = dateLimit;
         this.description = description;
         this.category = category;
         this.salary = salary;
+        this.user = user;
+    }
 
-    }
-    public Event() {
-    }
     public int getId() {
         return id;
     }
@@ -36,26 +35,28 @@ public class Event {
         this.id = id;
     }
 
-
-
-    public int getUser(){return user;}
-
-    public void setUser(int user){this.user = user;}
-
-    public int getCategory(){return category;}
-
-    public void setCategory(int category){this.category = category;}
-
-    public double getSalary(){return salary;}
-
-    public void setSalary(double salary){this.salary = salary;}
-
-    public String getPicture() {
-        return picture;
+    public String getPictureUrl() {
+        return pictureUrl;
     }
 
-    public void setPicture(String picture) {
-        this.picture = picture;
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getDateLimit() {
+        return dateLimit;
+    }
+
+    public void setDateLimit(String dateLimit) {
+        this.dateLimit = dateLimit;
     }
 
     public String getDescription() {
@@ -66,37 +67,42 @@ public class Event {
         this.description = description;
     }
 
-    public String getDatetime() {
-        return datetime;
+    public int getCategory() {
+        return category;
     }
 
-    public void setDatetime(String datetime) {
-        this.datetime = datetime;
+    public void setCategory(int category) {
+        this.category = category;
     }
 
-    public String getDatelimit() { return datelimit;}
-
-    public void setDatelimit(String datelimit) {
-        this.datelimit = datelimit;
+    public double getSalary() {
+        return salary;
     }
 
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
 
+    public User getUser() {
+        return user;
+    }
 
+    public void setUser(User user) {
+        this.user = user;
+    }
 
-
-
-
-    public static Event from (ResultSet rs) {
+    public static Event from(ResultSet rs,UsersEntity usersEntity,UserTypesEntity userTypesEntity) {
+        Event event=new Event();
         try {
-            return new Event(
-                    rs.getInt("evnt_id "),
-                    rs.getInt("user_id "),
-                    rs.getString("evnt_picture "),
-                    rs.getString("evnt_date "),
-                    rs.getString("evnt_datelimit "),
-                    rs.getString("evnt_description "),
-                    rs.getInt("evnt_category "),
-                    rs.getDouble("evnt_salary "));
+            event.setId(rs.getInt("id"));
+            event.setPictureUrl(rs.getString("picture_url"));
+            event.setDate(rs.getDate("date").toString());
+            event.setDateLimit(rs.getDate("date_limit").toString());
+            event.setDescription(rs.getString("description"));
+            event.setCategory(rs.getInt("category"));
+            event.setSalary(rs.getDouble("salary"));
+            event.setUser(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
+            return event;
         } catch (SQLException e) {
             e.printStackTrace();
         }

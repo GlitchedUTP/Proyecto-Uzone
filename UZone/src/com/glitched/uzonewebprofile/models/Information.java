@@ -6,14 +6,14 @@ import java.sql.SQLException;
 public class Information {
     private int id;
     private String description;
-    private double avgPoints;
+    private double averagePoints;
     private int voteQuantity;
     private User user;
 
-    public Information(int id, String description, double avgPoints, int voteQuantity, User user) {
+    public Information(int id, String description, double averagePoints, int voteQuantity, User user) {
         this.id = id;
         this.description = description;
-        this.avgPoints = avgPoints;
+        this.averagePoints = averagePoints;
         this.voteQuantity = voteQuantity;
         this.user = user;
     }
@@ -28,9 +28,9 @@ public class Information {
 
     public void setDescription(String description) { this.description = description;}
 
-    public double getAvgPoints() {return avgPoints;}
+    public double getAveragePoints() {return averagePoints;}
 
-    public void setAvgPoints(double avgPoints) {this.avgPoints = avgPoints; }
+    public void setAveragePoints(double averagePoints) {this.averagePoints = averagePoints; }
 
     public int getVoteQuantity() {return voteQuantity; }
 
@@ -47,10 +47,10 @@ public class Information {
     public static Information from (ResultSet rs,UsersEntity usersEntity,UserTypesEntity userTypesEntity) {
         Information info = new Information();
         try {
-                    info.setId(rs.getInt("info_id"));
-                    info.setDescription(rs.getString("info_description"));
-                    info.setAvgPoints(rs.getDouble("info_avgPoints"));
-                    info.setVoteQuantity(rs.getInt("info_voteQuantity"));
+                    info.setId(rs.getInt("id"));
+                    info.setDescription(rs.getString("description"));
+                    info.setAveragePoints(rs.getDouble("average_points"));
+                    info.setVoteQuantity(rs.getInt("vote_quantity"));
                     info.setUser(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
                     return info;
         } catch (SQLException e) {

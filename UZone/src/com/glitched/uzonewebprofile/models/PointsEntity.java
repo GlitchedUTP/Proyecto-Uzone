@@ -38,10 +38,10 @@ public class PointsEntity extends BaseEntity{
     }
 
     public List<Point> findByOrigin(User origin,UsersEntity usersEntity,UserTypesEntity userTypesEntity) {
-        return findByCriteria(String.format("WHERE point_origin=%d",origin.getId()),usersEntity,userTypesEntity);
+        return findByCriteria(String.format("WHERE origin=%d",origin.getId()),usersEntity,userTypesEntity);
     }
 
     public List<Point> findByTarget(User target,UsersEntity usersEntity,UserTypesEntity userTypesEntity) {
-        return findByCriteria(String.format("WHERE point_origin=%d",target.getId()),usersEntity,userTypesEntity);
+        return findByCriteria(String.format("WHERE origin=%d",target.getId()),usersEntity,userTypesEntity);
     }
 }

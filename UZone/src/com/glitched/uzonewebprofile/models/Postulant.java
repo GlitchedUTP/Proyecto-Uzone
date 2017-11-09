@@ -5,43 +5,61 @@ import java.sql.SQLException;
 
 public class Postulant {
 
-    private Event event_id;
-    private int id_postulant;
-    private User user_id;
+    private int id;
     private String date;
+    Event event;
+    User user;
 
-    public Postulant(int id_postulant, User user_id, String date) {
-        this.id_postulant = id_postulant;
-        this.user_id = user_id;
+    public Postulant() {
+    }
+
+    public Postulant(int id, String date, Event event, User user) {
+        this.id = id;
+        this.date = date;
+        this.event = event;
+        this.user = user;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public Postulant() { }
+    public Event getEvent() {
+        return event;
+    }
 
-    public Event getEvent_id() {return event_id; }
+    public void setEvent(Event event) {
+        this.event = event;
+    }
 
-    public void setEvent_id(Event event_id) {this.event_id = event_id;}
+    public User getUser() {
+        return user;
+    }
 
-    public int getPostulant_id() {return id_postulant;}
+    public void setUser(User user) {
+        this.user = user;
+    }
 
-    public void setPostulant_id(int id_postulant) {this.id_postulant = id_postulant;}
-
-    public String getDate() {return date;}
-
-    public void setDate(String date) {this.date = date; }
-
-    public User getUser_id() {return user_id; }
-
-    public void setUser_id(User user_id) {this.user_id = user_id;}
-
-    public static Postulant from(ResultSet rs, UsersEntity usersEntity, UserTypesEntity userTypesEntity, EventEntity eventEntity) {
-        Postulant postulant = new Postulant();
+    public static Postulant from(ResultSet rs, EventsEntity eventsEntity, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        Postulant postulant=new Postulant();
         try {
-                    postulant.setEvent_id(eventEntity.findById(rs.getInt("evnt_id")));
-                    postulant.setPostulant_id(rs.getInt("postulant_id"));
-                    postulant.setUser_id(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
-                    postulant.setDate(rs.getString("postulant_date"));
-                    return postulant;
+            postulant.setEvent(eventsEntity.findById(rs.getInt("event_id"),usersEntity,userTypesEntity));
+            postulant.setId(rs.getInt("id"));
+            postulant.setUser(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
+            postulant.setDate(rs.getDate("date").toString());
+            return postulant;
         } catch (SQLException e) {
             e.printStackTrace();
         }

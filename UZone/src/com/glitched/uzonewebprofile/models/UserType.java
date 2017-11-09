@@ -32,8 +32,8 @@ public class UserType {
     public static UserType from (ResultSet rs) {
         try {
             return new UserType(
-                    rs.getInt("usertype_id"),
-                    rs.getString("usertype_name"));
+                    rs.getInt("id"),
+                    rs.getString("name"));
         } catch (SQLException e) {
             e.printStackTrace();
         }

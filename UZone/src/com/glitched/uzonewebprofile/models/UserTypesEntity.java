@@ -10,7 +10,7 @@ public class UserTypesEntity extends BaseEntity{
 
     public UserTypesEntity() {
         super();
-        setTableName("usertypes");
+        setTableName("user_types");
     }
 
     public UserTypesEntity(Connection connection, String tableName) {
@@ -39,6 +39,6 @@ public class UserTypesEntity extends BaseEntity{
 
     public UserType findById(int id) {
         return findByCriteria(
-                String.format("WHERE usertype_id= %d",id)).get(0);
+                String.format("WHERE id= %d",id)).get(0);
     }
 }

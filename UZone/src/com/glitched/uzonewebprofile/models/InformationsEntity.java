@@ -37,6 +37,6 @@ public class InformationsEntity extends BaseEntity{
 
     public Information findById(int id,UsersEntity usersEntity,UserTypesEntity userTypesEntity) {
         return findByCriteria(
-                String.format("WHERE info_id= %d",id),usersEntity,userTypesEntity).get(0);
+                String.format("WHERE id=%d",id),usersEntity,userTypesEntity).get(0);
     }
 }

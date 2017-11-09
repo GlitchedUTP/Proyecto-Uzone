@@ -65,11 +65,11 @@ public class Post {
     public static Post from(ResultSet rs,UsersEntity usersEntity,UserTypesEntity userTypesEntity) {
         Post post=new Post();
         try {
-            post.setId(rs.getInt("post_id"));
+            post.setId(rs.getInt("id"));
             post.setUser(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
-            post.setTitle(rs.getString("post_title"));
-            post.setTitle(rs.getString("post_description"));
-            post.setUrl(rs.getString("post_url"));
+            post.setTitle(rs.getString("title"));
+            post.setTitle(rs.getString("description"));
+            post.setUrl(rs.getString("url"));
         } catch (SQLException e) {
             e.printStackTrace();
         }
