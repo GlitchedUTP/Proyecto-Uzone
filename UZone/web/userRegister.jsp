@@ -1,6 +1,4 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
-
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -18,10 +16,14 @@
     <s:textfield id="Password" name="Password" placeholder="Contraseña" type="password"/>
     <s:label for="Birthdate" value="Fecha de Nacimiento"/>
     <s:date name="Birthdate"/>
-    <s:label for="Gnre" value="Genero"/>
-    <s:combobox list="Masculino,Femenino"/>
+    <s:label value="Selecciona tu genero"/>
+    <s:select   headerKey="-1" headerValue="--- Select ---"
+                list="#{'M':'Masculino', 'F':'Femenino'}"
+                name="genre" />
     <s:label for="UserType" value="¿Eres artista o Worker?"/>
-    <s:combobox list="Artista,Worker"/>
+    <s:select   headerKey="-1" headerValue="--- Select ---"
+                list="#{'1':'Artista', '2':'Dueño de un local'}"
+                name="usertype" />
     <s:submit value="Registrarse"/>
 </s:form>
 </body>

@@ -2,12 +2,14 @@
 <%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+
   <head>
-    <title>$Title$</title>
+    <title>UZone</title>
+    <sb:head/>
   </head>
   <body>
-  <s:form action="register">
-      <s:submit value="Registrarse"/>
+  <s:form action="register" theme="bootstrap">
+      <s:submit value="Registrarse" cssClass="btn btn-danger"/>
   </s:form>
   </body>
 </html>
