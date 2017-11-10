@@ -7,5 +7,6 @@
   </head>
   <body>
   $TESTING STRUTS$
+
   </body>
 </html>

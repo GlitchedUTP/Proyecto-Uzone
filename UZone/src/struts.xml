@@ -14,7 +14,10 @@
         </action>
         <action name="dataUser" class="com.glitched.uzonewebprofile.actions.PostAction">
             <result name="success">index.jsp</result>
-
         </action>
+        <action name="dataEvent" class="com.glitched.uzonewebprofile.actions.PostAction">
+            <result name="success">index.jsp</result>
+        </action>
+
     </package>
 </struts>
