@@ -8,7 +8,11 @@ public class UZoneDataStore {
     private UserTypesEntity userTypesEntity;
     private UsersEntity usersEntity;
     private InformationsEntity informationsEntity;
+    private EventsEntity eventsEntity;
     private PostulantsEntity postulantsEntity;
+    private PostsEntity postsEntity;
+    private CommentsEntity commentsEntity;
+    private PointsEntity pointsEntity;
 
     public UZoneDataStore(Connection connection) {
         this.connection = connection;
@@ -51,12 +55,44 @@ public class UZoneDataStore {
         return informationsEntity;
     }
 
+    private EventsEntity getEventsEntity() {
+        if(eventsEntity==null) {
+            eventsEntity = new EventsEntity();
+            eventsEntity.setConnection(connection);
+        }
+        return eventsEntity;
+    }
+
     private PostulantsEntity getIPostulantsEntity(){
         if(postulantsEntity==null) {
             postulantsEntity=new PostulantsEntity();
             postulantsEntity.setConnection(connection);
         }
         return postulantsEntity;
+    }
+
+    private PostsEntity getPostsEntity() {
+        if (pointsEntity == null) {
+            postsEntity = new PostsEntity();
+            postsEntity.setConnection(connection);
+        }
+        return postsEntity;
+    }
+
+    private CommentsEntity getCommentsEntity() {
+        if (commentsEntity==null) {
+            commentsEntity=new CommentsEntity();
+            commentsEntity.setConnection(connection);
+        }
+        return commentsEntity;
+    }
+
+    private PointsEntity getPointsEntity() {
+        if(pointsEntity==null) {
+            pointsEntity=new PointsEntity();
+            pointsEntity.setConnection(connection);
+        }
+        return  pointsEntity;
     }
 
     //Public data store methods
