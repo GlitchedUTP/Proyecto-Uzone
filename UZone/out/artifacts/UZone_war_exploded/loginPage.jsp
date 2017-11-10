@@ -15,7 +15,7 @@
     <form action="loginaction" method="post">
         <br/><input type="text" name="username" placeholder="Ingresa tu usuario"/><br/>
         <br/><input type="password" name="password" placeholder="Ingresa tu contraseña"/><br/>
-        <input type="submit" value="Iniciar sesion"/>
+        <input type="submit" value="Log in"/>
     </form>
 </body>
 </html>
