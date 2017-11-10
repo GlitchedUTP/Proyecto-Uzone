@@ -6,6 +6,8 @@
     <title>$Title$</title>
   </head>
   <body>
-  $TESTING STRUTS$
+  <s:form action="register">
+      <s:submit value="Registrarse"/>
+  </s:form>
   </body>
 </html>
