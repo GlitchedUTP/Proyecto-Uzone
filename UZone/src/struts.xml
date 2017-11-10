@@ -12,5 +12,9 @@
         <action name="dataVideo" class="com.glitched.uzonewebprofile.actions.PostAction">
             <result name="success">videoData.jsp</result>
         </action>
+        <action name="dataUser" class="com.glitched.uzonewebprofile.actions.PostAction">
+            <result name="success">index.jsp</result>
+
+        </action>
     </package>
 </struts>
