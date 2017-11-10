@@ -6,32 +6,30 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PostulantsEntity extends BaseEntity {
+public class CommentsEntity extends BaseEntity {
 
-    public PostulantsEntity(Connection connection, String tableName) {
+    public CommentsEntity(Connection connection, String tableName) {
         super(connection, tableName);
     }
 
-    public PostulantsEntity() {
+    public CommentsEntity() {
         super();
-        setTableName("Postulants");
+        setTableName("comments");
     }
 
-    public List<Postulant> findByCriteria (String criteria, UsersEntity usersEntity, UserTypesEntity userTypesEntity, EventsEntity eventsEntity) {
+    public List<Comment> findByCriteria (String criteria, PostsEntity postsEntity,UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         try {
             ResultSet rs = getConnection()
                     .createStatement()
                     .executeQuery(getBaseStatement().concat(criteria));
-            List<Postulant> postulant = new ArrayList<>();
+            List<Comment> comments = new ArrayList<>();
             while (rs.next()) {
-                postulant.add(Postulant.from(rs,eventsEntity,usersEntity,userTypesEntity));
+                comments.add(Comment.from(rs,postsEntity,usersEntity,userTypesEntity));
             }
-            return postulant;
+            return comments;
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return null;
     }
-
-
 }
