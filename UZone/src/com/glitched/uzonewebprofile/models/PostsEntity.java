@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PostsEntity extends BaseEntity{
+
     public PostsEntity(Connection connection, String tableName) {
         super(connection, tableName);
     }
@@ -33,6 +34,10 @@ public class PostsEntity extends BaseEntity{
     }
 
     public List<Post> findByUser(User user, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
-        return findByCriteria(String.format("WHERE id=%d",user.getId()),usersEntity,userTypesEntity);
+        return findByCriteria(String.format("WHERE user_id=%d",user.getId()),usersEntity,userTypesEntity);
+    }
+
+    public Post findById (int id, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        return findByCriteria(String.format("WHERE id=%d",id),usersEntity,userTypesEntity).get(0);
     }
 }
