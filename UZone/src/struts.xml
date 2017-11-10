@@ -14,9 +14,16 @@
         </action>
         <action name="dataUser" class="com.glitched.uzonewebprofile.actions.PostAction">
             <result name="success">index.jsp</result>
+<<<<<<< HEAD
         </action>
         <action name="register">
             <result>userRegister.jsp</result>
+=======
+>>>>>>> c3d525643732c07e94a81064eeba9382e9053e53
         </action>
+        <action name="dataEvent" class="com.glitched.uzonewebprofile.actions.PostAction">
+            <result name="success">index.jsp</result>
+        </action>
+
     </package>
 </struts>

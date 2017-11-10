@@ -6,8 +6,13 @@
     <title>$Title$</title>
   </head>
   <body>
+<<<<<<< HEAD
   <s:form action="register">
       <s:submit value="Registrarse"/>
   </s:form>
+=======
+  $TESTING STRUTS$
+
+>>>>>>> c3d525643732c07e94a81064eeba9382e9053e53
   </body>
 </html>
