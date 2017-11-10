@@ -6,28 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63c1dee4-3de4-4f5c-83a8-0d189d48456d" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/EventEntity.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/EventsEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/UZone_war_exploded/WEB-INF/classes/com/glitched/uzonewebprofile/models/Post.class" afterPath="$PROJECT_DIR$/out/artifacts/UZone_war_exploded/WEB-INF/classes/com/glitched/uzonewebprofile/models/Post.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UZone/com/glitched/uzonewebprofile/models/Post.class" afterPath="$PROJECT_DIR$/out/production/UZone/com/glitched/uzonewebprofile/models/Post.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/UZone_war_exploded/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/out/artifacts/UZone_war_exploded/WEB-INF/classes/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/UZone/struts.xml" afterPath="$PROJECT_DIR$/out/production/UZone/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Event.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Event.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Information.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Information.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/InformationsEntity.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/InformationsEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Point.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Point.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PointsEntity.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PointsEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Post.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Post.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostsEntity.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostsEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Postulant.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Postulant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostulantsEntity.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostulantsEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/User.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/User.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserType.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserTypesEntity.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserTypesEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UsersEntity.java" afterPath="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UsersEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-    </list>
+    <list default="true" id="63c1dee4-3de4-4f5c-83a8-0d189d48456d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,31 +16,26 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1510214168057" expanded="true" signature="360:366" ph="..." />
+                <marker date="1508625076292" expanded="true" signature="4:58" ph="..." />
+                <marker date="1508625076292" expanded="true" signature="402:411" ph="..." />
+                <marker date="1508625076292" expanded="true" signature="402:419" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostulantsEntity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostulantsEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
-              <folding />
-            </state>
+      <file leaf-file-name="struts.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/struts.xml">
+          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+            <state />
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="videoData.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/videoData.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -70,92 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="videoShare.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/videoShare.jsp">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EventsEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/EventsEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-              <folding>
-                <element signature="method#findAll#0;class#EventsEntity#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Postulant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Postulant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-              <folding>
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#465#466#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#526#527#0" expanded="true" />
-                <element signature="e#557#558#0" expanded="true" />
-                <element signature="e#584#585#0" expanded="true" />
-                <element signature="e#624#625#0" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-                <element signature="e#687#688#0" expanded="true" />
-                <element signature="e#715#716#0" expanded="true" />
-                <element signature="e#756#757#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-                <element signature="e#846#847#0" expanded="true" />
-                <element signature="e#884#885#0" expanded="true" />
-                <element signature="e#916#917#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Post.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Post.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PostsEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostsEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Point.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="48" column="41" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PointsEntity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PointsEntity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="44" column="51" lean-forward="false" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+            <state relative-caret-position="221">
+              <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -170,9 +63,6 @@
       </list>
     </option>
   </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
       <projects_view />
@@ -182,25 +72,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/struts.xml" />
-        <option value="$PROJECT_DIR$/lib/struts2-core.jar!/com/opensymphony/xwork2/ActionSupport.class" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserType.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserTypesEntity.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/User.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UsersEntity.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Information.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/InformationsEntity.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Event.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/EventEntity.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/EventsEntity.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Postulant.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Post.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostsEntity.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Point.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PointsEntity.java" />
-        <option value="$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostulantsEntity.java" />
       </list>
     </option>
   </component>
@@ -217,13 +88,6 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-2" />
-    <option name="y" value="144" />
-    <option name="width" value="1004" />
-    <option name="height" value="592" />
-  </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -240,9 +104,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,7 +114,7 @@
             <path>
               <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
               <item name="UZone" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
@@ -265,39 +126,24 @@
               <item name="UZone" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="uzonewebprofile" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UZone" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="uzonewebprofile" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UZone" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="UZone" type="b2602c69:ProjectViewProjectNode" />
-              <item name="UZone" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2045977" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/log4j-api-2.8.2.jar!/" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -476,47 +322,45 @@
       <option name="presentableId" value="Default" />
       <updated>1510088420792</updated>
       <workItem from="1510088424107" duration="530000" />
-      <workItem from="1510206439223" duration="10031000" />
-      <workItem from="1510263491759" duration="3436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13997000" />
+    <option name="totallyTimeSpent" value="530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896462" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,134 +369,19 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <ignored-roots>
-      <path value="$PROJECT_DIR$" />
-    </ignored-roots>
-  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <marker date="1510214168057" expanded="true" signature="360:366" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1510266382863" expanded="true" signature="59395:59412" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59395:59430" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59395:59443" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59395:59458" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59493:62089" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59506:62074" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59560:59825" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59579:59810" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59612:59790" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59652:59756" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59673:59734" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59879:60275" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59898:60260" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60017:60240" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60057:60206" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60078:60184" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60325:60642" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60344:60627" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60423:60607" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60463:60573" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60484:60551" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60693:60964" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60712:60949" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60745:60929" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60785:60895" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60806:60873" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61007:61319" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61026:61304" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61100:61284" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61140:61250" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61161:61228" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61370:61684" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61389:61669" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61465:61649" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61505:61615" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61526:61593" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61736:62060" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61755:62045" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61841:62025" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61881:61991" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61902:61969" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/listUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="5" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UZone.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1510214168057" expanded="true" signature="360:366" ph="..." />
+            <marker date="1508625076292" expanded="true" signature="4:58" ph="..." />
+            <marker date="1508625076292" expanded="true" signature="402:411" ph="..." />
+            <marker date="1508625076292" expanded="true" signature="402:419" ph="..." />
           </folding>
         </state>
       </provider>
@@ -666,287 +395,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="5" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/struts2-core.jar!/com/opensymphony/xwork2/ActionSupport.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="66" column="28" lean-forward="false" selection-start-line="66" selection-start-column="28" selection-end-line="66" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/listUser.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1510266382863" expanded="true" signature="59395:59412" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59395:59430" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59395:59443" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59395:59458" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59493:62089" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59506:62074" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59560:59825" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59579:59810" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59612:59790" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59652:59756" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59673:59734" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59879:60275" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="59898:60260" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60017:60240" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60057:60206" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60078:60184" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60325:60642" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60344:60627" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60423:60607" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60463:60573" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60484:60551" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60693:60964" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60712:60949" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60745:60929" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60785:60895" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="60806:60873" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61007:61319" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61026:61304" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61100:61284" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61140:61250" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61161:61228" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61370:61684" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61389:61669" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61465:61649" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61505:61615" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61526:61593" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61736:62060" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61755:62045" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61841:62025" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61881:61991" ph="..." />
-            <marker date="1510266382863" expanded="true" signature="61902:61969" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UZone.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/BaseEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Information.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="51" column="67" lean-forward="false" selection-start-line="51" selection-start-column="67" selection-end-line="51" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/InformationsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="39" column="40" lean-forward="false" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="129" column="47" lean-forward="false" selection-start-line="129" selection-start-column="47" selection-end-line="129" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="37" column="32" lean-forward="false" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UserTypesEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="41" column="57" lean-forward="false" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/UsersEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="40" column="51" lean-forward="false" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Event.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="103" column="44" lean-forward="false" selection-start-line="103" selection-start-column="44" selection-end-line="103" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/EventsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="41" column="5" lean-forward="false" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <element signature="method#findAll#0;class#EventsEntity#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Postulant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="46" column="23" lean-forward="false" selection-start-line="46" selection-start-column="23" selection-end-line="46" selection-end-column="23" />
-          <folding>
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-            <element signature="e#624#625#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#715#716#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#819#820#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#916#917#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Post.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="71" column="38" lean-forward="false" selection-start-line="71" selection-start-column="38" selection-end-line="71" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/Point.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="48" column="41" lean-forward="false" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PointsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="44" column="51" lean-forward="false" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/videoData.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/videoShare.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding>
-            <marker date="1510214168057" expanded="true" signature="360:366" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/glitched/uzonewebprofile/models/PostulantsEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -954,17 +408,6 @@
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArquillianSettingsConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
@@ -972,7 +415,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2045977" />
+                <option value="0.2" />
                 <option value="0.5" />
               </list>
             </option>
@@ -985,7 +428,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2045977" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -996,7 +439,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2045977" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1008,7 +451,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2045977" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1020,7 +463,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2045977" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -1032,7 +475,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2045977" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
