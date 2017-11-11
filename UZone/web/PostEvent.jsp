@@ -20,6 +20,8 @@
     <s:date name="evntdate"/>   <s:textfield id="evntime" name="evntime" placeholder="Hora incio" />
     <s:label for="evntdatelimit" value="Fecha/Hora Finalizacion"/>
     <s:date name="evntdatelimit"/>   <s:textfield id="evntimelimit" name="evntimelimit" placeholder="Hora fin" />
+    <s:textfield id="Username" name="Username" placeholder="Nombre de Usuario" />
+    <s:textfield id="Password" name="Password" placeholder="Contraseña" type="password"/>
     <s:label for="description" value="Descripcion"/>
     <s:textfield id="description" name="description"/>
     <s:label for="keywords" value="Palabras Clave"/>
