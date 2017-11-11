@@ -40,4 +40,18 @@ public class UsersEntity extends BaseEntity{
     public User findById(int id,UserTypesEntity userTypesEntity) {
         return findByCriteria(String.format("WHERE id=%d",id),userTypesEntity).get(0);
     }
+
+    public boolean findByLogin(String username, String password, UserTypesEntity userTypesEntity) {
+        try {
+            ResultSet rs = getConnection()
+                    .createStatement()
+                    .executeQuery(String.format("SELECT id FROM users WHERE username='%s' AND password='%s'",username,password));
+            if(rs.next()) {
+                return true;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }
