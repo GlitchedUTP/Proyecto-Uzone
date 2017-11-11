@@ -10,16 +10,6 @@
     <sb:head/>
   </head>
   <body>
-<<<<<<< HEAD
-
-  <s:form action="register" theme="bootstrap">
-      <s:submit value="Registrarse" cssClass="btn btn-danger"/>
-  </s:form>
-  <s:form action="login" theme="bootstrap">
-      <s:submit value="Iniciar sesion" cssClass="btn btn-login"/>
-  </s:form>
-  </body>
-=======
   <nav class="navbar navbar-inverse">
       <div class="container-fluid">
           <div class="navbar-header">
@@ -51,5 +41,4 @@
   </nav>
 <a href="Main.jsp">No Action</a>
 </body>
->>>>>>> 18ee6104e8135ccc2c667879420d58caef99ee34
 </html>

@@ -46,7 +46,7 @@ public class UZoneService {
     //UserType methods
     public List<UserType> findAllUserTypes() { return dataStore.findAllUserTypes(); }
 
-    //Information ethods
+    //Information methods
     public List<Information> findAllInformations() { return dataStore.findAllInformations(); }
 
     //User methods
@@ -56,5 +56,9 @@ public class UZoneService {
 
     public User findUserById(int id) {
         return dataStore.findUserById(id);
+    }
+
+    public boolean findUserByLogin(String username,String password) {
+        return dataStore.findUserByLogin(username,password);
     }
 }
