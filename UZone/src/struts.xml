@@ -10,9 +10,9 @@
         <action name="index">
             <result>index.jsp</result>
         </action>
-        <action name="loginaction" class="com.glitched.uzonewebprofile.actions.UserAction">
-            <result name="success">/successLogin.jsp</result>
-            <result name="error">/errorLogin.jsp</result>
+        <action name="loginaction" class="com.glitched.uzonewebprofile.actions.UserAction" method="execute">
+            <result name="success">Main.jsp</result>
+            <result name="error">errorLogin.jsp</result>
             <result name="input">index.jsp</result>
         </action>
         <action name="dataUser" class="com.glitched.uzonewebprofile.actions.PostAction">
@@ -24,9 +24,6 @@
         </action>
         <action name="dataEvent" class="com.glitched.uzonewebprofile.actions.PostAction">
             <result name="success">index.jsp</result>
-        </action>
-        <action name="login">
-            <result>loginPage.jsp</result>
         </action>
     </package>
 </struts>

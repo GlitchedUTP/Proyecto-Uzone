@@ -28,17 +28,16 @@
                   <li><a href="#">Mensajes</a></li>
               </ul>--%>
               <div class="navbar-right">
-              <s:form theme="simple" action="loginaction">
-                  <s:textfield id="username" name="model.username" placeholder="Username"/>
-                  <s:password id="password" name="model.password" placeholder="Password"/>
-                  <s:submit value="Iniciar Sesion" cssClass="btn btn-login"/>
-                  <a href="userRegister.jsp"><s:label cssClass="btn btn-primary" value="Registrarse"/></a>
-                  <a href="#">Olvido su contraseña</a>
-              </s:form>
+                  <s:form theme="simple" action="loginaction">
+                      <s:textfield id="username" name="model.username" placeholder="Username"/>
+                      <s:password id="password" name="model.password" placeholder="Password"/>
+                      <s:submit value="Iniciar Sesion" cssClass="btn btn-login"/>
+                      <a href="userRegister.jsp"><s:label cssClass="btn btn-primary" value="Registrarse"/></a>
+                      <a href="#">Olvido su contraseña</a>
+                  </s:form>
               </div>
           </div>
       </div>
   </nav>
-<a href="Main.jsp">No Action</a>
 </body>
 </html>
