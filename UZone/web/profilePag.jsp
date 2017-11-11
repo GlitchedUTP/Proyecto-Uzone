@@ -152,29 +152,29 @@
                 <div class="form-group">
                     <label>Sexo</label>
                     <div class="radio">
-                        <label><input type="radio" name="optradio1">Hombre</label>
+                        <label><input type="radio" name="optradio">Hombre</label>
                     </div>
                     <div class="radio">
-                        <label><input type="radio" name="optradio2">Mujer</label>
+                        <label><input type="radio" name="optradio">Mujer</label>
                     </div>
                 <div class="form-group">
                     <label >Cambiar Foto</label>
-                    <input type="file" id="textarea1">
+                    <input type="file" id="ejemplo_archivo_1">
 
                 </div>
                     <div class="form-group">
                         <label >Sobre ti</label>
-                        <textarea class="form-control" rows="5" id="comment1"></textarea>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
 
                     </div>
                     <div class="form-group">
                         <label >Habilidades y Conocimientos</label>
-                        <textarea class="form-control" rows="5" id="comment2"></textarea>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
 
                     </div>
                     <div class="form-group">
                         <label >Ocupación</label>
-                        <input type="file" id="textarea2">
+                        <input type="file" id="ejemplo_archivo_1">
 
                     </div>
                     <div class="form-group">
