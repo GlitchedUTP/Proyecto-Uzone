@@ -46,7 +46,7 @@
 
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Bienvenido <s:property value="username"/></a></li>
+                <li><a href="profilePage.jsp/profile"><s:property value="model.username"/></a></li>
                 <li><a href="#">Preferencias</a></li>
                 <li><a href="#">Mensaje</a></li>
                 <li><a href="#">Cerrar sesión</a></li>
@@ -153,7 +153,6 @@
                 <ul class="list">
                     <li><a href="#">Facebook</a></li>
                     <li><a href="#">Contáctanos</a></li>
-
                 </ul>
             </div>
         </div>
