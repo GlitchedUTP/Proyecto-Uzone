@@ -119,6 +119,11 @@ public class UZoneDataStore {
         return getUsersEntity().findById(id,getUserTypesEntity());
     }
 
+    public User findUserByUsername(String username) {
+        if(connection==null) return null;
+        return getUsersEntity().findByUsername(username,getUserTypesEntity());
+    }
+
     public boolean findUserByLogin(String username,String password) {
         if(connection==null) return false;
         return getUsersEntity().findByLogin(username,password,getUserTypesEntity());

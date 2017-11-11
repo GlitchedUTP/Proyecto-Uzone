@@ -24,7 +24,6 @@ public class UZoneService {
         } catch(SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     public Connection getConnection() {
@@ -56,6 +55,10 @@ public class UZoneService {
 
     public User findUserById(int id) {
         return dataStore.findUserById(id);
+    }
+
+    public User findUserByUsername(String username) {
+        return dataStore.findUserByUsername(username);
     }
 
     public boolean findUserByLogin(String username,String password) {

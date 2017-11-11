@@ -41,6 +41,10 @@ public class UsersEntity extends BaseEntity{
         return findByCriteria(String.format("WHERE id=%d",id),userTypesEntity).get(0);
     }
 
+    public User findByUsername(String username, UserTypesEntity userTypesEntity) {
+        return findByCriteria(String.format("WHERE username='%s'",username),userTypesEntity).get(0);
+    }
+
     public boolean findByLogin(String username, String password, UserTypesEntity userTypesEntity) {
         try {
             ResultSet rs = getConnection()
