@@ -49,23 +49,61 @@
         </div>
     </div>
 </nav>
+<center>
+    <div>
 <div class="container">
+    <p class="navbar-text">Video 1</p>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">Video 1</div>
-        <div class="panel-body">
-            Publicado por Usuario el día d/m/a
-            <div class="col-md-8">
-                <div class="vid">
-                    <iframe width="560" height="315" src="//www.youtube.com/embed/ac7KhViaVqc" allowfullscreen=""></iframe>
-                </div>
+</div>
 
+<div class="container">
+    <p class="navbar-text">Publicado por Usuario el dìa d/m/a</p>
+
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h4>Lorem Ipsum</h4>
+            <p>
+                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+            </p>
+        </div>
+        <div class="col-md-8">
+            <div class="vid">
+                <iframe width="560" height="315" src="//www.youtube.com/embed/ac7KhViaVqc" allowfullscreen=""></iframe>
             </div>
         </div>
     </div>
-
-
-
 </div>
+    </div>
+    <div>
+        <div class="container">
+            <p class="navbar-text">Video 2</p>
+
+        </div>
+
+        <div class="container">
+            <p class="navbar-text">Publicado por Usuario el dìa d/m/a</p>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h4>Lorem Ipsum</h4>
+                    <p>
+                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                    </p>
+                </div>
+                <div class="col-md-8">
+                    <div class="vid">
+                        <iframe width="560" height="315" src="//www.youtube.com/embed/ac7KhViaVqc" allowfullscreen=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</center>
 </body>
 </html>
