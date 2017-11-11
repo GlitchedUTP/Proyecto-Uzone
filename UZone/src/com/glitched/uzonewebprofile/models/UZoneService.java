@@ -61,4 +61,12 @@ public class UZoneService {
     public boolean findUserByLogin(String username,String password) {
         return dataStore.findUserByLogin(username,password);
     }
+
+    public boolean createUser(User user) {
+        return dataStore.createUser(user);
+    }
+
+    public boolean createUser(String username,String password,String name,String lastName,String email,String birthDate,char genre,int id) {
+        return dataStore.createUser(username,password,name,lastName,email,birthDate,genre,id);
+    }
 }

@@ -123,4 +123,14 @@ public class UZoneDataStore {
         if(connection==null) return false;
         return getUsersEntity().findByLogin(username,password,getUserTypesEntity());
     }
+
+    public boolean createUser(User user) {
+        if(connection==null) return false;
+        return getUsersEntity().create(user);
+    }
+
+    public boolean createUser(String username,String password,String name,String lastName,String email,String birthDate,char genre,int id) {
+        if(connection==null) return false;
+        return getUsersEntity().create(username,password,name,lastName,email,birthDate,genre,getUserTypesEntity().findById(id));
+    }
 }

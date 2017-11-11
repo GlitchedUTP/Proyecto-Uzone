@@ -1,30 +1,40 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Registrar Usuario</title>
+    <title>Registrarte!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <sb:head/>
 </head>
 <body>
 <h3>Te tomara solo un par de minutos registrarte</h3>
 
-<s:form action="dataUser">
-    <s:textfield id="email" name="email" placeholder="Correo Electronico"/> <!-- texfield para el correo , no hay labels -->
-    <s:textfield id="Name" name="Name" placeholder="Nombres" />
-    <s:textfield id="LastName" name="Lastname" placeholder="Apellidos" />
-    <s:textfield id="Username" name="Username" placeholder="Nombre de Usuario" />
-    <s:textfield id="Password" name="Password" placeholder="Contraseña" type="password"/>
-    <s:label for="Birthdate" value="Fecha de Nacimiento"/>
-    <s:date name="Birthdate"/>
-    <s:label value="Selecciona tu genero"/>
-    <s:select   headerKey="-1" headerValue="--- Select ---"
-                list="#{'M':'Masculino', 'F':'Femenino'}"
-                name="genre" />
-    <s:label for="UserType" value="¿Eres artista o Worker?"/>
-    <s:select   headerKey="-1" headerValue="--- Select ---"
-                list="#{'1':'Artista', '2':'Dueño de un local'}"
-                name="usertype" />
-    <div> Al registrarte aceptas nuestras Condiciones y nuestra Política de privacidad</div>
-    <s:submit value="Registrarse"/>
+<s:form action="register" theme="bootstrap" cssClass="well form-vertical">
+    <s:textfield id="username" name="model.username" label="Nombre de Usuario" placeholder="e.g. Usuario123456" />
+    <s:textfield id="password" name="model.password" label="Contraseña" placeholder="e.g. 12345" type="password"/>
+    <s:textfield id="password2" label="Repita su contraseña" placeholder="e.g. 12345" type="password"
+                 onchange="this.setCustomValidity(this.value!=password.value ? 'Por favor ingrese la misma contraseña' : '');"/>
+    <s:textfield id="email" name="model.email" label="Correo Electronico" placeholder="e.g. usuario@gmail.com"/>
+    <s:textfield id="name" name="model.name" label="Nombre" placeholder="e.g. Cristian Nicolas" />
+    <s:textfield id="lastName" name="model.lastName" label="Apellido" placeholder="e.g. Cordova Puglianini" />
+    <s:textfield id="birthDate" name="model.birthDate" label="Fecha de Nacimiento" placeholder="e.g. 25-JAN-1999" type="date"/>
+    <s:select id="genre"
+              name="model.genre"
+              label="Selecciona tu genero"
+              headerKey="-1"
+              headerValue="--- Select ---"
+              list="#{'M':'Masculino', 'F':'Femenino'}"/>
+    <s:select id="userType"
+              name="model.userType.id"
+              label="¿Eres Artista o Dueño de un local?"
+              headerKey="-1"
+              headerValue="--- Select ---"
+              list="#{'1':'Artista', '2':'Dueño de un local'}"/>
+    <s:submit value="Registrarse" cssClass="bttn btn-primary"/>
 </s:form>
+<div> *Al registrarte aceptas nuestras Condiciones y nuestra Política de privacidad</div>
 </body>
 </html>

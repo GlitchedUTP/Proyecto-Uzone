@@ -45,7 +45,7 @@ public class UsersEntity extends BaseEntity{
         try {
             ResultSet rs = getConnection()
                     .createStatement()
-                    .executeQuery(String.format("SELECT id FROM users WHERE username='%s' AND password='%s'",username,password));
+                    .executeQuery(String.format("SELECT id FROM %s WHERE username='%s' AND password='%s'",getTableName(),username,password));
             if(rs.next()) {
                 return true;
             }
@@ -53,5 +53,26 @@ public class UsersEntity extends BaseEntity{
             e.printStackTrace();
         }
         return false;
+    }
+
+    public boolean create(User user) {
+        return executeUpdate(String.format(
+                "INSERT INTO %s(username,password,name,lastname,email,birthdate,genre,phone,picture_url,user_type_id)"
+                .concat("VALUES('%s','%s','%s','%s','%s',STR_TO_DATE('%s','%%d-%%M-%%Y'),'%s',NULL,NULL,%d)"),
+                getTableName(),user.getUsername(),user.getPassword(),user.getName(),user.getLastName(),user.getEmail(),
+                user.getBirthDate(),user.getGenre(),user.getUserType().getId()));
+    }
+
+    public boolean create(String username,String password,String name,String lastName,String email,String birthDate,char genre,UserType userType) {
+        User user=new User();
+        user.setUsername(username);
+        user.setPassword(password);
+        user.setName(name);
+        user.setLastName(lastName);
+        user.setEmail(email);
+        user.setBirthDate(birthDate);
+        user.setGenre(genre);
+        user.setUserType(userType);
+        return create(user);
     }
 }

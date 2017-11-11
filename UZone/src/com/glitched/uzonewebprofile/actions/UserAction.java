@@ -20,6 +20,8 @@ public class UserAction  extends ActionSupport implements ModelDriven<User> {
     }
 
     public String register() {
-        return SUCCESS;
+        UZoneService service=new UZoneService();
+        if(service.createUser(user)) return SUCCESS;
+        else return INPUT;
     }
 }
