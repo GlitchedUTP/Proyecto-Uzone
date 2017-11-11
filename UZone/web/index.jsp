@@ -39,56 +39,196 @@
           </div>
       </div>
   </nav>
-  <div class="container">
-      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <section class="section-white">
+      <div class="container">
 
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+              </ol>
 
-          <div class="carousel-inner">
-
-              <div class="item active">
-                  <img src="http://placehold.it/1200x400/cccccc/ffffff">
-                  <div class="carousel-caption">
-                      <h3>Usuario 1</h3>
-                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <a href="" target="_blank" class="label label-danger">Ver Perfil</a></p>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                  <div class="item active">
+                      <img src="http://placehold.it/800x400" alt="...">
+                      <div class="carousel-caption">
+                          <h2>Heading</h2>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="http://placehold.it/800x400" alt="...">
+                      <div class="carousel-caption">
+                          <h2>Heading</h2>
+                      </div>
+                  </div>
+                  <div class="item">
+                      <img src="http://placehold.it/800x400" alt="...">
+                      <div class="carousel-caption">
+                          <h2>Heading</h2>
+                      </div>
                   </div>
               </div>
 
-              <div class="item">
-                  <img src="http://placehold.it/1200x400/999999/cccccc">
-                  <div class="carousel-caption">
-                      <h3>Usuario 2</h3>
-                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <a href="" target="_blank" class="label label-danger">Ver Perfil</a></p>
-                  </div>
-              </div>
-
-              <div class="item">
-                  <img src="http://placehold.it/1200x400/dddddd/333333">
-                  <div class="carousel-caption">
-                      <h3>Usuario 3</h3>
-                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. <a href="" target="_blank" class="label label-danger">Ver Perfil</a></p>
-                  </div>
-              </div>
-
-              <div class="item">
-                  <img src="http://placehold.it/1200x400/999999/cccccc">
-                  <div class="carousel-caption">
-                      <h3>Headline</h3>
-                      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                  </div>
-              </div>
-
+              <!-- Controls -->
+              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+              </a>
+              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+              </a>
           </div>
 
+      </div>
+  </section>
+  <div class="container">
+      <div class="row">
+          <h3>
+              Buscar Video
+          </h3>
+          <form class="navbar-form navbar-left">
+              <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Buscar">
+              </div>
+              <button type="submit" class="btn btn-default">Enviar</button>
+          </form>
 
-          <ul class="nav nav-pills nav-justified">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"><a href="#">About<small>Lorem ipsum dolor sit</small></a></li>
-              <li data-target="#myCarousel" data-slide-to="1"><a href="#">Projects<small>Lorem ipsum dolor sit</small></a></li>
-              <li data-target="#myCarousel" data-slide-to="2"><a href="#">Portfolio<small>Lorem ipsum dolor sit</small></a></li>
-              <li data-target="#myCarousel" data-slide-to="3"><a href="#">Services<small>Lorem ipsum dolor sit</small></a></li>
-          </ul>
 
 
+
+          <hr>
       </div>
   </div>
-</body>
+
+
+  <div class="container">
+      <div class="row">
+          <h1>Videos Recomendados</h1>
+
+      </div>
+      <div class="row">
+          <div class="col-md-5 col-lg-5">
+              <!-- artigo em destaque -->
+              <div class="featured-article">
+                  <a href="#">
+                      <div class="embed-responsive embed-responsive-16by9">
+                          <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
+                      </div>
+                  </a>
+                  <div class="block-title">
+                      <h2>Publicado por:</h2>
+                      <p class="by-author"><small>Usuario</small></p>
+                  </div>
+              </div>
+              <!-- /.featured-article -->
+          </div>
+          <div class="col-md-7 col-lg-7">
+              <ul class="media-list main-list">
+                  <li class="media">
+                      <a class="pull-left" href="#">
+                          <img class="media-object" src="http://placehold.it/150x90" alt="...">
+                      </a>
+                      <div class="media-body">
+                          <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
+                          <p class="by-author">By Jhon Doe</p>
+                      </div>
+                  </li>
+                  <li class="media">
+                      <a class="pull-left" href="#">
+                          <img class="media-object" src="http://placehold.it/150x90" alt="...">
+                      </a>
+                      <div class="media-body">
+                          <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
+                          <p class="by-author">By Jhon Doe</p>
+                      </div>
+                  </li>
+                  <li class="media">
+                      <a class="pull-left" href="#">
+                          <img class="media-object" src="http://placehold.it/150x90" alt="...">
+                      </a>
+                      <div class="media-body">
+                          <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
+                          <p class="by-author">By Jhon Doe</p>
+                      </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </body>
+<style>
+    .img-responsive,
+    .thumbnail > img,
+    .thumbnail a > img,
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    }
+
+
+
+    .carousel-inner {
+    border-radius: 15px;
+    }
+
+    .carousel-caption {
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 0 0 10px 25px;
+    color: #fff;
+    text-align: left;
+    }
+
+    .carousel-indicators {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    margin: 0;
+    padding: 0 25px 25px 0;
+    text-align: right;
+    }
+
+    .carousel-control.left,
+    .carousel-control.right {
+    background-image: none;
+    }
+
+
+
+
+    .section-white {
+    padding: 10px 0;
+    }
+
+    .section-white {
+    background-color: #fff;
+    color: #555;
+    }
+
+    @media screen and (min-width: 768px) {
+
+    .section-white {
+    padding: 1.5em 0;
+    }
+
+    }
+
+    @media screen and (min-width: 992px) {
+
+    .container {
+    max-width: 930px;
+    }
+
+    }
+</style>
 </html>
