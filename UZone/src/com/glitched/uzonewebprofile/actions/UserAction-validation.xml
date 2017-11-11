@@ -1,0 +1,24 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+    <field name="model.username">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Campo de nombre de usuario vacio</message>
+        </field-validator>
+    </field>
+    <field name="model.password">
+        <field-validator type="requiredstring">
+            <param name="trim">true</param>
+            <message>Campo de contraseña vacio</message>
+        </field-validator>
+        <field-validator type="stringlength">
+            <param name="minLength">4</param>
+            <param name="trim">true</param>
+            <message>
+               Contraseña no valida
+            </message>
+        </field-validator>
+    </field>
+</validators>
