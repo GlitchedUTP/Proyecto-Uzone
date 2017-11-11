@@ -8,6 +8,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -29,10 +30,18 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Aportaciones</a></li>
+                <li><a href="#">Mensajes</a></li>
+            </ul>
+            <form class="navbar-form navbar-left">
 
 
+            </form>
             <ul class="nav navbar-nav navbar-right">
-                <li> <a href="#">Hola Usuario</a></li>
+                <li><a href="#">Bienvenido usuario</a></li>
                 <li><a href="#">Preferencias</a></li>
                 <li><a href="#">Mensaje</a></li>
                 <li><a href="#">Cerrar sesión</a></li>
