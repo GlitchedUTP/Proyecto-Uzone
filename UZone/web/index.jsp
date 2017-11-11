@@ -28,7 +28,7 @@
                   <li><a href="#">Mensajes</a></li>
               </ul>--%>
               <div class="navbar-right">
-                  <s:form theme="simple" action="loginaction">
+                  <s:form theme="simple" action="login">
                       <s:textfield id="username" name="model.username" placeholder="Username"/>
                       <s:password id="password" name="model.password" placeholder="Password"/>
                       <s:submit value="Iniciar Sesion" cssClass="btn btn-login"/>

@@ -5,7 +5,7 @@ import com.glitched.uzonewebprofile.models.User;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
 
-public class UserAction  extends ActionSupport implements ModelDriven<User> {
+public class LoginAction extends ActionSupport implements ModelDriven<User> {
     private User user= new User();
 
     @Override
@@ -14,13 +14,9 @@ public class UserAction  extends ActionSupport implements ModelDriven<User> {
         return user;
     }
 
-    public String execute() {
-        return SUCCESS;
-    }
-
-    public String register() {
+    public String login() {
         UZoneService service=new UZoneService();
-        if(service.createUser(user)) return SUCCESS;
-        else return INPUT;
+        if(service.findUserByLogin(user.getUsername(),user.getPassword())) return SUCCESS;
+        else return ERROR;
     }
 }

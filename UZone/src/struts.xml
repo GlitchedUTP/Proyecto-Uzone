@@ -10,9 +10,9 @@
         <action name="index">
             <result>index.jsp</result>
         </action>
-        <action name="loginaction" class="com.glitched.uzonewebprofile.actions.UserAction" method="execute">
+        <action name="login" class="com.glitched.uzonewebprofile.actions.LoginAction" method="login">
             <result name="success">Main.jsp</result>
-            <result name="error">errorLogin.jsp</result>
+            <result name="error">index.jsp</result>
             <result name="input">index.jsp</result>
         </action>
         <action name="dataUser" class="com.glitched.uzonewebprofile.actions.PostAction">
