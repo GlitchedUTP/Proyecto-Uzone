@@ -8,11 +8,12 @@
     <sb:head/>
   </head>
   <body>
+
   <s:form action="register" theme="bootstrap">
       <s:submit value="Registrarse" cssClass="btn btn-danger"/>
   </s:form>
   <s:form action="login" theme="bootstrap">
-      <s:submit value="Log in" cssClass="btn btn-login"/>
+      <s:submit value="Iniciar sesion" cssClass="btn btn-login"/>
   </s:form>
   </body>
 </html>

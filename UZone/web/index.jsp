@@ -8,6 +8,7 @@
     <sb:head/>
   </head>
   <body>
+
   <s:form action="register" theme="bootstrap">
       <s:submit value="Registrarse" cssClass="btn btn-danger"/>
   </s:form>
