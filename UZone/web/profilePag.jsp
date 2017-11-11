@@ -82,19 +82,107 @@
 
                 </div>
                 <div class="form-group">
-                    <label >Adjuntar un archivo</label>
+                    <label>Ciudad / Distrito</label>
+                    <input class="form-control" placeholder="Ingrese">
+
+                </div>
+                <div class="form-group">
+                    <label>Fecha de Nacimiento</label>
+                    <div><label for="sel1">Día</label></div>
+
+                        <select class="form-control" id="sel1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                            <option>12</option>
+                            <option>13</option>
+                            <option>14</option>
+                            <option>15</option>
+                            <option>16</option>
+                            <option>17</option>
+                            <option>18</option>
+                            <option>19</option>
+                            <option>20</option>
+                            <option>21</option>
+                            <option>22</option>
+                            <option>23</option>
+                            <option>24</option>
+                            <option>25</option>
+                            <option>26</option>
+                            <option>27</option>
+                            <option>28</option>
+                            <option>29</option>
+                            <option>30</option>
+                            <option>31</option>
+
+
+
+
+                        </select>
+
+
+                        <label for="sel1">Mes</label>
+                        <select class="form-control" id="sel1">
+                            <option>Enero</option>
+                            <option>Febrero</option>
+                            <option>Marzo</option>
+                            <option>Abril</option>
+                            <option>Mayo</option>
+                            <option>Junio</option>
+                            <option>Julio</option>
+                            <option>Agosto</option>
+                            <option>Setiembre</option>
+                            <option>Octubre</option>
+                            <option>Noviembre</option>
+                            <option>Diciembre</option>
+
+                        </select>
+
+                    <label>Año</label>
+                    <input class="form-control" placeholder="yyyy">
+                </div>
+
+                <div class="form-group">
+                    <label>Sexo</label>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Hombre</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Mujer</label>
+                    </div>
+                <div class="form-group">
+                    <label >Cambiar Foto</label>
                     <input type="file" id="ejemplo_archivo_1">
 
                 </div>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">Hombre</a></li>
-                        <li><a href="#">Mujer</a></li>
+                    <div class="form-group">
+                        <label >Sobre ti</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
 
-                    </ul>
-                </div>
+                    </div>
+                    <div class="form-group">
+                        <label >Habilidades y Conocimientos</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+
+                    </div>
+                    <div class="form-group">
+                        <label >Ocupación</label>
+                        <input type="file" id="ejemplo_archivo_1">
+
+                    </div>
+                    <div class="form-group">
+                        <label>Ocupación </label>
+                        <input class="form-control" placeholder="">
+
+                    </div>
+
                 <button type="submit" class="btn btn-default">Guardar</button>
             </form>
         </div>
