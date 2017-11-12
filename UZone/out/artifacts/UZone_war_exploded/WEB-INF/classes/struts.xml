@@ -5,25 +5,25 @@
         "http://struts.apache.org/dtds/struts-2.5.dtd">
 
 <struts>
-    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
     <package name="default" extends="struts-default">
         <action name="index">
             <result>index.jsp</result>
         </action>
+        <action name="loginaction" class="com.glitched.uzonewebprofile.actions.UserAction">
+            <result name="success">/successLogin.jsp</result>
+            <result name="error">/errorLogin.jsp</result>
+        </action>
         <action name="dataUser" class="com.glitched.uzonewebprofile.actions.PostAction">
             <result name="success">index.jsp</result>
         </action>
-        <action name="register" class="com.glitched.uzonewebprofile.actions.UserAction" method="register">
-            <result name="success">index.jsp</result>
-            <result name="input">userRegister.jsp</result>
+        <action name="register">
+            <result>userRegister.jsp</result>
         </action>
         <action name="dataEvent" class="com.glitched.uzonewebprofile.actions.PostAction">
             <result name="success">index.jsp</result>
         </action>
-        <action name="login" class="com.glitched.uzonewebprofile.actions.LoginAction" method="execute">
-            <result name="success">Main.jsp</result>
-            <result name="error">index.jsp</result>
-            <result name="input">index.jsp</result>
+        <action name="login">
+            <result>loginPage.jsp</result>
         </action>
     </package>
 </struts>

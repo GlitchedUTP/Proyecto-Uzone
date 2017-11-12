@@ -46,7 +46,7 @@
 
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Bienvenido <s:property value="username"/></a></li>
+                <li><a href="#">Bienvenido usuario</a></li>
                 <li><a href="#">Preferencias</a></li>
                 <li><a href="#">Mensaje</a></li>
                 <li><a href="#">Cerrar sesión</a></li>
