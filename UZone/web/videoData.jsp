@@ -30,12 +30,12 @@
 
                 </div>
                 <div class="form-group">
-                    <label>Product Description: </label>
+                    <label>Descripcion: </label>
                     <s:property value="description"/>
 
                 </div>
                 <div class="form-group">
-                    <label>Product Price: </label>
+                    <label>URL: </label>
                     <s:property value="url"/>
 
                 </div>
