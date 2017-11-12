@@ -137,9 +137,6 @@ public class UZoneDataStore {
         if(connection==null) return false;
         return getUsersEntity().create(username,password,name,lastName,email,birthDate,genre,getUserTypesEntity().findById(id));
     }
-    public boolean createEvent(Event event) {
-        if(connection==null) return false;
-        return getUsersEntity().create(user);
-    }
+
 
 }
