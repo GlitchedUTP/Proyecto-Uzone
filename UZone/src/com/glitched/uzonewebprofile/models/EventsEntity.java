@@ -18,7 +18,7 @@ public class EventsEntity extends BaseEntity {
     }
 
     public List<Event> findByCriteria (String criteria, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
-        try {
+            try {
             ResultSet rs = getConnection()
                     .createStatement()
                     .executeQuery(getBaseStatement().concat(criteria));
@@ -39,5 +39,20 @@ public class EventsEntity extends BaseEntity {
 
     public Event findById(int id, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         return findByCriteria(String.format("WHERE id= %d",id),usersEntity,userTypesEntity).get(0);
+    }
+    /* public Event findBypictureUrl(String pictureUrl,  UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        return findByCriteria(String.format("WHERE pictureUrl='%s'",pictureUrl),usersEntity,userTypesEntity).get(0);
+    }
+    public Event date(String pictureUrl,  UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        //return findByCriteria(String.format("WHERE date='%s,%s'",date()),usersEntity,userTypesEntity).get(0);
+    public Event findBydateLimit(String pictureUrl,  UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        return findByCriteria(String.format("WHERE pictureUrl='%s'",pictureUrl),usersEntity,userTypesEntity).get(0);
+    } */
+    public boolean create(Event event) {
+        return executeUpdate(String.format(
+                "INSERT INTO %s(id,pictureUrl,date,datelimit,description,category,salary,user)"
+                        .concat("VALUES('%d','%s',STR_TO_DATE('%%d-%%M-%%Y'),STR_TO_DATE('%%d-%%M-%%Y'),'%s','%d','%s',%s)"),
+                getTableName(),event.getId(),event.getPictureUrl(),event.getDate(),event.getDateLimit(),event.getDescription(),
+                event.getCategory(),event.getSalary(),event.getUser()));
     }
 }
