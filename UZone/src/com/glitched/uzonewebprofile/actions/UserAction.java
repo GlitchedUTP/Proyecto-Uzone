@@ -15,10 +15,6 @@ public class UserAction  extends ActionSupport implements ModelDriven<User> {
     }
 
     public String execute() {
-        return SUCCESS;
-    }
-
-    public String register() {
         UZoneService service=new UZoneService();
         if(service.createUser(user)) return SUCCESS;
         else return INPUT;
