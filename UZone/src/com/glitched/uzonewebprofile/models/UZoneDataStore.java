@@ -138,5 +138,9 @@ public class UZoneDataStore {
         return getUsersEntity().create(username,password,name,lastName,email,birthDate,genre,getUserTypesEntity().findById(id));
     }
 
+    public boolean createVideo(Post post) {
+        if(connection==null) return false;
+        return getPostsEntity().create(post);
+    }
 
 }
