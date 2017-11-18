@@ -73,6 +73,11 @@ public class UZoneService {
         return dataStore.createUser(username,password,name,lastName,email,birthDate,genre,id);
     }
 
+    //Posts methods
+    public List<Post> findLastest() {
+        return dataStore.findLastest();
+    }
+
     public boolean createVideo(Post post) {
         return dataStore.createVideo(post);
     }

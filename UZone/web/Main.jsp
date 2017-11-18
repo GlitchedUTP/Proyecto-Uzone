@@ -1,19 +1,10 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Alex
-  Date: 10/11/2017
-  Time: 09:56 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -68,32 +59,31 @@
 </ul>
 </div>
 <center>
+<s:iterator value="posts" var="post">
     <div class="container">
-        <div class="container">
-        <p class="navbar-text">Video 1</p>
+    <div class="container">
+        <p class="navbar-text">Publicado por <s:property value="user.username"/></p>
+    </div>
 
-</div>
-
-<div class="container">
-    <p class="navbar-text">Publicado por Usuario el dìa d/m/a</p>
-
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <h4>Lorem Ipsum</h4>
-            <p>
-                Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-        </div>
-        <div class="col-md-8">
-            <div class="vid">
-                <iframe width="560" height="315" src="//https://www.youtube.com/watch?v=WDbp2zoaEZg" allowfullscreen=""></iframe>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h4><s:property value="title"/></h4>
+                <p>
+                    <s:property value="description"/>
+                    <s:property value="url"/>
+                    <s:property value="%{#post.url}"/>
+                </p>
+            </div>
+            <div class="col-md-8">
+                <div class="vid">
+                    <iframe width="560" height="315" src=" https://www.youtube.com/embed/IiksAKkTCSo" allowfullscreen=""></iframe>
+                </div>
             </div>
         </div>
     </div>
-</div>
+</s:iterator>
+
     </div>
     <div>
         <div class="container">
@@ -123,12 +113,16 @@
         </div>
     </div>
 </center>
-<tr><tr>
-<tr>
-<tr>
-<tr>
-
-
+<%--<s:property value="trying"/>
+<s:iterator value="posts" var="post">
+    <s:property value="title" /><p>a</p>
+    <s:property value="#post.title" /><p>c</p>
+    <s:property value="#post.getTitle" /><p>e</p>
+    <s:property value="%{title}" /><p>j</p>
+    <s:property value="%{#post.title}" /><p>l</p>
+    <s:property value="%{#post.getTitle}" /><p>n</p></br>
+</s:iterator>
+   <%-- <div><s:property value="posts[0].title"/></div>--%>
 <footer class="footer-bs">
     <div class="row">
         <div class="col-md-3 footer-brand animated fadeInLeft">

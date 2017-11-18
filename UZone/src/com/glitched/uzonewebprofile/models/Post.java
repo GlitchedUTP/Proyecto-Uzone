@@ -53,7 +53,6 @@ public class Post {
         this.description = description;
     }
 
-
     public String getUrl() {
         return url;
     }
@@ -68,8 +67,9 @@ public class Post {
             post.setId(rs.getInt("id"));
             post.setUser(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
             post.setTitle(rs.getString("title"));
-            post.setTitle(rs.getString("description"));
+            post.setDescription(rs.getString("description"));
             post.setUrl(rs.getString("url"));
+            return post;
         } catch (SQLException e) {
             e.printStackTrace();
         }

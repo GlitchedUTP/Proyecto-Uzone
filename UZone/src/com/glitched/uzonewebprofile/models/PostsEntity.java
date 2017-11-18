@@ -42,18 +42,24 @@ public class PostsEntity extends BaseEntity{
     public Post findById (int id, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         return findByCriteria(String.format("WHERE id=%d",id),usersEntity,userTypesEntity).get(0);
     }
+
+    public List<Post> findLastest(UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        return findByCriteria(" ",usersEntity,userTypesEntity);
+    }
+
     public boolean create(Post post) {
         return executeUpdate(String.format(
                 "INSERT INTO %s(title,description,url)"
                         .concat("VALUES('%s','%s','%s')"),
                 getTableName(),post.getTitle(),post.getDescription(),post.getUrl()));
     }
-        public boolean create(String title, String description, String url) {
-            Post post = new Post();
-            post.setTitle(title);
-            post.setDescription(description);
-            post.setUrl(url);
-            return create(post);
-        }
-        }
+
+    public boolean create(String title, String description, String url) {
+        Post post = new Post();
+        post.setTitle(title);
+        post.setDescription(description);
+        post.setUrl(url);
+        return create(post);
+    }
+}
 
