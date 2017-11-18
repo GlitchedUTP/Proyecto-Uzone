@@ -46,7 +46,9 @@
 
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><s:a href="self"><s:property value="#session.username"/></s:a></li>
+                <li><s:a href="#">${sessionScope.userName} <s:property value="model.username"/></s:a></li>
+                <li><a href="#">Preferencias</a></li>
+                <li><a href="#">Mensaje</a></li>
                 <li><s:a href="logout">Cerrar sesión</s:a></li>
             </ul>
         </div>
@@ -56,9 +58,9 @@
     <ul class="nav nav-pills">
         <li role="presentation" class="active"><a href="#">Últimos</a></li>
         <li role="presentation"><a href="#">Màs Videos</a></li>
-        <li role="presentation"><a href="#">Enviar Video</a></li>
+        <li role="presentation"><a href="videoShare.jsp">Enviar Video</a></li>
         <li role="presentation"><a href="#">Más Votados</a></li>
-        <li role="presentation"><a href="#">Crea un evento</a></li>
+        <li role="presentation"><a href="PostEvent">Crea un evento</a></li>
         <form class="navbar-form navbar-left">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Buscar">
@@ -89,7 +91,7 @@
         </div>
         <div class="col-md-8">
             <div class="vid">
-                <iframe width="560" height="315" src="//www.youtube.com/embed/ac7KhViaVqc" allowfullscreen=""></iframe>
+                <iframe width="560" height="315" src="//https://www.youtube.com/watch?v=WDbp2zoaEZg" allowfullscreen=""></iframe>
             </div>
         </div>
     </div>
@@ -128,7 +130,7 @@
 <tr>
 <tr>
 
-</body>
+
 <footer class="footer-bs">
     <div class="row">
         <div class="col-md-3 footer-brand animated fadeInLeft">
@@ -158,6 +160,7 @@
 
     </div>
 </footer>
+</body>
 <style>
     .footer-bs {
         background-color: #000000;

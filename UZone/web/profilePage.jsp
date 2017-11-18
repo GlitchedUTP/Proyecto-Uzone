@@ -1,4 +1,10 @@
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: Alex
+  Date: 11/11/2017
+  Time: 02:33 AM
+  To change this template use File | Settings | File Templates.
+--%>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -39,8 +45,10 @@
 
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><s:a href="self"><s:property value="#session.username"/></s:a></li>
-                <li><s:a href="logout">Cerrar sesión</s:a></li>
+                <li><a href="#">Bienvenido usuario</a></li>
+                <li><a href="#">Preferencias</a></li>
+                <li><a href="#">Mensaje</a></li>
+                <li><a href="#">Cerrar sesión</a></li>
             </ul>
         </div>
     </div>
@@ -59,6 +67,7 @@
                     <s:if test="model.userType.id==1">Artista</s:if><s:if test="model.userType.id==2">Empresario</s:if> <s:property value="model.username"/>
                 </div>
 
+<<<<<<< HEAD
                 <s:textfield id="name" name="model.name" placeholder="Nombres" label="Nombres" disabled="true"/>
                 <s:textfield id="lastName" name="model.lastName" placeholder="Apellidos" label="Apellidos" disabled="true"/>
                 <s:textfield id="email" name="model.email" placeholder="Email" label="E-mail" disabled="true"/>
@@ -81,6 +90,68 @@
                 </ul>
                 </s:if>
             </s:form>
+=======
+                        </select>
+
+
+                        <label for="sel1">Mes</label>
+                        <select class="form-control" id="sel1">
+                            <option>Enero</option>
+                            <option>Febrero</option>
+                            <option>Marzo</option>
+                            <option>Abril</option>
+                            <option>Mayo</option>
+                            <option>Junio</option>
+                            <option>Julio</option>
+                            <option>Agosto</option>
+                            <option>Setiembre</option>
+                            <option>Octubre</option>
+                            <option>Noviembre</option>
+                            <option>Diciembre</option>
+
+                        </select>
+
+                    <label>Año</label>
+                    <input class="form-control" placeholder="yyyy">
+                </div>
+
+                <div class="form-group">
+                    <label>Sexo</label>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Hombre</label>
+                    </div>
+                    <div class="radio">
+                        <label><input type="radio" name="optradio">Mujer</label>
+                    </div>
+                <div class="form-group">
+                    <label >Cambiar Foto</label>
+                    <input type="file" id="ejemplo_archivo_1">
+
+                </div>
+                    <div class="form-group">
+                        <label >Sobre ti</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+
+                    </div>
+                    <div class="form-group">
+                        <label >Habilidades y Conocimientos</label>
+                        <textarea class="form-control" rows="5" id="comment"></textarea>
+
+                    </div>
+                    <div class="form-group">
+                        <label >Ocupación</label>
+                        <input type="file" id="ejemplo_archivo_1">
+
+                    </div>
+                    <div class="form-group">
+                        <label>Ocupación </label>
+                        <input class="form-control" placeholder="">
+
+                    </div>
+
+                <button type="submit" class="btn btn-default">Guardar</button>
+            </form>
+>>>>>>> 62a1fafbbc2c33151006234634f20b1751075cb8
         </div>
     </div>
 </div>

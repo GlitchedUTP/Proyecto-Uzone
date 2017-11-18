@@ -18,8 +18,7 @@ public class UZoneDataStore {
         this.connection = connection;
     }
 
-    public UZoneDataStore() {
-    }
+    public UZoneDataStore() {}
 
     public Connection getConnection() {
         return connection;
@@ -138,4 +137,6 @@ public class UZoneDataStore {
         if(connection==null) return false;
         return getUsersEntity().create(username,password,name,lastName,email,birthDate,genre,getUserTypesEntity().findById(id));
     }
+
+
 }

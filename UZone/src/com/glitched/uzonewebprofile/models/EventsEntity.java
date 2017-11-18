@@ -17,14 +17,14 @@ public class EventsEntity extends BaseEntity {
         super(connection, tableName);
     }
 
-    public List<Event> findByCriteria (String criteria, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
-            try {
+    public List<Event> findByCriteria(String criteria, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        try {
             ResultSet rs = getConnection()
                     .createStatement()
                     .executeQuery(getBaseStatement().concat(criteria));
             List<Event> events = new ArrayList<>();
             while (rs.next()) {
-                events.add(Event.from(rs,usersEntity,userTypesEntity));
+                events.add(Event.from(rs, usersEntity, userTypesEntity));
             }
             return events;
         } catch (SQLException e) {
@@ -34,12 +34,13 @@ public class EventsEntity extends BaseEntity {
     }
 
     public List<Event> findAll(UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
-        return findByCriteria("",usersEntity,userTypesEntity);
+        return findByCriteria("", usersEntity, userTypesEntity);
     }
 
     public Event findById(int id, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
-        return findByCriteria(String.format("WHERE id= %d",id),usersEntity,userTypesEntity).get(0);
+        return findByCriteria(String.format("WHERE id= %d", id), usersEntity, userTypesEntity).get(0);
     }
+
     /* public Event findBypictureUrl(String pictureUrl,  UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         return findByCriteria(String.format("WHERE pictureUrl='%s'",pictureUrl),usersEntity,userTypesEntity).get(0);
     }
@@ -50,9 +51,17 @@ public class EventsEntity extends BaseEntity {
     } */
     public boolean create(Event event) {
         return executeUpdate(String.format(
-                "INSERT INTO %s(id,pictureUrl,date,datelimit,description,category,salary,user)"
-                        .concat("VALUES('%d','%s',STR_TO_DATE('%%d-%%M-%%Y'),STR_TO_DATE('%%d-%%M-%%Y'),'%s','%d','%s',%s)"),
-                getTableName(),event.getId(),event.getPictureUrl(),event.getDate(),event.getDateLimit(),event.getDescription(),
-                event.getCategory(),event.getSalary(),event.getUser()));
+                "INSERT INTO %s(date,datelimit,description)"
+                        .concat("VALUES(STR_TO_DATE('%%d-%%M-%%Y'),STR_TO_DATE('%%d-%%M-%%Y'),'%s')"),
+                getTableName(), event.getDate(), event.getDateLimit(), event.getDescription()));
+    }
+
+    public boolean create(String date, String dateLimit, String description) {
+        Event event = new Event();
+        event.setDate(date);
+        event.setDateLimit(dateLimit);
+        event.setDescription(description);
+        return create(event);
     }
 }
+
