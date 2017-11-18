@@ -13,7 +13,7 @@ CREATE TABLE user_types (
 
 CREATE TABLE users (
 	id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT UNIQUE,
-	username VARCHAR(20) NOT NULL,
+	username VARCHAR(20) NOT NULL UNIQUE,
     password VARCHAR(20) NOT NULL,
     name VARCHAR(30),
     lastname VARCHAR(30),
@@ -123,12 +123,12 @@ VALUES (
     'M',
     '978066359',
     NULL,
-    4
+    1
 	);
     
 INSERT INTO users (username,password,name,lastname,email,birthdate,genre,phone,picture_url,user_type_id)
 VALUES (
-    'Potato',
+    'potato',
     'potato123',
     'Carlos',
     'Enrique',
@@ -137,11 +137,61 @@ VALUES (
     'F',
     '999069069',
     NULL,
-    3
+    2
 	);
     
+INSERT INTO posts (user_id,title,description,url) 
+VALUES (
+	1,
+    'CLICKBAIT 1',
+    'This is clickbait',
+    'https://www.youtube.com/embed/IiksAKkTCSo'
+	);
+    
+INSERT INTO posts (user_id,title,description,url) 
+VALUES (
+	2,
+    'CLICKBAIT 2',
+    'This is clickbait x2',
+    'https://www.youtube.com/watch?v=G3rc-2-jtr0'
+	);
+    
+INSERT INTO posts (user_id,title,description,url) 
+VALUES (
+	1,
+    'CLICKBAIT 3',
+    'This is clickbait x3',
+    'https://www.youtube.com/watch?v=_r7A1aTp74w'
+	);
+    
+INSERT INTO posts (user_id,title,description,url) 
+VALUES (
+	2,
+    'CLICKBAIT 4',
+    'This is clickbait x4',
+    'https://www.youtube.com/watch?v=F0c8U3x_vKM'
+	);
+    
+INSERT INTO posts (user_id,title,description,url) 
+VALUES (
+	1,
+    'CLICKBAIT 5',
+    'This is clickbait x5',
+    'https://www.youtube.com/watch?v=Oc08ZPc30Zs'
+	);
+    
+INSERT INTO posts (user_id,title,description,url) 
+VALUES (
+	2,
+    'CLICKBAIT 6',
+    'This is clickbait x6',
+    'https://www.youtube.com/watch?v=3gSwUwvP9Ao'
+	);
+    
+
 COMMIT;
 
 select * from users;
 
+select * from posts;
 
