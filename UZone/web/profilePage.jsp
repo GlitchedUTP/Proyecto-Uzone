@@ -12,11 +12,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
 <html>
 <head>
     <title>Perfil</title>
     <sb:head/>
-
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -34,11 +34,9 @@
 
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Aportaciones</a></li>
-                <li><a href="#">Mensajes</a></li>
+            <ul class="nav navbar-nav navbar-right">
+                <li><s:a href="self">${sessionScope.username}</s:a></li>
+                <li><s:a href="logout">Cerrar sesión</s:a></li>
             </ul>
             <form class="navbar-form navbar-left">
 
@@ -66,8 +64,6 @@
                 <div class="form-group">
                     <s:if test="model.userType.id==1">Artista</s:if><s:if test="model.userType.id==2">Empresario</s:if> <s:property value="model.username"/>
                 </div>
-
-<<<<<<< HEAD
                 <s:textfield id="name" name="model.name" placeholder="Nombres" label="Nombres" disabled="true"/>
                 <s:textfield id="lastName" name="model.lastName" placeholder="Apellidos" label="Apellidos" disabled="true"/>
                 <s:textfield id="email" name="model.email" placeholder="Email" label="E-mail" disabled="true"/>
@@ -90,68 +86,6 @@
                 </ul>
                 </s:if>
             </s:form>
-=======
-                        </select>
-
-
-                        <label for="sel1">Mes</label>
-                        <select class="form-control" id="sel1">
-                            <option>Enero</option>
-                            <option>Febrero</option>
-                            <option>Marzo</option>
-                            <option>Abril</option>
-                            <option>Mayo</option>
-                            <option>Junio</option>
-                            <option>Julio</option>
-                            <option>Agosto</option>
-                            <option>Setiembre</option>
-                            <option>Octubre</option>
-                            <option>Noviembre</option>
-                            <option>Diciembre</option>
-
-                        </select>
-
-                    <label>Año</label>
-                    <input class="form-control" placeholder="yyyy">
-                </div>
-
-                <div class="form-group">
-                    <label>Sexo</label>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">Hombre</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">Mujer</label>
-                    </div>
-                <div class="form-group">
-                    <label >Cambiar Foto</label>
-                    <input type="file" id="ejemplo_archivo_1">
-
-                </div>
-                    <div class="form-group">
-                        <label >Sobre ti</label>
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
-
-                    </div>
-                    <div class="form-group">
-                        <label >Habilidades y Conocimientos</label>
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
-
-                    </div>
-                    <div class="form-group">
-                        <label >Ocupación</label>
-                        <input type="file" id="ejemplo_archivo_1">
-
-                    </div>
-                    <div class="form-group">
-                        <label>Ocupación </label>
-                        <input class="form-control" placeholder="">
-
-                    </div>
-
-                <button type="submit" class="btn btn-default">Guardar</button>
-            </form>
->>>>>>> 62a1fafbbc2c33151006234634f20b1751075cb8
         </div>
     </div>
 </div>
