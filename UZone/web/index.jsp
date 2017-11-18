@@ -46,11 +46,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <div class="navbar-right">
                 <s:form theme="simple" action="login">
-                    <s:textfield id="username" name="model.username" placeholder="Username"/>
-                    <s:password id="password" name="model.password" placeholder="Password"/>
+                    <s:textfield id="username" name="model.username" placeholder="Nombre de usuario"/>
+                    <s:password id="password" name="model.password" placeholder="Contraseña"/>
                     <s:submit value="Iniciar Sesion" cssClass="btn btn-outline-secondary"/>
-                    <a href="userRegister.jsp"><s:label cssClass="btn btn-outline-info" value="Registrarse"/></a>
-                    <a href="#">¿olvido su contraseña?</a>
+                    <a href="userRegister.jsp"><s:label cssClass="btn btn-outline-secondary" value="Registrarse"/></a>
+                    <a href="#">¿Olvido su contraseña?</a>
                 </s:form>
             </div>
         </div>

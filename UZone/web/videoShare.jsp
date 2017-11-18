@@ -79,7 +79,6 @@
             <div>
                 <s:textarea id="exampleFormControlTextarea1" name="model.description" placeholder="Describe tu video" cssClass="form-control" rows="3"/>
             </div  class="form-group">
-
             <s:submit value="Enviar" cssClass="btn btn-outline-primary"/>
         </s:form>
     </div>

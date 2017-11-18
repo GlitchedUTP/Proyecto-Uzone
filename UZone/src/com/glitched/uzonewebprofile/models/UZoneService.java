@@ -82,5 +82,8 @@ public class UZoneService {
         return dataStore.createVideo(post);
     }
 
+    public boolean createVideo(String title,String description,String url,User user,int id) {
+        return dataStore.createVideo(title,description,url);
+    }
 
 }

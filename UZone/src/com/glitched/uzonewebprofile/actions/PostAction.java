@@ -21,6 +21,6 @@ public class PostAction extends ActionSupport implements ModelDriven<Post> {
         UZoneService service=new UZoneService();
         if(service.createVideo(post))
         return SUCCESS;
-        else return INPUT;
+        else return ERROR;
     }
 }

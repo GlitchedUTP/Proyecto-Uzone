@@ -20,7 +20,7 @@
             <result name="input">userRegister.jsp</result>
         </action>
         <action name="dataEvent" class="com.glitched.uzonewebprofile.actions.EventAction">
-            <result name="success">index.jsp</result>
+            <result name="success">main.jsp</result>
         </action>
         <action name="login" class="com.glitched.uzonewebprofile.actions.LoginAction" method="execute">
             <result name="success">Main.jsp</result>
@@ -37,8 +37,9 @@
             <result name="success">Main.jsp</result>
             <result name="error">index.jsp</result>
         </action>
-        <action name="videoshare" class="" method="execute">
-            <result name="success"></result>
+        <action name="videoshare" class="com.glitched.uzonewebprofile.actions.PostAction" method="execute">
+            <result name="success">Main.jsp</result>
+            <result name="error">videoShare.jsp</result>
         </action>
     </package>
 </struts>
