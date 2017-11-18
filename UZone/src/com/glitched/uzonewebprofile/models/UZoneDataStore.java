@@ -142,5 +142,8 @@ public class UZoneDataStore {
         if(connection==null) return false;
         return getPostsEntity().create(post);
     }
-
+    public boolean createVideo(String title,String description,String url) {
+        if(connection==null) return false;
+        return getPostsEntity().create(title,description,url);
+    }
 }

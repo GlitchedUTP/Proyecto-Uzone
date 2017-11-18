@@ -72,4 +72,10 @@ public class UZoneService {
     public boolean createUser(String username,String password,String name,String lastName,String email,String birthDate,char genre,int id) {
         return dataStore.createUser(username,password,name,lastName,email,birthDate,genre,id);
     }
+
+    public boolean createVideo(Post post) {
+        return dataStore.createVideo(post);
+    }
+
+
 }
