@@ -75,11 +75,11 @@
                           headerValue="--- Select ---"
                           list="#{'M':'Masculino', 'F':'Femenino'}"
                 disabled="true"/>
-                <s:textfield id="phone" name="model.phone" placeholder="Telefono" label="Telefono" disabled="true"/>
+                <s:textfield id="phone" name="model.phone" onchange="this.disabled=false;" placeholder="Telefono" label="Telefono" disabled="true"/>
                 <s:if test="model.username==#session.username"><s:file id="photoUrl" label="Cambiar foto" disabled="true"/>
                 <ul class="nav nav-pills">
-                    <button class="btn btn-success">Hacer Cambios</button>
-                    <button type="button" class="btn btn-success" disabled>Guardar Cambios</button>
+                    <button id="change" class="btn btn-success click" onchange="this.disabled=true;" onclick="disable()">Hacer Cambios</button>
+                    <s:submit id="save" class="btn btn-success" disabled="true">Guardar Cambios</s:submit>
                         <%--<button class="btn btn-primary" type="button">
                             Mensajes <span class="badge">4</span>
                         </button>--%>
