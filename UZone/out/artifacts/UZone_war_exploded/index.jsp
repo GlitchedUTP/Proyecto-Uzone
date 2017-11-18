@@ -1,234 +1,275 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: TORRES
+  Date: 18/11/2017
+  Time: 0:24
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-  <head>
-    <title>UZone</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <sb:head/>
-  </head>
-  <body>
-  <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                  <span class="sr-only">Toggle navigation</span>
-                  <%--<span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>--%>
-              </button>
-              <a class="navbar-brand" href="#">UZone</a>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              <%--<ul class="nav navbar-nav">
-                  <li><a href="#">Inicio</a></li>
-                  <li><a href="#">Aportaciones</a></li>
-                  <li><a href="#">Mensajes</a></li>
-              </ul>--%>
-              <div class="navbar-right">
-                  <s:form theme="simple" action="login">
-                      <s:textfield id="username" name="model.username" placeholder="Username"/>
-                      <s:password id="password" name="model.password" placeholder="Password"/>
-                      <s:submit value="Iniciar Sesion" cssClass="btn btn-login"/>
-                      <a href="userRegister.jsp"><s:label cssClass="btn btn-primary" value="Registrarse"/></a>
-                      <a href="#">Olvido su contraseña</a>
-                  </s:form>
-              </div>
-          </div>
-      </div>
-  </nav>
-  <section class="section-white">
-      <div class="container">
+<html lang="en">
+<head>
 
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-              <!-- Indicators -->
-              <ol class="carousel-indicators">
-                  <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                  <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-              </ol>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-              <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                  <div class="item active">
-                      <img src="http://placehold.it/800x400" alt="...">
-                      <div class="carousel-caption">
-                          <h2>Heading</h2>
-                      </div>
-                  </div>
-                  <div class="item">
-                      <img src="http://placehold.it/800x400" alt="...">
-                      <div class="carousel-caption">
-                          <h2>Heading</h2>
-                      </div>
-                  </div>
-                  <div class="item">
-                      <img src="http://placehold.it/800x400" alt="...">
-                      <div class="carousel-caption">
-                          <h2>Heading</h2>
-                      </div>
-                  </div>
-              </div>
+    <title>UZone La red social de artistas</title>
 
-              <!-- Controls -->
-              <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                  <span class="glyphicon glyphicon-chevron-left"></span>
-              </a>
-              <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                  <span class="glyphicon glyphicon-chevron-right"></span>
-              </a>
-          </div>
+    <!-- Bootstrap core CSS -->
+    <link href="Add-ons/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-      </div>
-  </section>
-  <div class="container">
-      <div class="row">
-          <h3>
-              Buscar Video
-          </h3>
-          <form class="navbar-form navbar-left">
-              <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Buscar">
-              </div>
-              <button type="submit" class="btn btn-default">Enviar</button>
-          </form>
+    <!-- Custom fonts for this template -->
+    <link href="Add-ons/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
 
+    <!-- Plugin CSS -->
+    <link href="Add-ons/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
+    <!-- Custom styles for this template -->
+    <link href="Add-ons/css/creative.min.css" rel="stylesheet">
 
+</head>
 
-          <hr>
-      </div>
-  </div>
+<body id="page-top">
 
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">UZone</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="navbar-right">
+                <s:form theme="simple" action="login">
+                    <s:textfield id="username" name="model.username" placeholder="Username"/>
+                    <s:password id="password" name="model.password" placeholder="Password"/>
+                    <s:submit value="Iniciar Sesion" cssClass="btn btn-outline-secondary"/>
+                    <a href="userRegister.jsp"><s:label cssClass="btn btn-outline-info" value="Registrarse"/></a>
+                    <a href="#">¿olvido su contraseña?</a>
+                </s:form>
+            </div>
+        </div>
+    </div>
+</nav>
 
-  <div class="container">
-      <div class="row">
-          <h1>Videos Recomendados</h1>
+<header class="masthead text-center text-white d-flex">
+    <div class="container my-auto">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <h1 class="text-uppercase">
+                    <strong>UZone te da la bienvenida</strong>
+                </h1>
+                <hr>
+            </div>
+            <div class="col-lg-8 mx-auto">
+                <p class="text-faded mb-5">
+                    Entrar en la comunidad de musicos, actores, pintores, escritores, bailarines...
+                    Sigue a nuevos artistas y mira sus eventos y logros.
+                    Promociona tu galeria, proyectos, obras y date a conocer en nuestra comunidad.
+                    Publica eventos como worker y califica a tus artistas favoritos.
+                    Porque UZone esta hecha para artistas como tu.
+                </p>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Registrate Ahora</a>
+            </div>
+        </div>
+    </div>
+</header>
 
-      </div>
-      <div class="row">
-          <div class="col-md-5 col-lg-5">
-              <!-- artigo em destaque -->
-              <div class="featured-article">
-                  <a href="#">
-                      <div class="embed-responsive embed-responsive-16by9">
-                          <iframe class="embed-responsive-item" src="//www.youtube.com/embed/zpOULjyy-n8?rel=0"></iframe>
-                      </div>
-                  </a>
-                  <div class="block-title">
-                      <h2>Publicado por:</h2>
-                      <p class="by-author"><small>Usuario</small></p>
-                  </div>
-              </div>
-              <!-- /.featured-article -->
-          </div>
-          <div class="col-md-7 col-lg-7">
-              <ul class="media-list main-list">
-                  <li class="media">
-                      <a class="pull-left" href="#">
-                          <img class="media-object" src="http://placehold.it/150x90" alt="...">
-                      </a>
-                      <div class="media-body">
-                          <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
-                          <p class="by-author">By Jhon Doe</p>
-                      </div>
-                  </li>
-                  <li class="media">
-                      <a class="pull-left" href="#">
-                          <img class="media-object" src="http://placehold.it/150x90" alt="...">
-                      </a>
-                      <div class="media-body">
-                          <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
-                          <p class="by-author">By Jhon Doe</p>
-                      </div>
-                  </li>
-                  <li class="media">
-                      <a class="pull-left" href="#">
-                          <img class="media-object" src="http://placehold.it/150x90" alt="...">
-                      </a>
-                      <div class="media-body">
-                          <h4 class="media-heading">Lorem ipsum dolor asit amet</h4>
-                          <p class="by-author">By Jhon Doe</p>
-                      </div>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </body>
-<style>
-    .img-responsive,
-    .thumbnail > img,
-    .thumbnail a > img,
-    .carousel-inner > .item > img,
-    .carousel-inner > .item > a > img {
-    display: block;
-    width: 100%;
-    height: auto;
-    }
+<section class="bg-primary" id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading text-white"></h2>
+                <hr class="light my-4">
+                <p class="text-faded mb-4"></p>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services"></a>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Tambien en todos tus dispositivos</h2>
+                <hr class="my-4">
+                <img  src="Add-ons/img/iphone.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                    <i class="fa fa-4x fa-diamond text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3"></h3>
+                    <p class="text-muted mb-0">Adaptabilidad en todos tus dispositivos.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                    <i class="fa fa-4x fa-paper-plane text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3"></h3>
+                    <p class="text-muted mb-0">Promocionar sus proyectos y eventos.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                    <i class="fa fa-4x fa-newspaper-o text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3"></h3>
+                    <p class="text-muted mb-0">Establecer contacto con workers y artistas.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="service-box mt-5 mx-auto">
+                    <i class="fa fa-4x fa-heart text-primary mb-3 sr-icons"></i>
+                    <h3 class="mb-3"></h3>
+                    <p class="text-muted mb-0">Estar al dia de con la comunidad artistica.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section class="p-0" id="portfolio">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters popup-gallery">
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/1.jpg">
+                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/1.jpg" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                COMIENZA
+                            </div>
+                            <div class="project-name">
+                                Desarrolla tu trayectoria artistica participando en numerosos proyectos
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/2.jpg">
+                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/2.jpg" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                BUSCA
+                            </div>
+                            <div class="project-name">
+                                Encuentra a las personas que se dedican al mundo del arte y la cultura
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/3.jpg">
+                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/3.jpg" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                OPORTUNIDADES
+                            </div>
+                            <div class="project-name">
+                                Tablon informativo de difusiones y acontecimientos que te pueden interesar
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/4.jpg">
+                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/4.jpg" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                PROYECTOS
+                            </div>
+                            <div class="project-name">
+                                Muestra y difunde todos tus trabajos artisticos para que te conozcan mejor
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/5.jpg">
+                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/5.jpg" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                EVENTOS
+                            </div>
+                            <div class="project-name">
+                                Sigue la actividad cultural que te rodea y atrevete a participar en eventos
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-4 col-sm-6">
+                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/6.jpg">
+                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/6.jpg" alt="">
+                    <div class="portfolio-box-caption">
+                        <div class="portfolio-box-caption-content">
+                            <div class="project-category text-faded">
+                                CONCURSOS
+                            </div>
+                            <div class="project-name">
+                                Disfruta del arte y la cultura mediante premios,sorteos y reconocimientos
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
 
-    .carousel-inner {
-    border-radius: 15px;
-    }
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="section-heading"></h2>
+                <hr class="my-4">
+                <p class="mb-5"></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 ml-auto text-center">
+                <i class="fa fa-phone fa-3x mb-3 sr-contact"></i>
+                <p></p>
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <i class="fa fa-envelope-o fa-3x mb-3 sr-contact"></i>
+                <p>
+                    <a href="mailto:your-email@your-domain.com"></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    .carousel-caption {
-    background-color: rgba(0,0,0,.5);
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 10;
-    padding: 0 0 10px 25px;
-    color: #fff;
-    text-align: left;
-    }
+<!-- Bootstrap core JavaScript -->
+<script src="Add-ons/vendor/jquery/jquery.min.js"></script>
+<script src="Add-ons/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    .carousel-indicators {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    z-index: 15;
-    margin: 0;
-    padding: 0 25px 25px 0;
-    text-align: right;
-    }
+<!-- Plugin JavaScript -->
+<script src="Add-ons/vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="Add-ons/vendor/scrollreveal/scrollreveal.min.js"></script>
+<script src="Add-ons/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
-    .carousel-control.left,
-    .carousel-control.right {
-    background-image: none;
-    }
+<!-- Custom scripts for this template -->
+<script src="Add-ons/js/creative.min.js"></script>
+</body>
 
-
-
-
-    .section-white {
-    padding: 10px 0;
-    }
-
-    .section-white {
-    background-color: #fff;
-    color: #555;
-    }
-
-    @media screen and (min-width: 768px) {
-
-    .section-white {
-    padding: 1.5em 0;
-    }
-
-    }
-
-    @media screen and (min-width: 992px) {
-
-    .container {
-    max-width: 930px;
-    }
-
-    }
-</style>
 </html>
+
