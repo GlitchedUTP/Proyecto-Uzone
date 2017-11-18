@@ -30,7 +30,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">UZone</a>
+            <s:a class="navbar-brand" href="home">UZone</s:a>
         </div>
 
 

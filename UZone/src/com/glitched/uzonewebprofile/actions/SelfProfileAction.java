@@ -26,6 +26,7 @@ public class SelfProfileAction extends ActionSupport implements ModelDriven<User
         UZoneService service = new UZoneService();
         if (sessionMap.containsKey("username")) {
             user=service.findUserByUsername(sessionMap.get("username").toString());
+            System.out.println(sessionMap.get("username").toString());
             return SUCCESS;
         }
         return ERROR;

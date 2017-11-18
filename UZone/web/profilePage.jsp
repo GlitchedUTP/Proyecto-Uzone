@@ -5,9 +5,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 <html>
 <head>
     <title>Perfil</title>
+    <sb:head/>
+
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -20,7 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">UZone</a>
+            <s:a class="navbar-brand" href="home">UZone</s:a>
         </div>
 
 
@@ -43,18 +46,6 @@
     </div>
 </nav>
 <div class="container">
-    <ul class="nav nav-pills">
-
-
-        <button type="button" class="btn btn-success">Inicio</button>
-        <button type="button" class="btn btn-success">Aportaciones</button>
-        <button class="btn btn-primary" type="button">
-            Mensajes <span class="badge">4</span>
-        </button>
-
-    </ul>
-</div>
-<div class="container">
     <div class="row">
         <div class="col-md-4">
             <h4>Edita tu perfil</h4>
@@ -62,121 +53,34 @@
 
         </div>
         <div class="col-md-8">
-            <form role="form">
+            <s:form action="self" theme="bootstrap" class="well form-vertical" method="POST" enctype="multipart/form-data">
+
                 <div class="form-group">
-                    <label >Usuario</label>
-                    <label >Usuario</label>
-
-                </div>
-                <div class="form-group">
-                    <label>Pais</label>
-                    <input class="form-control" placeholder="Ingrese Pais">
-
-                </div>
-                <div class="form-group">
-                    <label>Ciudad / Distrito</label>
-                    <input class="form-control" placeholder="Ingrese">
-
-                </div>
-                <div class="form-group">
-                    <label>Fecha de Nacimiento</label>
-                    <div><label for="sel1">Día</label></div>
-
-                        <select class="form-control" id="sel1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
-                            <option>6</option>
-                            <option>7</option>
-                            <option>8</option>
-                            <option>9</option>
-                            <option>10</option>
-                            <option>12</option>
-                            <option>13</option>
-                            <option>14</option>
-                            <option>15</option>
-                            <option>16</option>
-                            <option>17</option>
-                            <option>18</option>
-                            <option>19</option>
-                            <option>20</option>
-                            <option>21</option>
-                            <option>22</option>
-                            <option>23</option>
-                            <option>24</option>
-                            <option>25</option>
-                            <option>26</option>
-                            <option>27</option>
-                            <option>28</option>
-                            <option>29</option>
-                            <option>30</option>
-                            <option>31</option>
-
-
-
-
-                        </select>
-
-
-                        <label for="sel1">Mes</label>
-                        <select class="form-control" id="sel12">
-                            <option>Enero</option>
-                            <option>Febrero</option>
-                            <option>Marzo</option>
-                            <option>Abril</option>
-                            <option>Mayo</option>
-                            <option>Junio</option>
-                            <option>Julio</option>
-                            <option>Agosto</option>
-                            <option>Setiembre</option>
-                            <option>Octubre</option>
-                            <option>Noviembre</option>
-                            <option>Diciembre</option>
-
-                        </select>
-
-                    <label>Año</label>
-                    <input class="form-control" placeholder="yyyy">
+                    <s:if test="model.userType.id==1">Artista</s:if><s:if test="model.userType.id==2">Empresario</s:if> <s:property value="model.username"/>
                 </div>
 
-                <div class="form-group">
-                    <label>Sexo</label>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">Hombre</label>
-                    </div>
-                    <div class="radio">
-                        <label><input type="radio" name="optradio">Mujer</label>
-                    </div>
-                <div class="form-group">
-                    <label >Cambiar Foto</label>
-                    <input type="file" id="ejemplo_archivo_1">
-
-                </div>
-                    <div class="form-group">
-                        <label >Sobre ti</label>
-                        <textarea class="form-control" rows="5" id="comment"></textarea>
-
-                    </div>
-                    <div class="form-group">
-                        <label >Habilidades y Conocimientos</label>
-                        <textarea class="form-control" rows="5" id="comment2"></textarea>
-
-                    </div>
-                    <div class="form-group">
-                        <label >Ocupación</label>
-                        <input type="file" id="ejemplo_archivo_2">
-
-                    </div>
-                    <div class="form-group">
-                        <label>Ocupación </label>
-                        <input class="form-control" placeholder="">
-
-                    </div>
-
-                <button type="submit" class="btn btn-default">Guardar</button>
-            </form>
+                <s:textfield id="name" name="model.name" placeholder="Nombres" label="Nombres" disabled="true"/>
+                <s:textfield id="lastName" name="model.lastName" placeholder="Apellidos" label="Apellidos" disabled="true"/>
+                <s:textfield id="email" name="model.email" placeholder="Email" label="E-mail" disabled="true"/>
+                <s:textfield id="birthDate" name="model.birthDate" placeholder="Fecha de Nacimiento" label="Fecha de Nacimiento" disabled="true"/>
+                <s:select id="genre"
+                          name="model.genre"
+                          label="Selecciona tu genero"
+                          headerKey="0"
+                          headerValue="--- Select ---"
+                          list="#{'M':'Masculino', 'F':'Femenino'}"
+                disabled="true"/>
+                <s:textfield id="phone" name="model.phone" placeholder="Telefono" label="Telefono" disabled="true"/>
+                <s:if test="model.username==#session.username"><s:file id="photoUrl" label="Cambiar foto" disabled="true"/>
+                <ul class="nav nav-pills">
+                    <button class="btn btn-success">Hacer Cambios</button>
+                    <button type="button" class="btn btn-success" disabled>Guardar Cambios</button>
+                        <%--<button class="btn btn-primary" type="button">
+                            Mensajes <span class="badge">4</span>
+                        </button>--%>
+                </ul>
+                </s:if>
+            </s:form>
         </div>
     </div>
 </div>
