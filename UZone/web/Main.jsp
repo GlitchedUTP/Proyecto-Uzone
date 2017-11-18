@@ -46,9 +46,7 @@
 
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><s:a href="#">${sessionScope.userName} <s:property value="model.username"/></s:a></li>
-                <li><a href="#">Preferencias</a></li>
-                <li><a href="#">Mensaje</a></li>
+                <li><s:a href="self"><s:property value="#session.username"/></s:a></li>
                 <li><s:a href="logout">Cerrar sesión</s:a></li>
             </ul>
         </div>

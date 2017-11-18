@@ -29,5 +29,8 @@
         <action name="logout" class="com.glitched.uzonewebprofile.actions.LogoutAction" method="execute">
             <result name="success">index.jsp</result>
         </action>
+        <action name="self" class="com.glitched.uzonewebprofile.actions.SelfProfileAction" method="execute">
+            <result name="success">index.jsp</result>
+        </action>
     </package>
 </struts>
