@@ -41,5 +41,9 @@
             <result name="success">Main.jsp</result>
             <result name="error">videoShare.jsp</result>
         </action>
+        <action name="postevent" class="com.glitched.uzonewebprofile.actions.EventAction" method="execute">
+            <result name="success">Main.jsp</result>
+            <result name="error">PostEvent.jsp</result>
+        </action>
     </package>
 </struts>
