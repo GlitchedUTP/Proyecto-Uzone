@@ -4,8 +4,11 @@ import com.glitched.uzonewebprofile.models.Event;
 import com.glitched.uzonewebprofile.models.UZoneService;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.ModelDriven;
+import org.apache.struts2.interceptor.SessionAware;
 
-public class EventAction extends ActionSupport implements ModelDriven<Event> {
+import java.util.Map;
+
+public class EventAction extends ActionSupport implements ModelDriven<Event>, SessionAware {
     private Event event= new Event();
     public Event getModel(){return event;}
 
@@ -16,4 +19,8 @@ public class EventAction extends ActionSupport implements ModelDriven<Event> {
 
         }
 
+    @Override
+    public void setSession(Map<String, Object> map) {
+
+    }
 }

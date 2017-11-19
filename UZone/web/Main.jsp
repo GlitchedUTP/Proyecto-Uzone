@@ -77,7 +77,7 @@
             </div>
             <div class="col-md-8">
                 <div class="vid">
-                    <iframe width="560" height="315" src=" https://www.youtube.com/embed/IiksAKkTCSo" allowfullscreen=""></iframe>
+                    <iframe width="560" height="315" src="<s:property value="%{#post.url}"/>" allowfullscreen=""></iframe>
                      </div>
                 </div>
             </div>

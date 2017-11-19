@@ -10,14 +10,12 @@
 <body>
 <h2>Publica un Evento</h2>
 <h3>Publica un evento para poder capturar la atencion de los mejores artistas</h3>
-<s:form action="dataEvent">
-    <s:label for="evntdate" value="Fecha/Hora Inicio"/>
-    <s:date name="evntdate"/>   <s:textfield id="evntime" name="model.date" placeholder="Fecha incio" />
-    <s:label for="evntdatelimit" value="Fecha/Hora Finalizacion"/>
-    <s:date name="evntdatelimit"/>   <s:textfield id="evntimelimit" name="model.dateLimit" placeholder="Fecha fin" />
-    <s:label for="description" value="Descripcion"/>
-    <s:textfield id="description" name="model.description"/>
-    <s:submit value="Publicar"/>
+<s:form action="dataEvent" theme="bootstrap">
+    <s:textfield id="evntime" name="model.date" placeholder="Fecha incio" requerid="true" />
+    <s:textfield id="evntimelimit" name="model.dateLimit" placeholder="Fecha fin" requerid="true" />
+    <s:textfield id="salary" name="model.salary" placeholder="Ingrese una remuneracion para tu artista" />
+    <s:textfield id="description" name="model.description" placeholder="Describe lo que tendra tu publicacion" requerid="true"/>
+    <s:submit value="Publicar" cssClass="btn btn-default"/>
 </s:form>
 </body>
 </html>

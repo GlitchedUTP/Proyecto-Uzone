@@ -13,14 +13,14 @@
 <h3>Te tomara solo un par de minutos registrarte</h3>
 
 <s:form action="register" theme="bootstrap" cssClass="well form-vertical">
-    <s:textfield id="username" name="model.username" label="Nombre de Usuario" placeholder="e.g. Usuario123456" />
-    <s:textfield id="password" name="model.password" label="Contraseña" placeholder="e.g. 12345" type="password"/>
-    <s:textfield id="password2" label="Repita su contraseña" placeholder="e.g. 12345" type="password"
+    <s:textfield id="username" name="model.username" label="Nombre de Usuario" placeholder="Ej. Usuario123456" />
+    <s:textfield id="password" name="model.password" label="Contraseña" placeholder="Ej. 12345" type="password"/>
+    <s:textfield id="password2" label="Repita su contraseña" placeholder="Ej. 12345" type="password"
                  onchange="this.setCustomValidity(this.value!=password.value ? 'Por favor ingrese la misma contraseña' : '');"/>
     <s:textfield id="email" name="model.email" label="Correo Electronico" placeholder="ej. usuario@gmail.com"/>
-    <s:textfield id="name" name="model.name" label="Nombre" placeholder="ej. Cristian Nicolas" />
-    <s:textfield id="lastName" name="model.lastName" label="Apellido" placeholder="ej. Cordova Puglianini" />
-    <s:textfield id="birthDate" name="model.birthDate" label="Fecha de Nacimiento" placeholder="ej. 25-JAN-1999" type="textfield"/>
+    <s:textfield id="name" name="model.name" label="Nombre" placeholder="Ej. Cristian Nicolas" />
+    <s:textfield id="lastName" name="model.lastName" label="Apellido" placeholder="Ej. Cordova Puglianini" />
+    <s:textfield id="birthDate" name="model.birthDate" label="Fecha de Nacimiento" placeholder="Ej. 25-JAN-1999" type="textfield"/>
     <s:select id="genre"
               name="model.genre"
               label="Selecciona tu genero"
