@@ -51,16 +51,17 @@ public class EventsEntity extends BaseEntity {
     } */
     public boolean create(Event event) {
         return executeUpdate(String.format(
-                "INSERT INTO %s(date,datelimit,description)"
-                        .concat("VALUES(STR_TO_DATE('%%d-%%M-%%Y'),STR_TO_DATE('%%d-%%M-%%Y'),'%s')"),
-                getTableName(), event.getDate(), event.getDateLimit(), event.getDescription()));
+                "INSERT INTO %s(date,datelimit,description,salary)"
+                        .concat("VALUES(STR_TO_DATE('%%d-%%M-%%Y'),STR_TO_DATE('%%d-%%M-%%Y'),'%s','%s')"),
+                getTableName(), event.getDate(), event.getDateLimit(), event.getDescription(),event.getSalary()));
     }
 
-    public boolean create(String date, String dateLimit, String description) {
+    public boolean create(String date, String dateLimit, String description, double salary) {
         Event event = new Event();
         event.setDate(date);
         event.setDateLimit(dateLimit);
         event.setDescription(description);
+        event.setSalary(salary);
         return create(event);
     }
 }
