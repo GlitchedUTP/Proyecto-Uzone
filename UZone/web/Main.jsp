@@ -49,14 +49,14 @@
         <li role="presentation"><a href="#">Màs Videos</a></li>
         <li role="presentation"><a href="videoShare.jsp">Enviar Video</a></li>
         <li role="presentation"><a href="#">Más Votados</a></li>
-        <li role="presentation"><a href="PostEvent">Crea un evento</a></li>
+        <li role="presentation"><a href="PostEvent.jsp">Crea un evento</a></li>
         <form class="navbar-form navbar-left">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Buscar">
             </div>
             <button type="submit" class="btn btn-default">Enviar</button>
         </form>
-</ul>
+    </ul>
 </div>
 <center>
 <s:iterator value="posts" var="post">
@@ -68,23 +68,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h4><s:property value="title"/></h4>
+                <h4><s:property value="post.title"/></h4>
                 <p>
-                    <s:property value="description"/>
-                    <s:property value="url"/>
+                    <s:property value="post.description"/>
+                    <s:property value="post.url"/>
                     <s:property value="%{#post.url}"/>
                 </p>
             </div>
             <div class="col-md-8">
                 <div class="vid">
                     <iframe width="560" height="315" src=" https://www.youtube.com/embed/IiksAKkTCSo" allowfullscreen=""></iframe>
+                     </div>
                 </div>
             </div>
-        </div>
+         </div>
     </div>
 </s:iterator>
 
-    </div>
+
     <div>
         <div class="container">
             <p class="navbar-text">Video 2</p>
