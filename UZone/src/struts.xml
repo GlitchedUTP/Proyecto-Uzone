@@ -23,7 +23,7 @@
             <result name="success">main.jsp</result>
         </action>
         <action name="login" class="com.glitched.uzonewebprofile.actions.LoginAction" method="execute">
-            <result name="success">Main.jsp</result>
+            <result name="success">main.jsp</result>
             <result name="input">index.jsp</result>
         </action>
         <action name="logout" class="com.glitched.uzonewebprofile.actions.LogoutAction" method="execute">
@@ -34,11 +34,11 @@
             <result name="error">index.jsp</result>
         </action>
         <action name="home" class="com.glitched.uzonewebprofile.actions.HomeAction" method="execute">
-            <result name="success">Main.jsp</result>
+            <result name="success">main.jsp</result>
             <result name="error">index.jsp</result>
         </action>
         <action name="videoshare" class="com.glitched.uzonewebprofile.actions.PostAction" method="execute">
-            <result name="success">Main.jsp</result>
+            <result name="success">main.jsp</result>
             <result name="error">videoShare.jsp</result>
         </action>
     </package>

@@ -49,7 +49,7 @@
         <li role="presentation"><a href="#">Màs Videos</a></li>
         <li role="presentation"><a href="videoShare.jsp">Enviar Video</a></li>
         <li role="presentation"><a href="#">Más Votados</a></li>
-        <li role="presentation"><a href="PostEvent.jsp">Crea un evento</a></li>
+        <li role="presentation"><a href="postEvent.jsp">Crea un evento</a></li>
         <form class="navbar-form navbar-left">
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Buscar">
