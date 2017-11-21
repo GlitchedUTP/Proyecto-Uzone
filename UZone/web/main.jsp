@@ -59,7 +59,7 @@
     </ul>
 </div>
 <center>
-<s:iterator value="posts" var="post">
+<s:iterator value="posts">
     <div class="container">
     <div class="container">
         <p class="navbar-text">Publicado por <s:property value="user.username"/></p>
@@ -68,16 +68,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h4><s:property value="post.title"/></h4>
+                <h4><s:property value="title"/></h4>
                 <p>
-                    <s:property value="post.description"/>
-                    <s:property value="post.url"/>
-                    <s:property value="%{#post.url}"/>
+                    <s:property value="description"/>
                 </p>
             </div>
             <div class="col-md-8">
                 <div class="vid">
-                    <iframe width="560" height="315" src="<s:property value="%{#post.url}"/>" allowfullscreen=""></iframe>
+                    <iframe width="560" height="315" src="<s:property value="url"/>" allowfullscreen=""></iframe>
                      </div>
                 </div>
             </div>

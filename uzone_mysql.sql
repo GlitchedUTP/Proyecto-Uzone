@@ -65,7 +65,7 @@ CREATE TABLE posts (
 	id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT(5) UNSIGNED NOT NULL ,
     title VARCHAR(50),
-    description VARCHAR(100),
+    description VARCHAR(300),
 	url VARCHAR(100),
     PRIMARY KEY(id),
     CONSTRAINT posts_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
@@ -153,7 +153,7 @@ VALUES (
 	2,
     'CLICKBAIT 2',
     'This is clickbait x2',
-    'https://www.youtube.com/watch?v=G3rc-2-jtr0'
+    'https://www.youtube.com/embed/G3rc-2-jtr0'
 	);
     
 INSERT INTO posts (user_id,title,description,url) 
@@ -161,7 +161,7 @@ VALUES (
 	1,
     'CLICKBAIT 3',
     'This is clickbait x3',
-    'https://www.youtube.com/watch?v=_r7A1aTp74w'
+    'https://www.youtube.com/embed/_r7A1aTp74w'
 	);
     
 INSERT INTO posts (user_id,title,description,url) 
@@ -169,7 +169,7 @@ VALUES (
 	2,
     'CLICKBAIT 4',
     'This is clickbait x4',
-    'https://www.youtube.com/watch?v=F0c8U3x_vKM'
+    'https://www.youtube.com/embed/F0c8U3x_vKM'
 	);
     
 INSERT INTO posts (user_id,title,description,url) 
@@ -177,7 +177,7 @@ VALUES (
 	1,
     'CLICKBAIT 5',
     'This is clickbait x5',
-    'https://www.youtube.com/watch?v=Oc08ZPc30Zs'
+    'https://www.youtube.com/embed/Oc08ZPc30Zs'
 	);
     
 INSERT INTO posts (user_id,title,description,url) 
@@ -185,7 +185,7 @@ VALUES (
 	2,
     'CLICKBAIT 6',
     'This is clickbait x6',
-    'https://www.youtube.com/watch?v=3gSwUwvP9Ao'
+    'https://www.youtube.com/embed/3gSwUwvP9Ao'
 	);
     
 
