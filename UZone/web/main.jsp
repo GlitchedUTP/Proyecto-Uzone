@@ -62,7 +62,8 @@
 <s:iterator value="posts">
     <div class="container">
     <div class="container">
-        <p class="navbar-text">Publicado por <s:property value="user.username"/></p>
+        <s:url action="profile" var="profileLink"><s:param name="model.username"><s:property value="user.username"/></s:param></s:url>
+        <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="user.username"/></a></p>
     </div>
 
     <div class="container">
@@ -75,7 +76,7 @@
             </div>
             <div class="col-md-8">
                 <div class="vid">
-                    <iframe width="560" height="315" src="<s:property value="url"/>" allowfullscreen=""></iframe>
+                    <iframe width="560" height="315" src="<s:property value='url'/>" allowfullscreen=""></iframe>
                      </div>
                 </div>
             </div>

@@ -38,16 +38,6 @@
                 <li><s:a href="self">${sessionScope.username}</s:a></li>
                 <li><s:a href="logout">Cerrar sesión</s:a></li>
             </ul>
-            <form class="navbar-form navbar-left">
-
-
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Bienvenido usuario</a></li>
-                <li><a href="#">Preferencias</a></li>
-                <li><a href="#">Mensaje</a></li>
-                <li><a href="#">Cerrar sesión</a></li>
-            </ul>
         </div>
     </div>
 </nav>

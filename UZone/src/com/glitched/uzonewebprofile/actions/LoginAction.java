@@ -36,13 +36,16 @@ public class LoginAction extends ActionSupport implements ModelDriven<User>,Sess
 
     public String execute() throws Exception {
         UZoneService service = new UZoneService();
-        setPosts(service.findLastest());
         if (sessionMap.containsKey("username")) {
+            setPosts(service.findLastest());
             return SUCCESS;
         }
         if (service.findUserByLogin(user.getUsername(), user.getPassword())) {
             user=service.findUserByUsername(user.getUsername());
             sessionMap.put("username", user.getUsername());
+            sessionMap.put("id", user.getId());
+            sessionMap.put("userType",user.getUserType().getId());
+            setPosts(service.findLastest());
             return SUCCESS;
         }
         else return INPUT;
