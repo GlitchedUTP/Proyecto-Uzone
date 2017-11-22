@@ -17,7 +17,7 @@ CREATE TABLE users (
     password VARCHAR(20) NOT NULL,
     name VARCHAR(30),
     lastname VARCHAR(30),
-    email VARCHAR(40) NOT NULL,
+    email VARCHAR(40) NOT NULL UNIQUE,
     birthdate DATE NOT NULL,
     genre CHAR(1) NOT NULL,
     phone CHAR(9),
@@ -65,6 +65,7 @@ CREATE TABLE posts (
 	id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT(5) UNSIGNED NOT NULL ,
     title VARCHAR(50),
+    date DATE,
     description VARCHAR(300),
 	url VARCHAR(100),
     PRIMARY KEY(id),
@@ -119,7 +120,7 @@ VALUES (
     'Nicolas',
     'Cordova',
     'nicomax_008@hotmail.com',
-    STR_TO_DATE('25-JAN-1999', '%d-%M-%Y'),
+    STR_TO_DATE('25-01-1999', '%d-%m-%Y'),
     'M',
     '978066359',
     NULL,
@@ -133,57 +134,63 @@ VALUES (
     'Carlos',
     'Enrique',
     'aiuda_012@hotmail.com',
-    STR_TO_DATE('25-FEB-1995', '%d-%M-%Y'),
+    STR_TO_DATE('25-02-1995', '%d-%m-%Y'),
     'F',
     '999069069',
     NULL,
     2
 	);
     
-INSERT INTO posts (user_id,title,description,url) 
+INSERT INTO posts (user_id,title,date,description,url) 
 VALUES (
 	1,
     'CLICKBAIT 1',
+    STR_TO_DATE("15-06-2017", "%d-%m-%Y"),
     'This is clickbait',
     'https://www.youtube.com/embed/IiksAKkTCSo'
 	);
     
-INSERT INTO posts (user_id,title,description,url) 
+INSERT INTO posts (user_id,title,date,description,url) 
 VALUES (
 	2,
     'CLICKBAIT 2',
+    STR_TO_DATE("15-06-2017", "%d-%m-%Y"),
     'This is clickbait x2',
     'https://www.youtube.com/embed/G3rc-2-jtr0'
 	);
     
-INSERT INTO posts (user_id,title,description,url) 
+INSERT INTO posts (user_id,title,date,description,url) 
 VALUES (
 	1,
     'CLICKBAIT 3',
+    STR_TO_DATE("15-06-2017", "%d-%m-%Y"),
     'This is clickbait x3',
     'https://www.youtube.com/embed/_r7A1aTp74w'
 	);
     
-INSERT INTO posts (user_id,title,description,url) 
+INSERT INTO posts (user_id,title,date,description,url) 
 VALUES (
 	2,
     'CLICKBAIT 4',
+    STR_TO_DATE("15-06-2017", "%d-%m-%Y"),
     'This is clickbait x4',
     'https://www.youtube.com/embed/F0c8U3x_vKM'
 	);
     
-INSERT INTO posts (user_id,title,description,url) 
+INSERT INTO posts (user_id,title,date,description,url) 
 VALUES (
 	1,
     'CLICKBAIT 5',
+    STR_TO_DATE("15-06-2017", "%d-%m-%Y"),
     'This is clickbait x5',
     'https://www.youtube.com/embed/Oc08ZPc30Zs'
 	);
     
-INSERT INTO posts (user_id,title,description,url) 
+INSERT INTO posts (user_id,title,date,description,url) 
 VALUES (
 	2,
     'CLICKBAIT 6',
+    STR_TO_DATE("15-06-2017", "%d-%m-%Y"),
     'This is clickbait x6',
     'https://www.youtube.com/embed/3gSwUwvP9Ao'
 	);

@@ -7,13 +7,16 @@ public class Post {
     int id;
     User user;
     String title;
+    String date;
     String description;
     String url;
 
-    public Post(int id, User user, String title, String description, String url) {
+    public Post(int id, User user, String title, String date, String description, String url) {
         this.id = id;
         this.user = user;
         this.title = title;
+        this.date = date;
+
         this.description = description;
         this.url = url;
     }
@@ -45,6 +48,14 @@ public class Post {
         this.title = title;
     }
 
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -67,6 +78,7 @@ public class Post {
             post.setId(rs.getInt("id"));
             post.setUser(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
             post.setTitle(rs.getString("title"));
+            post.setDate(rs.getString("date"));
             post.setDescription(rs.getString("description"));
             post.setUrl(rs.getString("url"));
             return post;

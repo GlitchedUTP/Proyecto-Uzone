@@ -44,7 +44,20 @@ public class PostsEntity extends BaseEntity{
     }
 
     public List<Post> findLastest(UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
-        return findByCriteria(" ",usersEntity,userTypesEntity);
+        try {
+            ResultSet rs = getConnection()
+                    .createStatement()
+                    .executeQuery(String.format("SELECT id,user_id,title,date_format(date,'%%d-%%m-%%Y') as date,description,url FROM %s"
+                            ,super.getTableName()));
+            List<Post> posts = new ArrayList<>();
+            while (rs.next()) {
+                posts.add(Post.from(rs,usersEntity,userTypesEntity));
+            }
+            return posts;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public boolean create(Post post) {
