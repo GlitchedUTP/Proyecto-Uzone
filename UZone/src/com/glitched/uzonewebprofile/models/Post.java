@@ -4,12 +4,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Post {
-    int id;
-    User user;
-    String title;
-    String date;
-    String description;
-    String url;
+    private int id;
+    private User user;
+    private String title;
+    private String date;
+    private String description;
+    private String url;
 
     public Post(int id, User user, String title, String date, String description, String url) {
         this.id = id;

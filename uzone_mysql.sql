@@ -40,12 +40,15 @@ CREATE TABLE informations(
   
 CREATE TABLE events (
 	id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    picture_url VARCHAR(100),
+    title VARCHAR (50)  NOT NULL,
+    picture_url VARCHAR(100) NOT NULL,
+    ubication VARCHAR(150) NOT NULL,
     date DATETIME NOT NULL,
     date_limit DATETIME NOT NULL,
-    description VARCHAR(300),
-    category INT(2) NOT NULL,
-    salary DECIMAL(10,2) NOT NULL,
+    description VARCHAR(300) NOT NULL,
+    tags VARCHAR(100),
+    websites VARCHAR(70),
+    salary DECIMAL(10,2),
     user_id INT(5) UNSIGNED NOT NULL,
     PRIMARY KEY(id),
 	CONSTRAINT events_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
@@ -201,4 +204,3 @@ COMMIT;
 select * from users;
 
 select * from posts;
-
