@@ -34,6 +34,7 @@ public class LoginAction extends ActionSupport implements ModelDriven<User>,Sess
         return user;
     }
 
+    @Override
     public String execute() throws Exception {
         UZoneService service = new UZoneService();
         if (sessionMap.containsKey("username")) {

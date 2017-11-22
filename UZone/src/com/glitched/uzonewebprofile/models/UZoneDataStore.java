@@ -144,13 +144,13 @@ public class UZoneDataStore {
         return getPostsEntity().findLastest(getUsersEntity(),getUserTypesEntity());
     }
 
-    public boolean createVideo(Post post) {
+    public boolean createPost(Post post) {
         if(connection==null) return false;
         return getPostsEntity().create(post);
     }
 
-    public boolean createVideo(String title,String description,String url) {
+    public boolean createPost(int id,String title,String date,String description,String url) {
         if(connection==null) return false;
-        return getPostsEntity().create(title,description,url);
+        return getPostsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),title,date,description,url);
     }
 }

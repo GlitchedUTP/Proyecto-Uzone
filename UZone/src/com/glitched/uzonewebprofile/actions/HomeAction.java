@@ -25,6 +25,7 @@ public class HomeAction extends ActionSupport implements SessionAware{
         this.sessionMap = sessionMap;
     }
 
+    @Override
     public String execute() {
         UZoneService service = new UZoneService();
         if (sessionMap.containsKey("username")) {

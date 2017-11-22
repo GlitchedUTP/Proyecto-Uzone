@@ -78,12 +78,12 @@ public class UZoneService {
         return dataStore.findLastest();
     }
 
-    public boolean createVideo(Post post) {
-        return dataStore.createVideo(post);
+    public boolean createPost(Post post) {
+        return dataStore.createPost(post);
     }
 
-    public boolean createVideo(String title,String description,String url,User user,int id) {
-        return dataStore.createVideo(title,description,url);
+    public boolean createPost(int id,String title,String date,String description,String url) {
+        return dataStore.createPost(id,title,date,description,url);
     }
 
 }

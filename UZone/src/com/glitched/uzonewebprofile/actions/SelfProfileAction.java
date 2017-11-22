@@ -22,6 +22,7 @@ public class SelfProfileAction extends ActionSupport implements ModelDriven<User
         return user;
     }
 
+    @Override
     public String execute() throws Exception {
         UZoneService service = new UZoneService();
         if (sessionMap.containsKey("username")) {

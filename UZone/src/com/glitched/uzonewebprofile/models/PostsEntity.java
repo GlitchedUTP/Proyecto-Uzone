@@ -50,19 +50,21 @@ public class PostsEntity extends BaseEntity{
     }
 
     public List<Post> findLastest(UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
-        return findByCriteria("",usersEntity,userTypesEntity);
+        return findByCriteria("ORDER BY id DESC,date DESC",usersEntity,userTypesEntity);
     }
 
     public boolean create(Post post) {
         return executeUpdate(String.format(
-                "INSERT INTO %s(title,description,url)"
-                        .concat("VALUES('%s','%s','%s')"),
-                getTableName(),post.getTitle(),post.getDescription(),post.getUrl()));
+                "INSERT INTO %s(user_id,title,date,description,url)"
+                        .concat("VALUES(%d,'%s','%s','%s','%s')"),
+                getTableName(),post.getUser().getId(),post.getTitle(),post.getDate(),post.getDescription(),post.getUrl()));
     }
 
-    public boolean create(String title, String description, String url) {
+    public boolean create(User user, String title, String date,String description, String url) {
         Post post = new Post();
+        post.setUser(user);
         post.setTitle(title);
+        post.setDate(date);
         post.setDescription(description);
         post.setUrl(url);
         return create(post);

@@ -16,6 +16,8 @@ public class LogoutAction extends ActionSupport implements SessionAware {
     public String execute() throws Exception {
         if (sessionMap.containsKey("username")) {
             sessionMap.remove("username");
+            sessionMap.remove("id");
+            sessionMap.remove("userType");
         }
         return SUCCESS;
     }

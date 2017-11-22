@@ -55,11 +55,11 @@ CREATE TABLE events (
 );
 
 CREATE TABLE postulants (
-	event_id INT(5) UNSIGNED NOT NULL,
+	event_id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
     id INT(5) UNSIGNED NOT NULL,
     user_id INT(5) UNSIGNED NOT NULL,
     date DATETIME,
-    PRIMARY KEY(event_id,id),
+    PRIMARY KEY(event_id),
     CONSTRAINT postulants_events_event_id FOREIGN  KEY (event_id) REFERENCES events(id),
     CONSTRAINT postulants_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
 );
@@ -71,7 +71,7 @@ CREATE TABLE posts (
     date DATE,
     description VARCHAR(300),
 	url VARCHAR(100),
-    PRIMARY KEY(id),
+    PRIMARY KEY(id,user_id),
     CONSTRAINT posts_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
 );
     
