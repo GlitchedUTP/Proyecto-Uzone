@@ -27,10 +27,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-
-                <li><a href="main.jsp">Inicio</a></li>
-                <li><a href="#">Aportaciones</a></li>
-                <li><a href="#">Mensajes</a></li>
+                <li><a href="">Aportaciones</a></li>
             </ul>
             <form class="navbar-form navbar-left">
 
@@ -47,7 +44,7 @@
     <ul class="nav nav-pills">
         <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
         <li role="presentation"><a href="main.jsp">Màs Videos</a></li>
-        <li role="presentation"><a href="videoShare.jsp">Enviar Video</a></li>
+        <li role="presentation"><a href="createPost.jsp">Enviar Video</a></li>
         <li role="presentation"><a href="#">Más Votados</a></li>
         <li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li>
         <li role="presentation"><a href="#">Eventos disponibles</a></li>
