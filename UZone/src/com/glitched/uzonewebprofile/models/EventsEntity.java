@@ -49,15 +49,26 @@ public class EventsEntity extends BaseEntity {
     public Event findBydateLimit(String pictureUrl,  UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         return findByCriteria(String.format("WHERE pictureUrl='%s'",pictureUrl),usersEntity,userTypesEntity).get(0);
     } */
-    public boolean create(Event event) {
-        return executeUpdate(String.format(
-                "INSERT INTO %s(date,datelimit,description,salary)"
-                        .concat("VALUES(STR_TO_DATE('%%d-%%M-%%Y'),STR_TO_DATE('%%d-%%M-%%Y'),'%s','%s')"),
-                getTableName(), event.getDate(), event.getDateLimit(), event.getDescription(),event.getSalary()));
+
+    public List<Event> showEvents(UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        return findByCriteria("ORDER BY id DESC,date DESC",usersEntity,userTypesEntity);
     }
 
-    public boolean create(String date, String dateLimit, String description, double salary) {
+    public boolean create(Event event) {
+        return executeUpdate(String.format(
+                "INSERT INTO %s(user_id,title,ubication,picture_url,date,datelimit,description,salary,tags,websites)"
+                        .concat("VALUES ('%d','%s','%s','%s',STR_TO_DATE('%%d-%%M-%%Y'),STR_TO_DATE('%%d-%%M-%%Y'),'%s','%s','%s','%s')"),
+                getTableName(),event.getUser().getId(),event.getPictureUrl(),event.getTitle(),event.getUbication(), event.getDate(), event.getDateLimit(), event.getDescription(),event.getSalary(),event.getTags(),event.getWebsites()));
+    }
+
+    public boolean create(String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary, User user) {
         Event event = new Event();
+        event.setUser(user);
+        event.setPictureUrl(picture_url);
+        event.setTitle(title);
+        event.setUbication(ubication);
+        event.setTags(tags);
+        event.setWebsites(websites);
         event.setDate(date);
         event.setDateLimit(dateLimit);
         event.setDescription(description);

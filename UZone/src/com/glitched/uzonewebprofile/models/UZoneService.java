@@ -86,4 +86,11 @@ public class UZoneService {
         return dataStore.createPost(id,title,date,description,url);
     }
 
+    //Events methods
+    public List<Event> showEvents() {
+        return dataStore.showEvents();
+    }
+
+    public boolean createEvent(Event event) { return dataStore.createEvent(event); }
+
 }

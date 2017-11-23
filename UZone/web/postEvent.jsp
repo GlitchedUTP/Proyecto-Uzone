@@ -27,7 +27,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
 
-                <li><a href="#">Inicio</a></li>
+                <li><a href="main.jsp">Inicio</a></li>
                 <li><a href="#">Aportaciones</a></li>
                 <li><a href="#">Mensajes</a></li>
             </ul>
@@ -44,8 +44,8 @@
 </nav>
 <div class="container">
     <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="#">Últimos</a></li>
-        <li role="presentation"><a href="#">Màs Videos</a></li>
+        <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
+        <li role="presentation"><a href="main.jsp">Màs Videos</a></li>
         <li role="presentation"><a href="videoShare.jsp">Enviar Video</a></li>
         <li role="presentation"><a href="#">Más Votados</a></li>
         <li role="presentation"><a href="postEvent.jsp">Crea un evento</a></li>
@@ -53,7 +53,7 @@
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Buscar">
             </div>
-            <button type="submit" class="btn btn-default">Enviar</button>
+            <button type="submit" class="btn btn-default">Buscar</button>
         </form>
     </ul>
 </div>

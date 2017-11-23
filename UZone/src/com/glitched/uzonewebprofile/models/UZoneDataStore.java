@@ -153,4 +153,20 @@ public class UZoneDataStore {
         if(connection==null) return false;
         return getPostsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),title,date,description,url);
     }
+
+    //Event methods
+    public List<Event> showEvents() {
+        if(connection==null) return null;
+        return getEventsEntity().showEvents(getUsersEntity(),getUserTypesEntity());
+    }
+
+    public boolean createEvent(Event event) {
+        if(connection==null) return false;
+        return getEventsEntity().create(event);
+    }
+
+   /* public boolean createEvent(int id,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {
+        if(connection==null) return false;
+        return getEventsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),picture_url,ubication,tags,websites,title,date,description,dateLimit,salary);
+    }*/
 }
