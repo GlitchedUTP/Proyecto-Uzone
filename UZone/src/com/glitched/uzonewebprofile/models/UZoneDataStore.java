@@ -165,8 +165,8 @@ public class UZoneDataStore {
         return getEventsEntity().create(event);
     }
 
-   /* public boolean createEvent(int id,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {
+    public boolean createEvent(int id,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {
         if(connection==null) return false;
-        return getEventsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),picture_url,ubication,tags,websites,title,date,description,dateLimit,salary);
-    }*/
+        return getEventsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),title,picture_url,ubication,tags,websites,date,dateLimit,description,salary);
+    }
 }

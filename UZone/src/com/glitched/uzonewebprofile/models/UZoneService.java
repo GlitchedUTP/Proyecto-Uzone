@@ -93,4 +93,7 @@ public class UZoneService {
 
     public boolean createEvent(Event event) { return dataStore.createEvent(event); }
 
+    public boolean createEvent(int id,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {
+        return dataStore.createEvent(id,title,picture_url,ubication,tags,websites,date,dateLimit,description,salary);
+    }
 }

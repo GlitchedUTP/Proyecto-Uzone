@@ -57,21 +57,21 @@ public class EventsEntity extends BaseEntity {
     public boolean create(Event event) {
         return executeUpdate(String.format(
                 "INSERT INTO %s(user_id,title,ubication,picture_url,date,datelimit,description,salary,tags,websites)"
-                        .concat("VALUES ('%d','%s','%s','%s',STR_TO_DATE('%%d-%%M-%%Y'),STR_TO_DATE('%%d-%%M-%%Y'),'%s','%s','%s','%s')"),
-                getTableName(),event.getUser().getId(),event.getPictureUrl(),event.getTitle(),event.getUbication(), event.getDate(), event.getDateLimit(), event.getDescription(),event.getSalary(),event.getTags(),event.getWebsites()));
+                        .concat("VALUES ('%d','%s','%s','%s','%s','%s','%s','%s','%s','%s')"),
+                getTableName(),event.getUser().getId(),event.getTitle(),event.getPictureUrl(),event.getUbication(), event.getDate(), event.getDateLimit(), event.getDescription(),event.getTags(),event.getWebsites(),event.getSalary()));
     }
 
-    public boolean create(String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary, User user) {
+    public boolean create( User user,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {
         Event event = new Event();
         event.setUser(user);
-        event.setPictureUrl(picture_url);
         event.setTitle(title);
+        event.setPictureUrl(picture_url);
         event.setUbication(ubication);
-        event.setTags(tags);
-        event.setWebsites(websites);
         event.setDate(date);
         event.setDateLimit(dateLimit);
         event.setDescription(description);
+        event.setTags(tags);
+        event.setWebsites(websites);
         event.setSalary(salary);
         return create(event);
     }
