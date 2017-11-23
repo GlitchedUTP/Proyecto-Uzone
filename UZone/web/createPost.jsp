@@ -52,7 +52,7 @@
     <ul class="nav nav-pills">
         <li role="presentation" class="active"><a href="#">Últimos</a></li>
         <li role="presentation"><a href="#">Màs Videos</a></li>
-        <li role="presentation"><a href="videoShare.jsp">Enviar Video</a></li>
+        <li role="presentation"><a href="createPost.jsp">Enviar Video</a></li>
         <li role="presentation"><a href="#">Más Votados</a></li>
         <li role="presentation"><a href="PostEvent">Crea un evento</a></li>
         <form class="navbar-form navbar-left">
@@ -69,7 +69,7 @@
     <div>Haznos llegar todos aquellos vídeos que crees que pueden ser interesantes para publicar. </div>
 
     <div class="col-md-8">
-        <s:form theme="simple" role="form" action="videoshare">
+        <s:form theme="bootstrap" role="form" action="createPost">
             <div class="form-group">
                 <s:textfield id="title" name="model.title" placeholder="Ingresa el titulo de tu publicacion" class="form-control"/>
             </div>

@@ -40,10 +40,26 @@ public class PostAction extends ActionSupport implements ModelDriven<Post>,Sessi
     {
         UZoneService service=new UZoneService();
         if (sessionMap.containsKey("username")) {
+            String url=post.getUrl();
+            if(url.contains("=")){
+                String temp="";
+                int cont=-1;
+                for(int i=0;i<url.length();i++) {
+                    if(cont>=0 && cont<11) {
+                        temp+=url.charAt(i);
+                        cont++;
+                    }
+                    if(url.charAt(i)=='=') {
+                        cont=0;
+                    }
+                }
+                url=String.format("https://www.youtube.com/embed/%s",temp);
+                post.setUrl(url);
+            }
             post.setUser(service.findUserById((int)sessionMap.get("id")));
-            //DateTimeFormatter dateTimeFormatter= DateTimeFormatter.ofPattern("dd-mm-yyyy");
             LocalDate localDate=LocalDate.now();
             post.setDate(localDate.toString());
+
             if(service.createPost(post)) {
                 setPosts(service.findLastest());
                 return SUCCESS;
