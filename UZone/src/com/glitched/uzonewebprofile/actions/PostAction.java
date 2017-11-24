@@ -59,7 +59,6 @@ public class PostAction extends ActionSupport implements ModelDriven<Post>,Sessi
             post.setUser(service.findUserById((int)sessionMap.get("id")));
             LocalDate localDate=LocalDate.now();
             post.setDate(localDate.toString());
-
             if(service.createPost(post)) {
                 setPosts(service.findLastest());
                 return SUCCESS;

@@ -59,7 +59,7 @@
 </div>
 <h2>Publica un Evento</h2>
 <h3>Publica un evento para poder capturar la atencion de los mejores artistas</h3>
-<s:form action="postevent" theme="bootstrap">
+<s:form action="createEvent" theme="bootstrap">
     <s:textfield id="title" name="model.title" placeholder="Ingresa un titulo" requerid="true" />
     <s:textfield id="ubication" name="model.ubication" placeholder="¿Donde se realizara tu evento?" requerid="true" />
     <s:textfield id="evntime" name="model.date" placeholder="Fecha incio" requerid="true" />

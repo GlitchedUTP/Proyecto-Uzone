@@ -56,9 +56,12 @@ public class EventsEntity extends BaseEntity {
 
     public boolean create(Event event) {
         return executeUpdate(String.format(
-                "INSERT INTO %s(user_id,title,ubication,picture_url,date,datelimit,description,salary,tags,websites)"
-                        .concat("VALUES ('%d','%s','%s','%s','%s','%s','%s','%s','%s','%s')"),
-                getTableName(),event.getUser().getId(),event.getTitle(),event.getPictureUrl(),event.getUbication(), event.getDate(), event.getDateLimit(), event.getDescription(),event.getTags(),event.getWebsites(),event.getSalary()));
+                "INSERT INTO %s(title,picture_url,ubication,date,date_limit,description,tags,websites,salary,user_id)"
+                        .concat("VALUES ('%s','%s','%s',STR_TO_DATE('%s', '%%d-%%m-%%Y')," +
+                                "STR_TO_DATE('%s', '%%d-%%m-%%Y'),'%s','%s','%s',%.2f,%d)"),
+                getTableName(),event.getTitle(),event.getPictureUrl(),event.getUbication(),event.getDate(),
+                event.getDateLimit(),event.getDescription(),event.getTags(),event.getWebsites(),event.getSalary(),
+                event.getUser().getId()));
     }
 
     public boolean create( User user,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {

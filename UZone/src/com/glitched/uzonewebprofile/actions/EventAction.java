@@ -14,6 +14,15 @@ public class EventAction extends ActionSupport implements ModelDriven<Event>, Se
     private Event event= new Event();
     private Map<String, Object> sessionMap;
     private List<Event> events;
+    private List<Post> posts;
+
+    public List<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
 
     public List<Event> getEvents() {
         return events;
@@ -33,8 +42,15 @@ public class EventAction extends ActionSupport implements ModelDriven<Event>, Se
     public String execute() throws Exception {
         UZoneService service = new UZoneService();
         if (sessionMap.containsKey("username")) {
-            if (service.createEvent(event)) return SUCCESS;
+            event.setUser(service.findUserById((int)sessionMap.get("id")));
+            if(event.getPictureUrl()==null) {
+                event.setPictureUrl("default.jpg");
+            }
+            if (service.createEvent(event)) {
+                setPosts(service.findLastest());
+                return SUCCESS;
+            }
             else return ERROR;
-        }else return ERROR;
+        } else return ERROR;
     }
 }
