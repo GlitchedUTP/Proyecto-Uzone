@@ -49,8 +49,16 @@ public class PostsEntity extends BaseEntity{
         return findByCriteria(String.format("WHERE id=%d",id),usersEntity,userTypesEntity).get(0);
     }
 
+    public Post findByName (String title, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        return findByCriteria(String.format("WHERE title=%d",title),usersEntity,userTypesEntity).get(0);
+    }
+
     public List<Post> findLastest(UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         return findByCriteria("ORDER BY id DESC,date DESC",usersEntity,userTypesEntity);
+    }
+
+    public List<Post> showSearch(String title,UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        return findByCriteria(String.format("WHERE title=%d ORDER BY id DESC, date DESC",title),usersEntity,userTypesEntity);
     }
 
     public boolean create(Post post) {

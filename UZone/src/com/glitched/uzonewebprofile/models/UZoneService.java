@@ -86,6 +86,8 @@ public class UZoneService {
         return dataStore.createPost(id,title,date,description,url);
     }
 
+    public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
+
     //Events methods
     public List<Event> showEvents() {
         return dataStore.showEvents();

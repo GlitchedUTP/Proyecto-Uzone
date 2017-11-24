@@ -23,10 +23,8 @@
     <link href="Add-ons/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-
     <!-- Plugin CSS -->
     <link href="Add-ons/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
     <!-- Custom styles for this template -->
     <link href="Add-ons/css/creative.min.css" rel="stylesheet">
 
@@ -168,8 +166,8 @@
     <div class="container-fluid p-0">
         <div class="row no-gutters popup-gallery">
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/1.jpg">
-                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/1.jpg" alt="">
+                <a class="portfolio-box" href="Add-ons/img/1.jpg">
+                    <img class="img-fluid" src="Add-ons/img/1.jpg" alt="">
                     <div class="portfolio-box-caption">
                         <div class="portfolio-box-caption-content">
                             <div class="project-category text-faded">
@@ -183,82 +181,82 @@
                 </a>
             </div>
             <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/2.jpg">
-                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/2.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                BUSCA
-                            </div>
-                            <div class="project-name">
-                                Encuentra a las personas que se dedican al mundo del arte y la cultura
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/3.jpg">
-                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/3.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                OPORTUNIDADES
-                            </div>
-                            <div class="project-name">
-                                Tablon informativo de difusiones y acontecimientos que te pueden interesar
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/4.jpg">
-                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/4.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                PROYECTOS
-                            </div>
-                            <div class="project-name">
-                                Muestra y difunde todos tus trabajos artisticos para que te conozcan mejor
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/5.jpg">
-                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/5.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                EVENTOS
-                            </div>
-                            <div class="project-name">
-                                Sigue la actividad cultural que te rodea y atrevete a participar en eventos
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="Add-ons/img/portfolio/fullsize/6.jpg">
-                    <img class="img-fluid" src="Add-ons/img/portfolio/thumbnails/6.jpg" alt="">
-                    <div class="portfolio-box-caption">
-                        <div class="portfolio-box-caption-content">
-                            <div class="project-category text-faded">
-                                CONCURSOS
-                            </div>
-                            <div class="project-name">
-                                Disfruta del arte y la cultura mediante premios,sorteos y reconocimientos
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
+                <a class="portfolio-box" href="Add-ons/img/2.jpg">
+                  <img class="img-fluid" src="Add-ons/img/2.jpg" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              BUSCA
+                          </div>
+                          <div class="project-name">
+                              Encuentra a las personas que se dedican al mundo del arte y la cultura
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a class="portfolio-box" href="Add-ons/img/4.jpg">
+                  <img class="img-fluid" src="Add-ons/img/4.jpg" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              OPORTUNIDADES
+                          </div>
+                          <div class="project-name">
+                              Tablon informativo de difusiones y acontecimientos que te pueden interesar
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a class="portfolio-box" href="Add-ons/img/3.jpg">
+                  <img class="img-fluid" src="Add-ons/img/3.jpg" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              PROYECTOS
+                          </div>
+                          <div class="project-name">
+                              Muestra y difunde todos tus trabajos artisticos para que te conozcan mejor
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a class="portfolio-box" href="Add-ons/img/6.jpg">
+                  <img class="img-fluid" src="Add-ons/img/6.jpg" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              EVENTOS
+                          </div>
+                          <div class="project-name">
+                              Sigue la actividad cultural que te rodea y atrevete a participar en eventos
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-4 col-sm-6">
+              <a class="portfolio-box" href="Add-ons/img/5.jpg">
+                  <img class="img-fluid" src="Add-ons/img/5.jpg" alt="">
+                  <div class="portfolio-box-caption">
+                      <div class="portfolio-box-caption-content">
+                          <div class="project-category text-faded">
+                              CONCURSOS
+                          </div>
+                          <div class="project-name">
+                              Disfruta del arte y la cultura mediante premios,sorteos y reconocimientos
+                          </div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+      </div>
+  </div>
 </section>
 
 <section id="contact">

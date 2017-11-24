@@ -144,6 +144,11 @@ public class UZoneDataStore {
         return getPostsEntity().findLastest(getUsersEntity(),getUserTypesEntity());
     }
 
+    public List<Post> showSearch(String title) {
+        if(connection==null) return null;
+        return getPostsEntity().showSearch(title, getUsersEntity(), getUserTypesEntity());
+    }
+
     public boolean createPost(Post post) {
         if(connection==null) return false;
         return getPostsEntity().create(post);

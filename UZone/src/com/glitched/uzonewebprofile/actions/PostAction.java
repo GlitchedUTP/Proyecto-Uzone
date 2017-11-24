@@ -65,4 +65,13 @@ public class PostAction extends ActionSupport implements ModelDriven<Post>,Sessi
             } else return ERROR;
         } else return ERROR;
     }
+    public String search() throws Exception{
+        UZoneService service=new UZoneService();
+        if (sessionMap.containsKey("username")){
+                String title=post.getTitle();
+                setPosts(service.showSearch(title));
+                return SUCCESS;
+            } else return ERROR;
+        }
+
 }

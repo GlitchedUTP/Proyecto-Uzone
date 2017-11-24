@@ -50,5 +50,9 @@
             <result name="success">main.jsp</result>
             <result name="error">createEvent.jsp</result>
         </action>
+        <action name="searchVideo" class="com.glitched.uzonewebprofile.actions.PostAction" method="search">
+            <result name="success">main.jsp</result>
+            <result name="error">createEvent.jsp</result>
+        </action>
     </package>
 </struts>
