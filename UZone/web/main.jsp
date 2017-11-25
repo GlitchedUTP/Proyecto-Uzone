@@ -44,15 +44,15 @@
     <ul class="nav nav-pills">
         <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
         <li role="presentation"><a href="main.jsp">Màs Videos</a></li>
-        <li role="presentation"><a href="createPost.jsp">Enviar Video</a></li>
+        <s:if test="#session.id==1"><li role="presentation"><a href="createPost.jsp">Enviar Video</a></li></s:if>
         <li role="presentation"><a href="#">Más Votados</a></li>
-        <li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li>
+        <s:if test="#session.id==2"><li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li></s:if>
         <li role="presentation"><a href="listEvent.jsp">Eventos disponibles</a></li>
         <s:form class="navbar-form navbar-left" action="searchVideo">
             <div class="form-group">
-                <s:textfield name=""  class="form-control" placeholder="Buscar">
+                <s:textfield name="model.title"  class="form-control" placeholder="Buscar"/>
             </div>
-            <s:submit type="submit" class="btn btn-default">Buscar</s:submit>
+            <s:submit type="submit" class="btn btn-default" value="Buscar"/>
         </s:form>
     </ul>
 </div>
