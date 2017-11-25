@@ -101,8 +101,6 @@ public class UZoneService {
 
     public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
 
-    public List<Post> findByUser(int user_id) { return dataStore.findByUser(user_id); }
-
     //Events methods
     public List<Event> showEvents() {
         return dataStore.showEvents();

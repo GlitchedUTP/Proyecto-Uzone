@@ -46,7 +46,7 @@
                     <s:password id="password" name="model.password" placeholder="Contraseña"/>
                     <s:submit value="Iniciar Sesion" cssClass="btn btn-outline-secondary"/>
                     <a href="userRegister.jsp"><s:label cssClass="btn btn-outline-secondary" value="Registrarse"/></a>
-                    <a href="#">¿Olvido su contraseña?</a>
+                    <a href="forgotPass.jsp">¿Olvido su contraseña?</a>
                 </s:form>
             </div>
         </div>

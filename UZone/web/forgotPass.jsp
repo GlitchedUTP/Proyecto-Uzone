@@ -1,3 +1,16 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: Jorda01
+  Date: 25/11/2017
+  Time: 3:07
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+         pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -21,67 +34,28 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <s:a class="navbar-brand" href="main.jsp">UZone</s:a>
+            <s:a class="navbar-brand" href="home">UZone</s:a>
         </div>
 
-
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="contribution.jsp">Mis Aportaciones</a></li>
-            </ul>
-            <form class="navbar-form navbar-left">
-
-
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-                <li><s:a href="self">${sessionScope.username}</s:a></li>
-                <li><s:a href="logout">Cerrar sesión</s:a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<div class="container">
-    <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
-        <li role="presentation"><a href="main.jsp">Màs Videos</a></li>
-        <s:if test="#session.userType==1"><li role="presentation"><a href="createPost.jsp">Enviar Video</a></li></s:if>
-        <li role="presentation"><a href="#">Más Votados</a></li>
-        <s:if test="#session.userType==2"><li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li></s:if>
-        <li role="presentation"><a href="listEvent.jsp">Eventos disponibles</a></li>
-        <s:form class="navbar-form navbar-left" action="searchVideo">
-            <div class="form-group">
-                <s:textfield name="model.title"  class="form-control" placeholder="Buscar"/>
-            </div>
-            <s:submit type="submit" class="btn btn-default" value="Buscar"/>
-        </s:form>
-    </ul>
-</div>
-<center>
-<s:iterator value="posts">
-    <div class="container">
-    <div class="container">
-        <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="user.username"/></s:param></s:url>
-        <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="user.username"/></a> en <s:property value="date"/></p>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h4><s:property value="title"/></h4>
-                <p>
-                    <s:property value="description"/>
-                </p>
-            </div>
-            <div class="col-md-8">
-                <div class="vid">
-                    <iframe width="560" height="315" src="<s:property value='url'/>" allowfullscreen=""></iframe>
-                     </div>
-                </div>
-            </div>
-         </div>
-    </div>
-</s:iterator>
-</center>
+    <em>The form below uses Google's SMTP server.
+        So you need to enter a gmail username and password
+    </em>
+    <form action="emailer" method="post">
+        <label for="from">From</label><br/>
+        <input type="text" name="from"/><br/>
+        <label for="password">Password</label><br/>
+        <input type="password" name="password"/><br/>
+        <label for="to">To</label><br/>
+        <input type="text" name="to"/><br/>
+        <label for="subject">Subject</label><br/>
+        <input type="text" name="subject"/><br/>
+        <label for="body">Body</label><br/>
+        <input type="text" name="body"/><br/>
+        <input type="submit" value="Send Email"/>
+    </form>
+
 <%--<s:property value="trying"/>
 <s:iterator value="posts" var="post">
     <s:property value="title" /><p>a</p>
@@ -121,6 +95,7 @@
 
     </div>
 </footer>
+</nav>
 </body>
 <style>
     .footer-bs {
