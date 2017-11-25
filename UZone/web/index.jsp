@@ -58,19 +58,18 @@
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 <h1 class="text-uppercase">
-                    <strong>UZone te da la bienvenida</strong>
+                    <strong>Te damos la bienvenida</strong>
                 </h1>
                 <hr>
             </div>
             <div class="col-lg-8 mx-auto">
                 <p class="text-faded mb-5">
-                    Entrar en la comunidad de musicos, actores, pintores, escritores, bailarines...
-                    Sigue a nuevos artistas y mira sus eventos y logros.
+                    Entra en la comunidad de musicos, actores, pintores, escritores, bailarines...
+                    para seguir a nuevos artistas y mirar sus eventos y logros
                     Promociona tu galeria, proyectos, obras y date a conocer en nuestra comunidad.
-                    Publica eventos como worker y califica a tus artistas favoritos.
-                    Porque UZone esta hecha para artistas como tu.
+                    Publica eventos como worker y califica a tus artistas favoritos
                 </p>
-                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Registrate Ahora</a>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="userRegister.jsp">Registrate Ahora</a>
             </div>
         </div>
     </div>
@@ -80,10 +79,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-heading text-white"></h2>
+                <h2 class="section-heading text-white">Artistas, desarrollen su creatividad</h2>
                 <hr class="light my-4">
-                <p class="text-faded mb-4"></p>
-                <a class="btn btn-light btn-xl js-scroll-trigger" href="#services"></a>
+                <p class="text-faded mb-4">Simple, Rápido, Ilimitado y sin costos adicionales.</p>
+                <a class="btn btn-light btn-xl js-scroll-trigger" href="#contact">¿Desea mas informacion?</a>
             </div>
         </div>
     </div>
@@ -234,9 +233,10 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-heading"></h2>
+                <h2 class="section-heading">Contacto</h2>
                 <hr class="my-4">
-                <p class="mb-5"></p>
+                <a href="#">Acerca de uzone</a>
+                <a href="#">Politicas de privacidad</a>
             </div>
         </div>
         <div class="row">

@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script src="Add-ons/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link href="Add-ons/vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+    <link href="Add-ons/css/creative.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -30,9 +34,8 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
 
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Aportaciones</a></li>
-                <li><a href="#">Mensajes</a></li>
+                <li><a href="main.jsp">Inicio</a></li>
+                <li><a href="contribution.jsp">Aportaciones</a></li>
             </ul>
             <form class="navbar-form navbar-left">
 
@@ -40,8 +43,6 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><s:a href="#">${sessionScope.userName} <s:property value="model.username"/></s:a></li>
-                <li><a href="#">Preferencias</a></li>
-                <li><a href="#">Mensaje</a></li>
                 <li><s:a href="logout">Cerrar sesión</s:a></li>
             </ul>
         </div>
@@ -50,17 +51,18 @@
 
 <div class="container">
     <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="#">Últimos</a></li>
-        <li role="presentation"><a href="#">Màs Videos</a></li>
-        <li role="presentation"><a href="createPost.jsp">Enviar Video</a></li>
+        <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
+        <li role="presentation"><a href="main.jsp">Màs Videos</a></li>
+        <s:if test="#session.userType==1"><li role="presentation"><a href="createPost.jsp">Enviar Video</a></li></s:if>
         <li role="presentation"><a href="#">Más Votados</a></li>
-        <li role="presentation"><a href="PostEvent">Crea un evento</a></li>
-        <form class="navbar-form navbar-left">
+        <s:if test="#session.userType==2"><li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li></s:if>
+        <li role="presentation"><a href="listEvent.jsp">Eventos disponibles</a></li>
+        <s:form class="navbar-form navbar-left" action="searchVideo">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Buscar">
+                <s:textfield name="model.title"  class="form-control" placeholder="Buscar"/>
             </div>
-            <button type="submit" class="btn btn-default">Enviar</button>
-        </form>
+            <s:submit type="submit" class="btn btn-default" value="Buscar"/>
+        </s:form>
     </ul>
 </div>
 
