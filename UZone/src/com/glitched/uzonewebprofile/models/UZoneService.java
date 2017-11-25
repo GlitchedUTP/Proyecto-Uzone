@@ -106,10 +106,6 @@ public class UZoneService {
     public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
 
     //Events methods
-    public List<Event> findAllEvents() {
-        return dataStore.findAllEvents();
-    }
-
     public List<Event> showEvents() {
         return dataStore.showEvents();
     }

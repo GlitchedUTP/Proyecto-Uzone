@@ -42,7 +42,7 @@
 
             </form>
             <ul class="nav navbar-nav navbar-right">
-                <li><s:a href="self">${sessionScope.username} </s:a></li>
+                <li><s:a href="#">${sessionScope.userName} <s:property value="model.username"/></s:a></li>
                 <li><s:a href="logout">Cerrar sesión</s:a></li>
             </ul>
         </div>
