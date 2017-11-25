@@ -95,6 +95,7 @@
 
     </div>
 </footer>
+</nav>
 </body>
 <style>
     .footer-bs {
