@@ -13,6 +13,15 @@ public class ProfileAction extends ActionSupport implements ModelDriven<Informat
     private Map<String, Object> sessionMap;
     private Information information;
     String username;
+    int value;
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
 
     public String getUsername() {
         return username;
@@ -37,6 +46,7 @@ public class ProfileAction extends ActionSupport implements ModelDriven<Informat
         UZoneService service = new UZoneService();
         if (sessionMap.containsKey("username")) {
             information=service.findInformationByUserUsername(username);
+            value=service.getQuantity((int)sessionMap.get("id"),information.getUser().getId());
             return SUCCESS;
         }
         return ERROR;

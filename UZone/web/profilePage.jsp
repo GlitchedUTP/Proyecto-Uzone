@@ -49,11 +49,13 @@
             <h4>Edita tu perfil</h4>
             <img data-src="holder.js/140x140" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAADnklEQVR4Xu3YUU4bARAD0HI3js2ZuEIrkCKlNGRjCazFff1sJpmM/bSUPr2+vv7+5Y8EHkzgCZgHkzL2ngAwIEQJABPFZRgYBqIEgIniMgwMA1ECwERxGQaGgSgBYKK4DAPDQJQAMFFchoFhIEoAmCguw8AwECUATBSXYWAYiBIAJorLMDAMRAkAE8VlGBgGogSAieIyDAwDUQLARHEZBoaBKAFgorgMA8NAlAAwUVyGgWEgSgCYKC7DwDAQJQBMFJdhYBiIEgAmisswMAxECQATxWUYGAaiBICJ4jIMDANRAsBEcRkGhoEoAWCiuAwDw0CUADBRXIaBYSBKAJgoLsPAMBAlAEwUl2FgGIgSACaKyzAwDEQJABPFZRgYBqIEgIniMgwMA1ECwERxGQaGgSgBYKK4DAPDQJQAMFFchoFhIEoAmCguw8AwECUATBSXYWAYiBKYAPPy8vJ+9PPz8z/H33rt8neX4Vvvu5die1/U6DcP/3gw1+V/LP7Wax/Lvlf+rezb+765//jjfzSYoydFCuYI01fvi9s6wRt+PJi3p8pnP3ZuvXYPxSNgvnLfCfqPv8KPBnO59qvAvH3e0VPkeub6R+Db+1KgcVsneMMkmEt5t8o9eop8BuK6q1ufccFz9Pnpv5lOYOSvrzAL5lbQyRPg3m9Qn6H4uPORfWcDcfR9JsEcPQ2ufwW/Lv/o6XDvR+Bnrz36mUdFneX1/w7MvX+nPFqu/4c5C1/f4/QJTDxhTp/y0BcEZqjMxinANFIe2gHMUJmNU4BppDy0A5ihMhunANNIeWgHMENlNk4BppHy0A5ghspsnAJMI+WhHcAMldk4BZhGykM7gBkqs3EKMI2Uh3YAM1Rm4xRgGikP7QBmqMzGKcA0Uh7aAcxQmY1TgGmkPLQDmKEyG6cA00h5aAcwQ2U2TgGmkfLQDmCGymycAkwj5aEdwAyV2TgFmEbKQzuAGSqzcQowjZSHdgAzVGbjFGAaKQ/tAGaozMYpwDRSHtoBzFCZjVOAaaQ8tAOYoTIbpwDTSHloBzBDZTZOAaaR8tAOYIbKbJwCTCPloR3ADJXZOAWYRspDO4AZKrNxCjCNlId2ADNUZuMUYBopD+0AZqjMxinANFIe2gHMUJmNU4BppDy0A5ihMhunANNIeWgHMENlNk4BppHy0A5ghspsnAJMI+WhHcAMldk4BZhGykM7gBkqs3EKMI2Uh3YAM1Rm4xRgGikP7fgDC/oXpnZMYeUAAAAASUVORK5CYII=" class="img-thumbnail" alt="140x140" style="width: 200px; height: 200px;">
             <s:if test="model.user.username!=#session.username">
-                <h3>Mi calificacion:</h3>
-                <s:url action="point" var="pointLink">
-                    <s:param name="target"><s:property value="model.user.id"/></s:param>
-                </s:url>
-                <a href="${pointLink}"><div id="rateYo"></div></a>
+                <h3>Califica:</h3>
+                <s:form action="point">
+                    <s:hidden name="target" value="%{model.user.id}"/>
+                    <s:radio name="quantity" list="#{'1':'1','2':'2','2':'2','3':'3','4':'4','5':'5'}"/>
+                    <s:submit value="Enviar Calificacion"/>
+                </s:form>
+                <h3>Mi calificacion: <s:property value="value"/> </h3>
             </s:if>
                 <h3>Calificacion promedio:</h3>
                 <div id="rateYo2"></div>
@@ -77,28 +79,18 @@
                           list="#{'M':'Masculino', 'F':'Femenino'}"
                 disabled="true"/>
                 <s:textfield id="phone" name="model.user.phone" onchange="this.disabled=false;" placeholder="Telefono" label="Telefono" disabled="true"/>
-                <s:if test="model.user.username==#session.username"><s:file id="photoUrl" label="Cambiar foto" disabled="true"/>
+                <%--<s:if test="model.user.username==#session.username"><s:file id="photoUrl" label="Cambiar foto" disabled="true"/>
                 <ul class="nav nav-pills">
                     <button id="change" class="btn btn-success click" onchange="this.disabled=true;" onclick="disable()">Hacer Cambios</button>
                     <s:submit id="save" class="btn btn-success" disabled="true">Guardar Cambios</s:submit>
-                        <%--<button class="btn btn-primary" type="button">
-                            Mensajes <span class="badge">4</span>
-                        </button>--%>
                 </ul>
-                </s:if>
+                </s:if>--%>
             </s:form>
         </div>
     </div>
 </div>
 <script>
     $(function () {
-        $("#rateYo").rateYo({
-            fullStar: true,
-            onChange: function (rating, rateYoInstance) {
-                $(this).next().text(rating);
-                var value = $("#rateYo").rateYo("option", "rating");
-            }
-        });
         $("#rateYo2").rateYo({
             readOnly: true
         });
