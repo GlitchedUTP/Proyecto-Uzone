@@ -38,7 +38,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="contribution.jsp">Mis Aportaciones</a></li>
+                <li><s:a href="contribution">Mis Aportaciones</s:a></li>
             </ul>
             <form class="navbar-form navbar-left">
 
@@ -67,6 +67,11 @@
                     <p>
                         <s:property value="description"/>
                     </p>
+                </div>
+                <div class="col-md-4">
+                    <s:form class="navbar-form navbar-left" action="deletevideo">
+                        <s:submit type="submit" class="btn btn-default" value="Borrar video"/>
+                    </s:form>
                 </div>
                 <div class="col-md-8">
                     <div class="vid">

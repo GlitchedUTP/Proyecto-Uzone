@@ -64,14 +64,31 @@
 <h2>Publica un Evento</h2>
 <h3>Publica un evento para poder capturar la atencion de los mejores artistas</h3>
 <s:form action="createEvent" theme="bootstrap">
+        <div class="form-group">
     <s:textfield id="title" name="model.title" placeholder="Ingresa un titulo" requerid="true" />
+        </div>
+        <div class="form-group">
     <s:textfield id="ubication" name="model.ubication" placeholder="¿Donde se realizara tu evento?" requerid="true" />
+        </div>
+        <div class="form-group">
     <s:textfield id="evntime" name="model.date" placeholder="Fecha incio" requerid="true" />
+        </div>
+        <div class="form-group">
     <s:textfield id="evntimelimit" name="model.dateLimit" placeholder="Fecha fin" requerid="true" />
+        </div>
+        <div class="form-group">
     <s:textarea id="description" name="model.description" placeholder="Describe lo que tendra tu publicacion" requerid="true" rows="3"/>
+        </div>
+        <div class="form-group">
     <s:textfield id="tags" name="model.tags" placeholder="Etiquetas" requerid="true"/>
+        </div>
+        <div class="form-group">
     <s:textfield id="websites" name="model.websites" placeholder="Ingresa algun sitio web asociado a tu evento" requerid="true"/>
+        </div>
+        <div class="form-group">
     <s:textfield id="salary" name="model.salary" placeholder="Ingrese una remuneracion para tu artista" />
+        </div>
+
     <s:submit value="Publicar" cssClass="btn btn-default"/>
 </s:form>
 </body>

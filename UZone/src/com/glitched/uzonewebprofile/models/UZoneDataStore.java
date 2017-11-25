@@ -165,6 +165,11 @@ public class UZoneDataStore {
         return getPostsEntity().showSearch(title, getUsersEntity(), getUserTypesEntity());
     }
 
+    public List<Post> findByUser(int user_id) {
+        if(connection==null) return null;
+        return getPostsEntity().findByUser(getUsersEntity().findById(user_id,getUserTypesEntity()),getUsersEntity(), getUserTypesEntity());
+        }
+
     public boolean createPost(Post post) {
         if(connection==null) return false;
         return getPostsEntity().create(post);
@@ -175,10 +180,11 @@ public class UZoneDataStore {
         return getPostsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),title,date,description,url);
     }
 
+
     //Event methods
-    public List<Event> showEvents() {
+    public List<Event> findAll() {
         if(connection==null) return null;
-        return getEventsEntity().showEvents(getUsersEntity(),getUserTypesEntity());
+        return getEventsEntity().findAll(getUsersEntity(),getUserTypesEntity());
     }
 
     public boolean createEvent(Event event) {
@@ -191,6 +197,10 @@ public class UZoneDataStore {
         return getEventsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),title,picture_url,ubication,tags,websites,date,dateLimit,description,salary);
     }
 
+    public List<Event> findByUserEvent(int user_id) {
+        if(connection==null) return null;
+        return getEventsEntity().findByUser(getUsersEntity().findById(user_id,getUserTypesEntity()),getUsersEntity(), getUserTypesEntity());
+    }
     //Point methods
     public boolean createPoint(int origin, int target, int quantity) {
         if(connection==null) return false;

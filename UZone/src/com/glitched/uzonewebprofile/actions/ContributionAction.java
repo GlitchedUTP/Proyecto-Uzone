@@ -10,82 +10,28 @@ import org.apache.struts2.interceptor.SessionAware;
 import java.util.List;
 import java.util.Map;
 
-public class ContributionAction extends ActionSupport implements ModelDriven<Post> {
-    private  Post post = new Post();
+public class ContributionAction extends ActionSupport implements ModelDriven<Post>,SessionAware {
+    private Map<String, Object> sessionMap;
+    private Post post= new Post();
+    private Event event= new Event();
+    private List<Post> posts;
+    private List<Event> events;
 
-    public Post getPost() {
+    public List<Event> getEvents() { return events; }
+
+    public void setEvents(List<Event> events) { this.events = events; }
+
+    public List<Post> getPosts() { return posts; }
+
+    public void setPosts(List<Post> posts) {
+        this.posts = posts;
+    }
+
+    @Override
+    public Post getModel()
+    {
         return post;
     }
-
-    public void setPost(Post post) {
-        this.post = post;
-    }
-
-    public Map<String, Object> getSessionMap() {
-        return sessionMap;
-    }
-
-    public void setSessionMap(Map<String, Object> sessionMap) {
-        this.sessionMap = sessionMap;
-    }
-
-    public List<Post> getPosts() {
-        return posts;
-    }
-
-    public void setPosts(List<Post> posts) {
-        this.posts = posts;
-    }
-
-    private Map<String, Object> sessionMap;
-    private List<Post> posts;
-
-
-    @Override
-    public Post getModel() {
-        return null;
-    }
-
-    @Override
-    public String execute() throws Exception {
-        UZoneService service = new UZoneService();
-        if (sessionMap.containsKey("username")) {
-            post.setUser(service.findUserById((int)sessionMap.get("id")));
-
-            if (service.createPost(post)) {
-                setPosts(service.findLastest());
-                return SUCCESS;
-            }
-            else return ERROR;
-        } else return ERROR;
-    }
-}
-
-
-
-/*
-public class EventAction extends ActionSupport implements ModelDriven<Event>, SessionAware {
-    private Event event= new Event();
-    private Map<String, Object> sessionMap;
-    private List<Event> events;
-    private List<Post> posts;
-
-    public List<Post> getPosts() {
-        return posts;
-    }
-
-    public void setPosts(List<Post> posts) {
-        this.posts = posts;
-    }
-
-    public List<Event> getEvents() {
-        return events;
-    }
-
-    public void setEvents(List<Event> events) {this.events= events; }
-
-    @Override
-    public Event getModel(){return event;}
 
     @Override
     public void setSession(Map<String, Object> sessionMap) {
@@ -96,16 +42,26 @@ public class EventAction extends ActionSupport implements ModelDriven<Event>, Se
     public String execute() throws Exception {
         UZoneService service = new UZoneService();
         if (sessionMap.containsKey("username")) {
-            event.setUser(service.findUserById((int)sessionMap.get("id")));
-            if(event.getPictureUrl()==null) {
-                event.setPictureUrl("default.jpg");
-            }
-            if (service.createEvent(event)) {
-                setPosts(service.findLastest());
-                return SUCCESS;
-            }
-            else return ERROR;
+            post.setUser(service.findUserById((int)sessionMap.get("id")));
+            setPosts(service.findByUser(post.getUser().getId()));
+            return SUCCESS;
         } else return ERROR;
     }
+
 }
-*/
+
+
+
+  /*  public String execute() throws Exception {
+        UZoneService service = new UZoneService();
+        if (sessionMap.containsKey("username")) {
+            if (sessionMap.get("id").equals("1")){
+                post.setUser(service.findUserById((int)sessionMap.get("id")));
+                setPosts(service.findByUser(post.getUser().getId()));
+                return SUCCESS;
+            }else if(sessionMap.get("id").equals("2"))
+                event.setUser(service.findUserById((int)sessionMap.get("id")));
+            setEvents(service.findByUserEvent(event.getUser().getId()));
+            return SUCCESS;
+        } else return ERROR;
+    }*/

@@ -99,11 +99,13 @@ public class UZoneService {
         return dataStore.createPost(id,title,date,description,url);
     }
 
+    public List<Post> findByUser(int user_id) {return dataStore.findByUser(user_id); }
+
     public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
 
     //Events methods
-    public List<Event> showEvents() {
-        return dataStore.showEvents();
+    public List<Event> findAll() {
+        return dataStore.findAll();
     }
 
     public boolean createEvent(Event event) { return dataStore.createEvent(event); }
@@ -111,6 +113,7 @@ public class UZoneService {
     public boolean createEvent(int id,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {
         return dataStore.createEvent(id,title,picture_url,ubication,tags,websites,date,dateLimit,description,salary);
     }
+    public List<Event> findByUserEvent(int user_id) { return dataStore.findByUserEvent(user_id); }
 
     //Point methods
     public boolean createPoint(int origin,int target,int quantity) {
