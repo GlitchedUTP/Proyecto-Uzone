@@ -181,6 +181,11 @@ public class UZoneDataStore {
     }
 
     //Event methods
+    public List<Event> findAllEvents() {
+        if(connection==null) return null;
+        return getEventsEntity().findAll(getUsersEntity(),getUserTypesEntity());
+    }
+
     public List<Event> showEvents() {
         if(connection==null) return null;
         return getEventsEntity().showEvents(getUsersEntity(),getUserTypesEntity());
