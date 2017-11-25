@@ -62,7 +62,7 @@ public class UZoneDataStore {
         return eventsEntity;
     }
 
-    private PostulantsEntity getIPostulantsEntity(){
+    private PostulantsEntity getPostulantsEntity(){
         if(postulantsEntity==null) {
             postulantsEntity=new PostulantsEntity();
             postulantsEntity.setConnection(connection);
@@ -199,6 +199,17 @@ public class UZoneDataStore {
     public boolean createEvent(int id,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {
         if(connection==null) return false;
         return getEventsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),title,picture_url,ubication,tags,websites,date,dateLimit,description,salary);
+    }
+
+    //Postulant methods
+    public boolean createPostulant(String date,int eventId,int userId) {
+        if(connection==null) return false;
+        return getPostulantsEntity().create(date,eventId,userId);
+    }
+
+    public boolean checkPostulant(int eventId, int userId) {
+        if(connection==null) return false;
+        return getPostulantsEntity().check(eventId,userId);
     }
 
     //Point methods

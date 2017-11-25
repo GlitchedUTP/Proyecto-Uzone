@@ -33,5 +33,22 @@ public class PostulantsEntity extends BaseEntity {
         return null;
     }
 
+    public boolean check(int eventId,int userId) {
+        try {
+            ResultSet rs = getConnection()
+                    .createStatement()
+                    .executeQuery(String.format("SELECT * FROM %s WHERE event_id=%d AND user_id=%d",getTableName(),eventId,userId));
+            if (rs.next()) {
+                return false;
+            }
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return true;
+    }
 
+    public boolean create(String date, int eventId, int userId) {
+        return executeUpdate(String.format("INSERT INTO %s VALUES('%s',%d,%d)",getTableName(),date,eventId,userId));
+    }
 }

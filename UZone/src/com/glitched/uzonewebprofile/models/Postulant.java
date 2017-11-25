@@ -5,7 +5,6 @@ import java.sql.SQLException;
 
 public class Postulant {
 
-    private int id;
     private String date;
     Event event;
     User user;
@@ -13,19 +12,10 @@ public class Postulant {
     public Postulant() {
     }
 
-    public Postulant(int id, String date, Event event, User user) {
-        this.id = id;
+    public Postulant(String date, Event event, User user) {
         this.date = date;
         this.event = event;
         this.user = user;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getDate() {
@@ -56,7 +46,6 @@ public class Postulant {
         Postulant postulant=new Postulant();
         try {
             postulant.setEvent(eventsEntity.findById(rs.getInt("event_id"),usersEntity,userTypesEntity));
-            postulant.setId(rs.getInt("id"));
             postulant.setUser(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
             postulant.setDate(rs.getDate("date").toString());
             return postulant;

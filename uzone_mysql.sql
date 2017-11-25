@@ -28,9 +28,9 @@ CREATE TABLE users (
 	);
   
 CREATE TABLE informations(
-	id INT(5) UNSIGNED NOT NULL,
+	id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
     description VARCHAR(100),
-    average_points DECIMAL(2,2),
+    average_points DECIMAL(3,2),
     vote_quantity INT(10),
     user_id INT(5) UNSIGNED NOT NULL,
     PRIMARY KEY(id),
@@ -43,8 +43,8 @@ CREATE TABLE events (
     title VARCHAR (50)  NOT NULL,
     picture_url VARCHAR(100) NOT NULL,
     ubication VARCHAR(150) NOT NULL,
-    date DATETIME NOT NULL,
-    date_limit DATETIME NOT NULL,
+    date DATE NOT NULL,
+    date_limit DATE NOT NULL,
     description VARCHAR(300) NOT NULL,
     tags VARCHAR(100),
     websites VARCHAR(70),
@@ -56,10 +56,9 @@ CREATE TABLE events (
 
 CREATE TABLE postulants (
 	event_id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
-    id INT(5) UNSIGNED NOT NULL,
     user_id INT(5) UNSIGNED NOT NULL,
-    date DATETIME,
-    PRIMARY KEY(event_id),
+    date DATE,
+    PRIMARY KEY(event_id,user_id),
     CONSTRAINT postulants_events_event_id FOREIGN  KEY (event_id) REFERENCES events(id),
     CONSTRAINT postulants_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
 );
@@ -144,6 +143,44 @@ VALUES (
     2
 	);
     
+INSERT INTO users (username,password,name,lastname,email,birthdate,genre,phone,picture_url,user_type_id)
+VALUES (
+    'NicoForce2',
+    'nicomax',
+    'Nicolas',
+    'Cordova',
+    'nicomax_012@hotmail.com',
+    STR_TO_DATE('25-01-1999', '%d-%m-%Y'),
+    'M',
+    '978066359',
+    NULL,
+    1
+	);
+    
+INSERT INTO informations (description,average_points,vote_quantity,user_id)
+VALUES (
+	'',
+    0,
+    0,
+    1
+    );
+    
+INSERT INTO informations (description,average_points,vote_quantity,user_id)
+VALUES (
+	'',
+    0,
+    0,
+    2
+    );
+    
+INSERT INTO informations (description,average_points,vote_quantity,user_id)
+VALUES (
+	'',
+    0,
+    0,
+    3
+    );
+    
 INSERT INTO posts (user_id,title,date,description,url) 
 VALUES (
 	1,
@@ -197,10 +234,19 @@ VALUES (
     'This is clickbait x6',
     'https://www.youtube.com/embed/3gSwUwvP9Ao'
 	);
-    
 
 COMMIT;
 
+INSERT INTO points VALUES (1,2,5);
+
 select * from users;
 
+select * from informations;
+
 select * from posts;
+
+select * from events;
+
+select * from points;
+
+select * from informations WHERE user_id=(SELECT id FROM users WHERE username='NicoForce');
