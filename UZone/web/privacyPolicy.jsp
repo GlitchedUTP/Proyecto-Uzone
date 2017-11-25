@@ -14,7 +14,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Términos de Uso</title>
+    <title>Polìticas de Privacidad</title>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -49,22 +49,12 @@
 </nav>
 <div class="container">
     <div id="terms" class="row">
-        <h2>Términos de Uso</h2>
-        <h3>Le solicitamos leer cuidadosamente los términos y condiciones del servicio que ofrece Uzone</h3>
+        <h2>POLÍTICA DE PRIVACIDAD</h2>
+        <h3>El presente Política de Privacidad establece los términos en que UZone usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</h3>
     </div>
 
 </div>
-<div class="col-md-8">
-    <div class="op-text-block">
-        <ol>
-            <li>Tomar en cuenta que esta página no tienen fines de lucro en relación a la contratación de artistas</li>
-            <br> <li>Este servicio considera válidas los acuerdos realizados por los empleadores(workers) y empleados(servicio momentaneo)</li>
-            <br><li>No nos haremos responsables por cualquier altercado entre usuarios de este sitio web.</li>
-            <br><li>No se aceptan transacciones monetarias bajo a cuerdo dentro de la misma página web. Esta acción deberá llevarse a acabo fuera de la plataforma Uzone como acuerdo personal.</li>
-            <br><li>El uso o divulgación de tarjeta de crédito, intereses y otras condiciones aplicables a las tarjetas de crédito, son de exclusiva responsabilidad de su emisor.</li>
-        </ol>
-    </div>
-</div>
+
 <center>
 
 
