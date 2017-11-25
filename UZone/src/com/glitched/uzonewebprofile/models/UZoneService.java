@@ -78,10 +78,6 @@ public class UZoneService {
         return dataStore.findLastest();
     }
 
-    public List<Post> findByUser(int user_id) {
-        return dataStore.findByUser(user_id);
-    }
-
     public boolean createPost(Post post) {
         return dataStore.createPost(post);
     }
@@ -91,7 +87,6 @@ public class UZoneService {
     }
 
     public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
-
 
     //Events methods
     public List<Event> showEvents() {

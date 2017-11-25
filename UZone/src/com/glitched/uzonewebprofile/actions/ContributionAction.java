@@ -10,10 +10,8 @@ import org.apache.struts2.interceptor.SessionAware;
 import java.util.List;
 import java.util.Map;
 
-public class ContributionAction extends ActionSupport implements ModelDriven<Post>, SessionAware {
+public class ContributionAction extends ActionSupport implements ModelDriven<Post> {
     private  Post post = new Post();
-    private Map<String, Object> sessionMap;
-    private List<Post> posts;
 
     public Post getPost() {
         return post;
@@ -27,6 +25,10 @@ public class ContributionAction extends ActionSupport implements ModelDriven<Pos
         return sessionMap;
     }
 
+    public void setSessionMap(Map<String, Object> sessionMap) {
+        this.sessionMap = sessionMap;
+    }
+
     public List<Post> getPosts() {
         return posts;
     }
@@ -35,8 +37,9 @@ public class ContributionAction extends ActionSupport implements ModelDriven<Pos
         this.posts = posts;
     }
 
-    @Override
-    public void setSession(Map<String, Object> map) { this.sessionMap = sessionMap; }
+    private Map<String, Object> sessionMap;
+    private List<Post> posts;
+
 
     @Override
     public Post getModel() {
@@ -48,11 +51,14 @@ public class ContributionAction extends ActionSupport implements ModelDriven<Pos
         UZoneService service = new UZoneService();
         if (sessionMap.containsKey("username")) {
             post.setUser(service.findUserById((int)sessionMap.get("id")));
-            setPosts(service.findByUser(post.getUser().getId()));
-            return SUCCESS;
+
+            if (service.createPost(post)) {
+                setPosts(service.findLastest());
+                return SUCCESS;
+            }
+            else return ERROR;
         } else return ERROR;
     }
-
 }
 
 
