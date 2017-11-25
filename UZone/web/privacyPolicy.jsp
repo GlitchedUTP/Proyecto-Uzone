@@ -1,5 +1,7 @@
 <%@ taglib prefix="s" uri="/struts-tags" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -12,7 +14,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Main</title>
+    <title>Polìticas de Privacidad</title>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -25,14 +27,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <s:a class="navbar-brand" href="main.jsp">UZone</s:a>
+
         </div>
 
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="main.jsp">Inicio</a></li>
-                <li><a href="contribution.jsp">Mis Aportaciones</a></li>
+
             </ul>
             <form class="navbar-form navbar-left">
 
@@ -46,46 +48,19 @@
     </div>
 </nav>
 <div class="container">
-    <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
-        <li role="presentation"><a href="main.jsp">Màs Videos</a></li>
-        <s:if test="#session.userType==1"><li role="presentation"><a href="createPost.jsp">Enviar Video</a></li></s:if>
-        <li role="presentation"><a href="#">Más Votados</a></li>
-        <s:if test="#session.userType==2"><li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li></s:if>
-        <li role="presentation"><a href="listEvent.jsp">Eventos disponibles</a></li>
-        <s:form class="navbar-form navbar-left" action="searchVideo">
-            <div class="form-group">
-                <s:textfield name="model.title"  class="form-control" placeholder="Buscar"/>
-            </div>
-            <s:submit type="submit" class="btn btn-default" value="Buscar"/>
-        </s:form>
-    </ul>
-</div>
-<center>
-<s:iterator value="posts">
-    <div class="container">
-    <div class="container">
-        <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="user.username"/></s:param></s:url>
-        <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="user.username"/></a> en <s:property value="date"/></p>
+    <div id="terms" class="row">
+        <h2>POLÍTICA DE PRIVACIDAD</h2>
+        <h3>El presente Política de Privacidad establece los términos en que UZone usa y protege la información que es proporcionada por sus usuarios al momento de utilizar su sitio web. Esta compañía está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</h3>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-                <h4><s:property value="title"/></h4>
-                <p>
-                    <s:property value="description"/>
-                </p>
-            </div>
-            <div class="col-md-8">
-                <div class="vid">
-                    <iframe width="560" height="315" src="<s:property value='url'/>" allowfullscreen=""></iframe>
-                     </div>
-                </div>
-            </div>
-         </div>
-    </div>
-</s:iterator>
+</div>
+
+<center>
+
+
+
+
+
 </center>
 <%--<s:property value="trying"/>
 <s:iterator value="posts" var="post">
@@ -110,7 +85,7 @@
                 <ul class="pages">
                     <li><a href="aboutUs.jsp">Acerca de Uzone</a></li>
                     <li><a href="termsOfUse.jsp">Terminos de Uso</a></li>
-                    <li><a href="privacyPolicy.jsp">Política de privacidad</a></li>
+                    <li><a href="#">Política de privacidad</a></li>
                     <li><a href="#">Feedback</a></li>
 
                 </ul>

@@ -90,8 +90,8 @@
             <div class="col-md-6">
                 <ul class="pages">
                     <li><a href="#">Acerca de Uzone</a></li>
-                    <li><a href="#">Terminos de Uso</a></li>
-                    <li><a href="#">Política de privacidad</a></li>
+                    <li><a href="termsOfUse.jsp">Terminos de Uso</a></li>
+                    <li><a href="privacyPolicy.jsp">Política de privacidad</a></li>
                     <li><a href="#">Feedback</a></li>
 
                 </ul>
