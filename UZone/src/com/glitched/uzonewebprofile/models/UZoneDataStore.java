@@ -143,7 +143,10 @@ public class UZoneDataStore {
         if(connection==null) return null;
         return getPostsEntity().findLastest(getUsersEntity(),getUserTypesEntity());
     }
-
+    public List<Post> findByUser(int user_id) {
+        if(connection==null) return null;
+        return getPostsEntity().findByUser(getUsersEntity().findById(user_id,getUserTypesEntity()),getUsersEntity(), getUserTypesEntity());
+    }
     public List<Post> showSearch(String title) {
         if(connection==null) return null;
         return getPostsEntity().showSearch(title, getUsersEntity(), getUserTypesEntity());
