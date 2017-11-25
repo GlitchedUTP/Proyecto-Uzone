@@ -193,4 +193,15 @@ public class UZoneDataStore {
         if(connection==null) return false;
         return getEventsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),title,picture_url,ubication,tags,websites,date,dateLimit,description,salary);
     }
+
+    //Point methods
+    public boolean createPoint(int origin, int target, int quantity) {
+        if(connection==null) return false;
+        return getPointsEntity().create(getUsersEntity().findById(origin,getUserTypesEntity()),getUsersEntity().findById(target,getUserTypesEntity()),quantity);
+    }
+
+    public boolean createPoint(Point point) {
+        if(connection==null) return false;
+        return getPointsEntity().create(point);
+    }
 }

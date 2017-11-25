@@ -45,17 +45,16 @@ public class PointsEntity extends BaseEntity{
         return findByCriteria(String.format("WHERE origin=%d",target.getId()),usersEntity,userTypesEntity);
     }
     public boolean create(Point point) {
-        return executeUpdate(String.format(
-                "INSERT INTO %s(origin,target,quantity)"
-                        .concat("VALUES('$s','$s','$s')"),
-                getTableName(),point.getOrigin(),point.getTarget(),point.getQuantity()));
+        return executeUpdate(String.format("INSERT INTO %s"
+                        .concat("VALUES(%d,%d,%d)"),getTableName(),
+                point.getOrigin().getId(),point.getTarget().getId(),point.getQuantity()));
     }
-    /*public boolean create(String origin, String target, int quantity){
+
+    public boolean create(User origin, User target, int quantity) {
         Point point = new Point();
         point.setOrigin(origin);
         point.setTarget(target);
         point.setQuantity(quantity);
-        return create(event);
+        return create(point);
     }
-    */
 }
