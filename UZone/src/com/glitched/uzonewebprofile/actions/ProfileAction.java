@@ -1,5 +1,6 @@
 package com.glitched.uzonewebprofile.actions;
 
+import com.glitched.uzonewebprofile.models.Information;
 import com.glitched.uzonewebprofile.models.UZoneService;
 import com.glitched.uzonewebprofile.models.User;
 import com.opensymphony.xwork2.ActionSupport;
@@ -8,9 +9,18 @@ import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.Map;
 
-public class ProfileAction extends ActionSupport implements ModelDriven<User>,SessionAware {
+public class ProfileAction extends ActionSupport implements ModelDriven<Information>,SessionAware {
     private Map<String, Object> sessionMap;
-    private User user= new User();
+    private Information information;
+    String username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     @Override
     public void setSession(Map<String, Object> sessionMap) {
@@ -18,15 +28,15 @@ public class ProfileAction extends ActionSupport implements ModelDriven<User>,Se
     }
 
     @Override
-    public User getModel() {
-        return user;
+    public Information getModel() {
+        return information;
     }
 
     @Override
     public String execute() throws Exception {
         UZoneService service = new UZoneService();
         if (sessionMap.containsKey("username")) {
-            user=service.findUserByUsername(user.getUsername());
+            information=service.findInformationByUserUsername(username);
             return SUCCESS;
         }
         return ERROR;

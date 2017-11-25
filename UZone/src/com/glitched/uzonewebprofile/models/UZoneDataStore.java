@@ -138,6 +138,22 @@ public class UZoneDataStore {
         return getUsersEntity().create(username,password,name,lastName,email,birthDate,genre,getUserTypesEntity().findById(id));
     }
 
+    //Information methods
+    public Information findInformationByUserId(int userId) {
+        if(connection==null) return null;
+        return getInformationsEntity().findByUserId(userId,getUsersEntity(),getUserTypesEntity());
+    }
+
+    public Information findInformationByUserUsername(String username) {
+        if(connection==null) return null;
+        return getInformationsEntity().findByUserUsername(username,getUsersEntity(),getUserTypesEntity());
+    }
+
+    public boolean createInformation(String description,double averagePoints, int voteQuantity, int userId) {
+        if(connection==null) return false;
+        return getInformationsEntity().create(description,averagePoints,voteQuantity,getUsersEntity().findById(userId,getUserTypesEntity()));
+    }
+
     //Posts methods
     public List<Post> findLastest() {
         if(connection==null) return null;

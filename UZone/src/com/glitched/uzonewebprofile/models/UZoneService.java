@@ -73,6 +73,19 @@ public class UZoneService {
         return dataStore.createUser(username,password,name,lastName,email,birthDate,genre,id);
     }
 
+    //Information Methods
+    public Information findInformationByUserId (int userId) {
+        return dataStore.findInformationByUserId(userId);
+    }
+
+    public Information findInformationByUserUsername(String username) {
+        return dataStore.findInformationByUserUsername(username);
+    }
+
+    public boolean createInformation(String description, double averagePoints, int voteQuantity, int userId) {
+        return dataStore.createInformation(description,averagePoints,voteQuantity,userId);
+    }
+
     //Posts methods
     public List<Post> findLastest() {
         return dataStore.findLastest();
