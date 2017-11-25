@@ -11,6 +11,7 @@
       <root url="jar://$PROJECT_DIR$/lib/struts2-core.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/log4j-api-2.8.2.jar!/" />
       <root url="jar://$PROJECT_DIR$/lib/struts2-bootstrap-plugin-2.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/mail.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
