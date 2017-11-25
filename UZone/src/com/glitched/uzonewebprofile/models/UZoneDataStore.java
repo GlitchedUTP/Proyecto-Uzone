@@ -190,6 +190,11 @@ public class UZoneDataStore {
         if(connection==null) return false;
         return getEventsEntity().create(event);
     }
+    
+    public List<Event> findAllEvents() {
+        if(connection==null) return null;
+        return getEventsEntity().findAll(getUsersEntity(),getUserTypesEntity());
+    }
 
     public boolean createEvent(int id,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {
         if(connection==null) return false;

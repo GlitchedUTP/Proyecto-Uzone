@@ -116,6 +116,10 @@ public class UZoneService {
         return dataStore.createEvent(id,title,picture_url,ubication,tags,websites,date,dateLimit,description,salary);
     }
 
+    public List<Event> findAllEvents() {
+        return dataStore.findAllEvents();
+    }
+
     //Postulant methods
     public boolean createPostulant(String date,int eventId,int userId) {
         return dataStore.createPostulant(date,eventId,userId);
