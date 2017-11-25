@@ -44,15 +44,15 @@
     <ul class="nav nav-pills">
         <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
         <li role="presentation"><a href="main.jsp">Màs Videos</a></li>
-        <li role="presentation"><a href="createPost.jsp">Enviar Video</a></li>
+        <s:if test="#session.userType==1"><li role="presentation"><a href="createPost.jsp">Enviar Video</a></li></s:if>
         <li role="presentation"><a href="#">Más Votados</a></li>
-        <li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li>
+        <s:if test="#session.userType==2"><li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li></s:if>
         <li role="presentation"><a href="listEvent.jsp">Eventos disponibles</a></li>
         <s:form class="navbar-form navbar-left" action="searchVideo">
             <div class="form-group">
-                <s:textfield name=""  class="form-control" placeholder="Buscar">
+                <s:textfield name="model.title"  class="form-control" placeholder="Buscar"/>
             </div>
-            <s:submit type="submit" class="btn btn-default">Buscar</s:submit>
+            <s:submit type="submit" class="btn btn-default" value="Buscar"/>
         </s:form>
     </ul>
 </div>
@@ -74,46 +74,11 @@
                         <p>
                             <s:property value="description"/>
                         </p>
-                        <p>
-                            <s:property value="date"/>
-                        </p>
-                        <p>
-                            <s:property value="datelimit"/>
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </s:iterator>
-
-
-    <div>
-        <div class="container">
-            <p class="navbar-text">Video 2</p>
-
-        </div>
-
-        <div class="container">
-            <p class="navbar-text">Publicado por Usuario el dìa d/m/a</p>
-
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Lorem Ipsum</h4>
-                    <p>
-                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                    </p>
-                </div>
-                <div class="col-md-8">
-                    <div class="vid">
-                        <iframe width="560" height="315" src="//www.youtube.com/embed/ac7KhViaVqc" allowfullscreen=""></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </center>
 <%--<s:property value="trying"/>
 <s:iterator value="posts" var="post">

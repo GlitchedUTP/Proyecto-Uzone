@@ -36,5 +36,12 @@
     <s:submit value="Registrarse" cssClass="bttn btn-primary"/>
 </s:form>
 <div> *Al registrarte aceptas nuestras Condiciones y nuestra Política de privacidad</div>
+<style>
+    body {
+
+        background: url(Add-ons/img/register.jpg) no-repeat fixed center;
+
+    }
+</style>
 </body>
 </html>

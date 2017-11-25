@@ -50,9 +50,9 @@
             <result name="success">main.jsp</result>
             <result name="error">createEvent.jsp</result>
         </action>
-        <action name="searchVideo" class="com.glitched.uzonewebprofile.actions.PostAction" method="search">
+        <action name="searchVideo" class="com.glitched.uzonewebprofile.actions.SearchAction" method="execute">
             <result name="success">main.jsp</result>
-            <result name="error">createEvent.jsp</result>
+            <result name="error">main.jsp</result>
         </action>
     </package>
 </struts>

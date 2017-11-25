@@ -21,13 +21,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <s:a class="navbar-brand" href="home">UZone</s:a>
+            <s:a class="navbar-brand" href="main.jsp">UZone</s:a>
         </div>
 
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="">Aportaciones</a></li>
+                <li><a href="">Mis Aportaciones</a></li>
             </ul>
             <form class="navbar-form navbar-left">
 
@@ -44,9 +44,9 @@
     <ul class="nav nav-pills">
         <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
         <li role="presentation"><a href="main.jsp">Màs Videos</a></li>
-        <s:if test="#session.id==1"><li role="presentation"><a href="createPost.jsp">Enviar Video</a></li></s:if>
+        <s:if test="#session.userType==1"><li role="presentation"><a href="createPost.jsp">Enviar Video</a></li></s:if>
         <li role="presentation"><a href="#">Más Votados</a></li>
-        <s:if test="#session.id==2"><li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li></s:if>
+        <s:if test="#session.userType==2"><li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li></s:if>
         <li role="presentation"><a href="listEvent.jsp">Eventos disponibles</a></li>
         <s:form class="navbar-form navbar-left" action="searchVideo">
             <div class="form-group">
@@ -81,35 +81,6 @@
          </div>
     </div>
 </s:iterator>
-
-
-    <div>
-        <div class="container">
-            <p class="navbar-text">Video 2</p>
-
-        </div>
-
-        <div class="container">
-            <p class="navbar-text">Publicado por Usuario el dìa d/m/a</p>
-
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Lorem Ipsum</h4>
-                    <p>
-                        Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-                    </p>
-                </div>
-                <div class="col-md-8">
-                    <div class="vid">
-                        <iframe width="560" height="315" src="//www.youtube.com/embed/ac7KhViaVqc" allowfullscreen=""></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </center>
 <%--<s:property value="trying"/>
 <s:iterator value="posts" var="post">
