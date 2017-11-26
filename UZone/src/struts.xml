@@ -62,5 +62,17 @@
             <result name="success">profilePage.jsp</result>
             <result name="error">index.jsp</result>
         </action>
+        <action name="redirectCreatePost" class="com.glitched.uzonewebprofile.actions.RedirectAction" method="execute">
+            <result name="success">createPost.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="redirectCreateEvent" class="com.glitched.uzonewebprofile.actions.RedirectAction" method="execute">
+            <result name="success">createEvent.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="listEvents" class="com.glitched.uzonewebprofile.actions.EventListAction" method="execute">
+            <result name="success">listEvent.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
     </package>
 </struts>

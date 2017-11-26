@@ -115,6 +115,8 @@ public class UZoneService {
     }
     public List<Event> findByUserEvent(int user_id) { return dataStore.findByUserEvent(user_id); }
 
+    public List<Event> findAllEvents() { return dataStore.findAllEvents(); }
+
     //Point methods
     public boolean createPoint(int origin,int target,int quantity) {
         return dataStore.createPoint(origin,target,quantity);
@@ -122,5 +124,14 @@ public class UZoneService {
 
     public boolean createPoint(Point point) {
         return dataStore.createPoint(point);
+    }
+
+    //Postulant methods
+    public boolean createPostulant(String date,int eventId,int userId) {
+               return dataStore.createPostulant(date,eventId,userId);
+    }
+
+    public boolean checkPostulant(int eventId, int userId) {
+                return dataStore.checkPostulant(eventId,userId);
     }
 }

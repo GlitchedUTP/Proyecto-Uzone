@@ -62,7 +62,7 @@ public class UZoneDataStore {
         return eventsEntity;
     }
 
-    private PostulantsEntity getIPostulantsEntity(){
+    private PostulantsEntity getPostulantsEntity(){
         if(postulantsEntity==null) {
             postulantsEntity=new PostulantsEntity();
             postulantsEntity.setConnection(connection);
@@ -201,6 +201,10 @@ public class UZoneDataStore {
         if(connection==null) return null;
         return getEventsEntity().findByUser(getUsersEntity().findById(user_id,getUserTypesEntity()),getUsersEntity(), getUserTypesEntity());
     }
+    public List<Event> findAllEvents() {
+                if(connection==null) return null;
+               return getEventsEntity().findAll(getUsersEntity(),getUserTypesEntity());
+    }
     //Point methods
     public boolean createPoint(int origin, int target, int quantity) {
         if(connection==null) return false;
@@ -210,5 +214,15 @@ public class UZoneDataStore {
     public boolean createPoint(Point point) {
         if(connection==null) return false;
         return getPointsEntity().create(point);
+    }
+    //Postulant methods
+     public boolean createPostulant(String date,int eventId,int userId) {
+               if(connection==null) return false;
+                return getPostulantsEntity().create(date,eventId,userId);
+     }
+
+    public boolean checkPostulant(int eventId, int userId) {
+                if(connection==null) return false;
+               return getPostulantsEntity().check(eventId,userId);
     }
 }

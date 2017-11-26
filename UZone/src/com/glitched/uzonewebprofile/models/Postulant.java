@@ -13,8 +13,7 @@ public class Postulant {
     public Postulant() {
     }
 
-    public Postulant(int id, String date, Event event, User user) {
-        this.id = id;
+    public Postulant(String date, Event event, User user) {
         this.date = date;
         this.event = event;
         this.user = user;
