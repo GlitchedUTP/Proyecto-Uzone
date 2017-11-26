@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <constant name = "struts.devMode" value = "true" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"/>
+
+    <package name="default" extends="struts-default">
+        <action name="index">
+            <result>index.jsp</result>
+        </action>
+        <action name="dataUser" class="com.glitched.uzonewebprofile.actions.PostAction">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="register" class="com.glitched.uzonewebprofile.actions.UserAction" method="execute">
+            <result name="success">index.jsp</result>
+            <result name="input">userRegister.jsp</result>
+        </action>
+        <action name="dataEvent" class="com.glitched.uzonewebprofile.actions.EventAction">
+            <result name="success">main.jsp</result>
+        </action>
+        <action name="login" class="com.glitched.uzonewebprofile.actions.LoginAction" method="execute">
+            <result name="success">main.jsp</result>
+            <result name="input">index.jsp</result>
+        </action>
+        <action name="logout" class="com.glitched.uzonewebprofile.actions.LogoutAction" method="execute">
+            <result name="success">index.jsp</result>
+        </action>
+        <action name="self" class="com.glitched.uzonewebprofile.actions.SelfProfileAction" method="execute">
+            <result name="success">profilePage.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="profile" class="com.glitched.uzonewebprofile.actions.ProfileAction" method="execute">
+            <result name="success">profilePage.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="home" class="com.glitched.uzonewebprofile.actions.HomeAction" method="execute">
+            <result name="success">main.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="createPost" class="com.glitched.uzonewebprofile.actions.PostAction" method="execute">
+            <result name="success">main.jsp</result>
+            <result name="error">index.jsp</result>
+            <result name="input">createPost.jsp</result>
+        </action>
+        <action name="createEvent" class="com.glitched.uzonewebprofile.actions.EventAction" method="execute">
+            <result name="success">main.jsp</result>
+            <result name="error">createEvent.jsp</result>
+        </action>
+        <action name="searchVideo" class="com.glitched.uzonewebprofile.actions.SearchAction" method="execute">
+            <result name="success">main.jsp</result>
+            <result name="error">main.jsp</result>
+        </action>
+        <action name="contribution" class="com.glitched.uzonewebprofile.actions.ContributionAction" method="execute">
+            <result name="success">contribution.jsp</result>
+        </action>
+        <action name="point" class="com.glitched.uzonewebprofile.actions.PointAction" method="execute">
+            <result name="success">profilePage.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="redirectCreatePost" class="com.glitched.uzonewebprofile.actions.RedirectAction" method="execute">
+            <result name="success">createPost.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="redirectCreateEvent" class="com.glitched.uzonewebprofile.actions.RedirectAction" method="execute">
+            <result name="success">createEvent.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="listEvents" class="com.glitched.uzonewebprofile.actions.EventListAction" method="execute">
+            <result name="success">listEvent.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+    </package>
+</struts>
