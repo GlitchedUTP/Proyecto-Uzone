@@ -49,9 +49,9 @@
     <ul class="nav nav-pills">
         <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
         <li role="presentation"><a href="main.jsp">Màs Videos</a></li>
-        <s:if test="#session.userType==1"><li role="presentation"><a href="redirectCreatePost">Enviar Video</a></li></s:if>
+        <s:if test="#session.userType==1"><li role="presentation"><s:a href="redirectCreatePost">Enviar Video</s:a></li></s:if>
         <li role="presentation"><a href="#">Más Votados</a></li>
-        <s:if test="#session.userType==2"><li role="presentation"><a href="redirectCreateEvent">Crea un evento</a></li></s:if>
+        <s:if test="#session.userType==2"><li role="presentation"><s:a href="redirectCreateEvent">Crea un evento</s:a></li></s:if>
         <li role="presentation"><s:a href="listevent">Eventos disponibles</s:a></li>
         <s:form class="navbar-form navbar-left" action="searchVideo">
             <div class="form-group">
