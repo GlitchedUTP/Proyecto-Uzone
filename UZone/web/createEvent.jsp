@@ -32,7 +32,7 @@
             <ul class="nav navbar-nav">
 
                 <li><a href="main.jsp">Inicio</a></li>
-                <li><a href="contribution.jsp">Mis Aportaciones</a></li>
+                <li><s:a href="contribution">Mis Aportaciones</s:a></li>
             </ul>
             <form class="navbar-form navbar-left">
 

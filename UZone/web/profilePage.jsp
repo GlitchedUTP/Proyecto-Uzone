@@ -40,6 +40,12 @@
 
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><s:a href="contribution">Mis Aportaciones</s:a></li>
+            </ul>
+            <form class="navbar-form navbar-left">
+
+            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><s:a href="self">${sessionScope.username}</s:a></li>
                 <li><s:a href="logout">Cerrar sesión</s:a></li>

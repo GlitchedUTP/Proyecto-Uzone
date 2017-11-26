@@ -31,7 +31,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="">Aportaciones</a></li>
+                <li><s:a href="contribution">Mis Aportaciones</s:a></li>
             </ul>
             <form class="navbar-form navbar-left">
 
@@ -51,7 +51,7 @@
         <s:if test="#session.userType==1"><li role="presentation"><a href="createPost.jsp">Enviar Video</a></li></s:if>
         <li role="presentation"><a href="#">Más Votados</a></li>
         <s:if test="#session.userType==2"><li role="presentation"><a href="createEvent.jsp">Crea un evento</a></li></s:if>
-        <li role="presentation"><a href="listEvent.jsp">Eventos disponibles</a></li>
+        <li role="presentation"><s:a href="listevent">Eventos disponibles</s:a></li>
         <s:form class="navbar-form navbar-left" action="searchVideo">
             <div class="form-group">
                 <s:textfield name="model.title"  class="form-control" placeholder="Buscar"/>
