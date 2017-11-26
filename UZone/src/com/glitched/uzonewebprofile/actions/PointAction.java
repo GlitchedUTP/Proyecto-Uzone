@@ -1,16 +1,28 @@
 package com.glitched.uzonewebprofile.actions;
 
+import com.glitched.uzonewebprofile.models.Information;
 import com.glitched.uzonewebprofile.models.Point;
 import com.glitched.uzonewebprofile.models.UZoneService;
 import com.opensymphony.xwork2.ActionSupport;
+import com.opensymphony.xwork2.ModelDriven;
 import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.Map;
 
-public class PointAction extends ActionSupport implements SessionAware {
+public class PointAction extends ActionSupport implements ModelDriven<Information>, SessionAware {
     private Map<String, Object> sessionMap;
-    String target;
-    String quantity;
+    private Information information;
+    private String target;
+    private String quantity;
+    private int value;
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
+    }
 
     public String getTarget() {
         return target;
@@ -34,13 +46,35 @@ public class PointAction extends ActionSupport implements SessionAware {
     }
 
     @Override
+    public Information getModel() {
+        return information;
+    }
+
+
     public String execute() throws Exception {
-        UZoneService service=new UZoneService();
-        if(sessionMap.containsKey("username")) {
-            if(service.createPoint((int)sessionMap.get("id"),Integer.parseInt(target),Integer.parseInt(quantity))) {
-                return SUCCESS;
+        UZoneService service = new UZoneService();
+        if (sessionMap.containsKey("username")) {
+                if (!service.checkPoint((int) sessionMap.get("id"), Integer.parseInt(target))) {
+
+                    if (service.createPoint((int) sessionMap.get("id"), Integer.parseInt(target), Integer.parseInt(quantity))) {
+                        if (service.updateInformation(Integer.parseInt(target))) {
+                            value = service.getQuantity((int) sessionMap.get("id"), Integer.parseInt(target));
+                            information = service.findInformationByUserId(Integer.parseInt(target));
+                            return SUCCESS;
+
+                        }
+                    }
+                } else {
+
+                    if (service.updatePoint((int) sessionMap.get("id"), Integer.parseInt(target), Integer.parseInt(quantity))) {
+                        if (service.updateInformation(Integer.parseInt(target))) {
+                            value = service.getQuantity((int) sessionMap.get("id"), Integer.parseInt(target));
+                            information = service.findInformationByUserId(Integer.parseInt(target));
+                            return SUCCESS;
+                        }
+                    }
+                }
             }
-        }
         return ERROR;
     }
 }

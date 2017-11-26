@@ -58,7 +58,7 @@
 <div> *Al registrarte aceptas nuestras Condiciones y nuestra Política de privacidad</div>
 <style>
     body {
-
+        -webkit-background-size: cover;
         background: url(Add-ons/img/register.jpg) no-repeat fixed center;
 
     }

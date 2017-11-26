@@ -45,16 +45,47 @@ public class PointsEntity extends BaseEntity{
         return findByCriteria(String.format("WHERE origin=%d",target.getId()),usersEntity,userTypesEntity);
     }
     public boolean create(Point point) {
-        return executeUpdate(String.format("INSERT INTO %s"
+        return executeUpdate(String.format("INSERT INTO %s "
                         .concat("VALUES(%d,%d,%d)"),getTableName(),
                 point.getOrigin().getId(),point.getTarget().getId(),point.getQuantity()));
     }
 
-    public boolean create(User origin, User target, int quantity) {
+    public boolean create(int origin, int target, int quantity,UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         Point point = new Point();
-        point.setOrigin(origin);
-        point.setTarget(target);
+        point.setOrigin(usersEntity.findById(origin,userTypesEntity));
+        point.setTarget(usersEntity.findById(target,userTypesEntity));
         point.setQuantity(quantity);
         return create(point);
+    }
+    public boolean check(int origin,int target) {
+                try {
+                        ResultSet rs = getConnection()
+                                        .createStatement()
+                                        .executeQuery(String.format("SELECT * FROM %s WHERE origin=%d AND target=%d",getTableName(),origin,target));
+                        if(rs.next()) {
+                               return true;
+                           } return false;
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+                return false;
+            }
+
+    public boolean update(int origin,int target,int quantity) {
+                return executeUpdate(String.format("UPDATE %s SET quantity=%d WHERE origin=%d AND target=%d",getTableName(),quantity,origin,target));
+            }
+
+    public int getQuantity(int origin,int target) {
+        try {
+            ResultSet rs = getConnection()
+                    .createStatement()
+                    .executeQuery(String.format("SELECT quantity FROM %s WHERE origin=%d AND target=%d",getTableName(),origin,target));
+            if (rs.next()) {
+                return rs.getInt("quantity");
+            } else return 0;
+        } catch (SQLException e) {
+                        e.printStackTrace();
+        }
+        return 0;
     }
 }

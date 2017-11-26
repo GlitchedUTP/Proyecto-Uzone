@@ -85,6 +85,9 @@ public class UZoneService {
     public boolean createInformation(String description, double averagePoints, int voteQuantity, int userId) {
         return dataStore.createInformation(description,averagePoints,voteQuantity,userId);
     }
+    public boolean updateInformation(int userId) {
+                return dataStore.updateInformation(userId);
+    }
 
     //Posts methods
     public List<Post> findLastest() {
@@ -102,6 +105,17 @@ public class UZoneService {
     public List<Post> findByUser(int user_id) {return dataStore.findByUser(user_id); }
 
     public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
+    public boolean checkPoint(int origin,int target) {
+               return dataStore.checkPoint(origin,target);
+            }
+
+    public boolean updatePoint(int origin,int target,int quantity) {
+                return dataStore.updatePoint(origin,target,quantity);
+    }
+
+    public int getQuantity(int origin, int target) {
+                return dataStore.getQuantity(origin,target);
+    }
 
     //Events methods
     public List<Event> findAll() {

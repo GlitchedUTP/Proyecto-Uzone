@@ -153,6 +153,10 @@ public class UZoneDataStore {
         if(connection==null) return false;
         return getInformationsEntity().create(description,averagePoints,voteQuantity,getUsersEntity().findById(userId,getUserTypesEntity()));
     }
+    public boolean updateInformation(int userId) {
+                if(connection==null) return false;
+               return getInformationsEntity().update(userId);
+    }
 
     //Posts methods
     public List<Post> findLastest() {
@@ -208,12 +212,27 @@ public class UZoneDataStore {
     //Point methods
     public boolean createPoint(int origin, int target, int quantity) {
         if(connection==null) return false;
-        return getPointsEntity().create(getUsersEntity().findById(origin,getUserTypesEntity()),getUsersEntity().findById(target,getUserTypesEntity()),quantity);
+        return getPointsEntity().create(origin,target,quantity,getUsersEntity(),getUserTypesEntity());
     }
 
     public boolean createPoint(Point point) {
         if(connection==null) return false;
         return getPointsEntity().create(point);
+    }
+
+    public boolean updatePoint(int origin, int target, int quantity) {
+               if(connection==null) return false;
+               return getPointsEntity().update(origin,target,quantity);
+            }
+
+    public boolean checkPoint(int origin, int target) {
+                if(connection==null) return false;
+                return getPointsEntity().check(origin,target);
+    }
+
+    public int getQuantity(int origin, int target) {
+               if(connection==null) return 0;
+                return getPointsEntity().getQuantity(origin,target);
     }
     //Postulant methods
      public boolean createPostulant(String date,int eventId,int userId) {

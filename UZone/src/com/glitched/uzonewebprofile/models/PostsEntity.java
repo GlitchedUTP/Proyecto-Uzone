@@ -58,7 +58,7 @@ public class PostsEntity extends BaseEntity{
     }
 
     public List<Post> showSearch(String title,UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
-        return findByCriteria(String.format("WHERE title LIKE %d",title),usersEntity,userTypesEntity);
+        return findByCriteria(String.format("WHERE title LIKE '%s'",title),usersEntity,userTypesEntity);
     }
 
     public boolean create(Post post) {

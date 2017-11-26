@@ -64,4 +64,9 @@ public class InformationsEntity extends BaseEntity{
         information.setUser(user);
         return create(information);
     }
+    public boolean update(int userId) {
+                return executeUpdate(String.format("UPDATE %s SET vote_quantity=(SELECT COUNT(target) FROM points WHERE target=%d)," +
+                               "average_points=(SELECT AVG(quantity) FROM points WHERE target=%d) " +
+                                "WHERE user_id=%d",getTableName(),userId,userId,userId));
+    }
 }
