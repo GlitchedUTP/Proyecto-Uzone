@@ -82,8 +82,8 @@ public class UZoneService {
         return dataStore.findInformationByUserUsername(username);
     }
 
-    public boolean createInformation(String description, double averagePoints, int voteQuantity, int userId) {
-        return dataStore.createInformation(description,averagePoints,voteQuantity,userId);
+    public boolean createInformation(String description, double averagePoints, int voteQuantity, String username) {
+        return dataStore.createInformation(description,averagePoints,voteQuantity,username);
     }
 
     public boolean updateInformation(int userId) {

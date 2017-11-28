@@ -62,7 +62,7 @@ public class UsersEntity extends BaseEntity{
     public boolean create(User user) {
         return executeUpdate(String.format(
                 "INSERT INTO %s(username,password,name,lastname,email,birthdate,genre,phone,picture_url,user_type_id)"
-                .concat("VALUES('%s','%s','%s','%s','%s',STR_TO_DATE('%s','%%d-%%M-%%Y'),'%s',NULL,NULL,%d)"),
+                .concat("VALUES('%s','%s','%s','%s','%s',STR_TO_DATE('%s','%%d-%%m-%%Y'),'%s',NULL,NULL,%d)"),
                 getTableName(),user.getUsername(),user.getPassword(),user.getName(),user.getLastName(),user.getEmail(),
                 user.getBirthDate(),user.getGenre(),user.getUserType().getId()));
     }

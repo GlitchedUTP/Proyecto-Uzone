@@ -149,9 +149,9 @@ public class UZoneDataStore {
         return getInformationsEntity().findByUserUsername(username,getUsersEntity(),getUserTypesEntity());
     }
 
-    public boolean createInformation(String description,double averagePoints, int voteQuantity, int userId) {
+    public boolean createInformation(String description,double averagePoints, int voteQuantity, String username) {
         if(connection==null) return false;
-        return getInformationsEntity().create(description,averagePoints,voteQuantity,getUsersEntity().findById(userId,getUserTypesEntity()));
+        return getInformationsEntity().create(description,averagePoints,voteQuantity,getUsersEntity().findByUsername(username,getUserTypesEntity()));
     }
 
     public boolean updateInformation(int userId) {

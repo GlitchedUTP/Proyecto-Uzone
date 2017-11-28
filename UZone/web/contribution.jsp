@@ -32,7 +32,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <s:a class="navbar-brand" href="main.jsp">UZone</s:a>
+            <s:a class="navbar-brand" href="home">UZone</s:a>
         </div>
 
 

@@ -17,7 +17,11 @@ public class UserAction  extends ActionSupport implements ModelDriven<User> {
     @Override
     public String execute() {
         UZoneService service=new UZoneService();
-        if(service.createUser(user) && service.createInformation("",0,0,user.getId())) return SUCCESS;
-        else return INPUT;
+        if(service.createUser(user)) {
+            if(service.createInformation("",0,0,user.getUsername())) {
+                return SUCCESS;
+            }
+        }
+        return INPUT;
     }
 }
