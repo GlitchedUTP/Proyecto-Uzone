@@ -54,39 +54,35 @@
         <li role="presentation"><a href="listEvents">Eventos disponibles</a></li>
     </ul>
 </div>
+<h3>Eventos a los que he postulado:</h3>
 <center>
+    <s:iterator value="events">
         <div class="container">
             <div class="container">
-                <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="model.user.username"/></s:param></s:url>
-                <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="model.user.username"/></a> en <s:property value="date"/></p>
+                <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="user.username"/></s:param></s:url>
+                <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="user.username"/></a> en <s:property value="date"/></p>
             </div>
 
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <h4><s:property value="model.title"/></h4>
+                        <h4><s:property value="title"/></h4>
                         <p>
-                            <s:property value="model.ubication"/>
+                            <s:property value="ubication"/>
                         </p>
                         <p>
-                            <s:property value="model.description"/>
+                            <s:property value="description"/>
                         </p>
                     </div>
                     <div class="col-md-8">
                         <div class="vid">
-                            <iframe width="560" height="315" src="<s:property value='model.url'/>" allowfullscreen=""></iframe>
+                            <iframe width="560" height="315" src="<s:property value='url'/>" allowfullscreen=""></iframe>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </s:iterator>
 </center>
-<h3>Lista de postulantes</h3>
-<ul>
-<s:iterator value="postulants">
-    <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="user.username"/></s:param></s:url>
-    <li><a href="${profileLink}"><s:property value="user.name"/> <s:property value="user.lastname"/></a></li>
-</s:iterator>
-</ul>
 </body>
 </html>

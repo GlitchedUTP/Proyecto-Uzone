@@ -36,6 +36,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><s:a href="contribution">Mis Aportaciones</s:a></li>
+                <s:if test="#session.userType==1"><li><s:a href="userPostulant">Eventos postulados</s:a></li></s:if>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><s:a href="self">${sessionScope.username}</s:a></li>

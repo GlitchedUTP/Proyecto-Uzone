@@ -27,7 +27,6 @@
 <body>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -37,15 +36,23 @@
             </button>
             <s:a class="navbar-brand" href="home">UZone</s:a>
         </div>
-
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><s:a href="contribution">Mis Aportaciones</s:a></li>
+                <s:if test="#session.userType==1"><li><s:a href="userPostulant">Eventos postulados</s:a></li></s:if>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><s:a href="self">${sessionScope.username}</s:a></li>
                 <li><s:a href="logout">Cerrar sesión</s:a></li>
             </ul>
+            <div class="navbar-header">
+                <s:form theme="simple" action="searchVideo">
+                    <ul class="nav navbar-nav">
+                        <li><s:textfield name="model.title"  class="form-control" placeholder="Buscar"/></li>
+                        <li><s:submit type="submit" class="btn btn-default" value="Buscar"/></li>
+                    </ul>
+                </s:form>
+            </div>
         </div>
     </div>
 </nav>
@@ -68,13 +75,12 @@
                 <h3>de <s:property value="model.voteQuantity"/> <s:if test="model.voteQuantity==1">voto</s:if><s:else>votos</s:else>.</h3>
         </div>
         <div class="col-md-8">
-            <s:form action="self" theme="bootstrap" class="well form-vertical" method="POST" enctype="multipart/form-data">
-
+            <s:form action="updateProfile" theme="bootstrap" class="well form-vertical" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <s:if test="model.userType.id==1">Artista</s:if><s:if test="model.userType.id==2">Empresario</s:if> <s:property value="model.username"/>
                 </div>
-                <s:textfield id="name" name="model.user.name" placeholder="Nombres" label="Nombres" disabled="true"/>
-                <s:textfield id="lastName" name="model.user.lastName" placeholder="Apellidos" label="Apellidos" disabled="true"/>
+                <s:textfield id="name" name="model.user.name" placeholder="Nombres" label="Nombres"/>
+                <s:textfield id="lastName" name="model.user.lastName" placeholder="Apellidos" label="Apellidos"/>
                 <s:textfield id="email" name="model.user.email" placeholder="Email" label="E-mail" disabled="true"/>
                 <s:textfield id="birthDate" name="model.user.birthDate" placeholder="Fecha de Nacimiento" label="Fecha de Nacimiento" disabled="true"/>
                 <s:select id="genre"
@@ -84,13 +90,11 @@
                           headerValue="--- Select ---"
                           list="#{'M':'Masculino', 'F':'Femenino'}"
                 disabled="true"/>
-                <s:textfield id="phone" name="model.user.phone" onchange="this.disabled=false;" placeholder="Telefono" label="Telefono" disabled="true"/>
-                <%--<s:if test="model.user.username==#session.username"><s:file id="photoUrl" label="Cambiar foto" disabled="true"/>
-                <ul class="nav nav-pills">
-                    <button id="change" class="btn btn-success click" onchange="this.disabled=true;" onclick="disable()">Hacer Cambios</button>
-                    <s:submit id="save" class="btn btn-success" disabled="true">Guardar Cambios</s:submit>
-                </ul>
-                </s:if>--%>
+                <s:textfield id="phone" name="model.user.phone" placeholder="Telefono" label="Telefono"/>
+                <s:if test="model.user.username==#session.username">
+                    <s:file id="photoUrl" label="Cambiar foto"/>
+                    <s:submit id="save" class="btn btn-success">Guardar Cambios</s:submit>
+                </s:if>
             </s:form>
         </div>
     </div>

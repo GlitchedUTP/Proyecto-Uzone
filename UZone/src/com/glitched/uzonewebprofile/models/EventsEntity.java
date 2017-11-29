@@ -58,6 +58,10 @@ public class EventsEntity extends BaseEntity {
         return findByCriteria("ORDER BY id DESC,date DESC",usersEntity,userTypesEntity);
     }
 
+    public List<Event> findByPostulant(int userId,UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        return findByCriteria(String.format("WHERE id IN (SELECT event_id FROM postulants WHERE user_id=%d)",userId),usersEntity,userTypesEntity);
+    }
+
     public boolean create(Event event) {
         return executeUpdate(String.format(
                 "INSERT INTO %s(title,picture_url,ubication,date,date_limit,description,tags,websites,salary,user_id)"

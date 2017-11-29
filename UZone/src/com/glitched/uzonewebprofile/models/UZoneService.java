@@ -139,6 +139,10 @@ public class UZoneService {
         return dataStore.findEventById(eventId);
     }
 
+    public List<Event> findEventByPostulant(int userId) {
+        return dataStore.findEventByPostulant(userId);
+    }
+
     public boolean createEvent(Event event) { return dataStore.createEvent(event); }
 
     public boolean createEvent(int id,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {
