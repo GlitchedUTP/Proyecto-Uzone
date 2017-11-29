@@ -38,7 +38,7 @@
             <div class="navbar-header">
                 <s:form theme="simple" action="searchVideo">
                     <ul class="nav navbar-nav">
-                        <li><s:textfield name="model.title"  class="form-control" placeholder="Buscar"/></li>
+                        <li><s:textfield class="form-control" placeholder="Buscar"/></li>
                         <li><s:submit type="submit" class="btn btn-default" value="Buscar"/></li>
                     </ul>
                 </s:form>
@@ -55,40 +55,49 @@
     </ul>
 </div>
 <center>
-        <div class="container">
-            <div class="container">
+    <div class="container">
+        <div class="row">
+            <br><br>
+            <div class="col-md-4">
                 <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="model.user.username"/></s:param></s:url>
                 <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="model.user.username"/></a> en <s:property value="model.date"/></p>
+                <s:url action="postDetails" var="showPostDetails"><s:param name="postId"><s:property value="id"/></s:param></s:url>
+                <a href="${showPostDetails}"><h4><s:property value="title"/></h4></a>
+                <p>
+                    <s:property value="model.description"/>
+                </p>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-                        <s:url action="postDetails" var="showPostDetails"><s:param name="postId"><s:property value="id"/></s:param></s:url>
-                        <a href="${showPostDetails}"><h4><s:property value="title"/></h4></a>
-                        <p>
-                            <s:property value="model.description"/>
-                        </p>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="vid">
-                            <iframe width="560" height="315" src="<s:property value='model.url'/>" allowfullscreen=""></iframe>
-                        </div>
-                    </div>
+            <div class="col-md-8">
+                <div class="vid">
+                    <iframe width="560" height="315" src="<s:property value='model.url'/>" allowfullscreen=""></iframe>
                 </div>
             </div>
         </div>
+    </div>
 </center>
-<h3>Comentarios:</h3>
-<s:form  theme="simple" cssClass="well" action="createComment">
-    <s:hidden name="postId" value="%{model.id}"/>
-    <s:textarea name="description" placeholder="Deja tu comentario"/>
-    <s:submit value="Enviar Commentario"/>
-</s:form>
+<center>
+    <br><br>
+    <div class="container">
+        <div class="col-md-8">
+            <s:form  theme="simple" cssClass="well" action="createComment">
+                <s:hidden name="postId" value="%{model.id}"/>
+                <div class="form-group">
+                    <s:textarea placeholder="Deja un comentario publico" cssClass="form-control" rows="2"/>
+                </div>
+                <div class="form-group">
+                    <s:submit value="Comentar" cssClass="btn btn-default"/>
+                    <s:reset value="Cancelar" cssClass="btn btn-default"/>
+                </div>
+            </s:form>
+        </div>
+    </div>
+</center>
 <s:iterator value="comments">
     <div class="container">
         <table>
             <tr>
-                <td><h4>Comentario hecho por <s:property value="user.username"/> en <s:property value="date"/>:</h4></td>
+                <td><s:url action="profile" var="profileLink"><s:param name="username"><s:property value="model.user.username"/></s:param></s:url>
+                    <p class="navbar-text">Comentario hecho por <a href="${profileLink}"><s:property value="model.user.username"/></a> en <s:property value="model.date"/></p></td>
             </tr>
             <tr>
                 <td><s:property value="description"/></td>
