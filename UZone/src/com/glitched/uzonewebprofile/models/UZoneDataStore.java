@@ -175,11 +175,6 @@ public class UZoneDataStore {
         return getPostsEntity().showSearch(title, getUsersEntity(), getUserTypesEntity());
     }
 
-    public boolean deleteById(int id) {
-        if(connection==null) return false;
-        return getPostsEntity().deleteByID(id);
-    }
-
     public boolean createPost(Post post) {
         if(connection==null) return false;
         return getPostsEntity().create(post);
@@ -248,4 +243,3 @@ public class UZoneDataStore {
         return getPointsEntity().getQuantity(origin,target);
     }
 }
-

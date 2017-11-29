@@ -19,7 +19,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Tus Aportaciones</title>
+    <title>Contributions</title>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -38,7 +38,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><s:a href="contribution">Mis Aportaciones</s:a></li>
+                <li><a href="contribution.jsp">Mis Aportaciones</a></li>
             </ul>
             <form class="navbar-form navbar-left">
 
@@ -64,12 +64,15 @@
                     <p>
                         <s:property value="description"/>
                     </p>
+<<<<<<< HEAD
                     <s:url action="delete" var="delete">
                         <s:param name="postId">
                             <s:property value="id"/>
                         </s:param>
                     </s:url>
                     <a href="${delete}" class="btn btn-success">Borrar Video</a>
+=======
+>>>>>>> 940998d1287fa31ce1d6149b5498108cbdda494f
                 </div>
                 <div class="col-md-8">
                     <div class="vid">
@@ -82,7 +85,5 @@
 
 </body>
 </html>
-
-
 
 

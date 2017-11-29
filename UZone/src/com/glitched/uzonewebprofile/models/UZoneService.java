@@ -97,8 +97,6 @@ public class UZoneService {
 
     public List<Post> findByUser(int user_id) { return dataStore.findByUser(user_id); }
 
-    public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
-
     public boolean createPost(Post post) {
         return dataStore.createPost(post);
     }
@@ -107,7 +105,7 @@ public class UZoneService {
         return dataStore.createPost(id,title,date,description,url);
     }
 
-    public boolean deleteById(int id){return dataStore.deleteById(id);}
+    public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
 
     //Events methods
     public List<Event> showEvents() {
@@ -154,4 +152,3 @@ public class UZoneService {
         return dataStore.getQuantity(origin,target);
     }
 }
-
