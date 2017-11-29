@@ -57,7 +57,7 @@ CREATE TABLE events (
 CREATE TABLE postulants (
 	event_id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id INT(5) UNSIGNED NOT NULL,
-    date DATE,
+    date DATE NOT NULL,
     PRIMARY KEY(event_id,user_id),
     CONSTRAINT postulants_events_event_id FOREIGN  KEY (event_id) REFERENCES events(id),
     CONSTRAINT postulants_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
@@ -75,11 +75,14 @@ CREATE TABLE posts (
 );
     
 CREATE TABLE comments (
-	post_id INT(5) UNSIGNED NOT NULL,
-    id INT(5) UNSIGNED NOT NULL,
+    post_id INT(5) UNSIGNED NOT NULL,
+    id INT(5) UNSIGNED NOT NULL AUTO_INCREMENT,
     description VARCHAR(100) NOT NULL,
-    PRIMARY KEY(post_id,id),
-    CONSTRAINT comments_posts_post_id FOREIGN KEY (post_id) REFERENCES posts(id)
+    date DATE NOT NULL,
+    user_id INT(5) UNSIGNED NOT NULL,
+    PRIMARY KEY(id),
+    CONSTRAINT comments_posts_post_id FOREIGN KEY (post_id) REFERENCES posts(id),
+    CONSTRAINT comments_users_user_id FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 CREATE TABLE points(
@@ -235,18 +238,29 @@ VALUES (
     'https://www.youtube.com/embed/3gSwUwvP9Ao'
 	);
 
+INSERT INTO comments (post_id,description,date,user_id)
+VALUES (
+	1,
+    'asd',
+    STR_TO_DATE("15-06-2017", "%d-%m-%Y"),
+    1
+	);    
+    
+INSERT INTO comments (post_id,description,date,user_id)
+VALUES (
+	1,
+    'asd',
+    STR_TO_DATE("15-06-2017", "%d-%m-%Y"),
+    2
+	);    
+    
+INSERT INTO comments (post_id,description,date,user_id)
+VALUES (
+	1,
+    'asd',
+    STR_TO_DATE("15-06-2017", "%d-%m-%Y"),
+    3
+	);    
+
 COMMIT;
 
-INSERT INTO points VALUES (1,2,5);
-
-select * from users;
-
-select * from informations;
-
-select * from posts;
-
-select * from events;
-
-select * from points;
-
-select * from informations WHERE user_id=(SELECT id FROM users WHERE username='NicoForce');
