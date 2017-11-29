@@ -73,6 +73,10 @@ public class UZoneService {
         return dataStore.createUser(username,password,name,lastName,email,birthDate,genre,id);
     }
 
+    public boolean updateUser(int id,String name,String lastname,String phone) {
+        return dataStore.updateUser(id,name,lastname,phone);
+    }
+
     //Information Methods
     public Information findInformationByUserId (int userId) {
         return dataStore.findInformationByUserId(userId);
