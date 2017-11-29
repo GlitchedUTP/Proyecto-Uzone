@@ -41,6 +41,10 @@ public class EventsEntity extends BaseEntity {
         return findByCriteria(String.format("WHERE id= %d", id), usersEntity, userTypesEntity).get(0);
     }
 
+    public List<Event> findByUser(int userId,UsersEntity usersEntity,UserTypesEntity userTypesEntity) {
+        return findByCriteria(String.format("WHERE user_id=%d",userId),usersEntity,userTypesEntity);
+    }
+
     /* public Event findBypictureUrl(String pictureUrl,  UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         return findByCriteria(String.format("WHERE pictureUrl='%s'",pictureUrl),usersEntity,userTypesEntity).get(0);
     }

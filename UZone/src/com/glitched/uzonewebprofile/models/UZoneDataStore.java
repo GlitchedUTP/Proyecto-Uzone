@@ -208,6 +208,11 @@ public class UZoneDataStore {
         return getEventsEntity().showEvents(getUsersEntity(),getUserTypesEntity());
     }
 
+    public List<Event> findEventByUser(int userId) {
+        if(connection==null) return null;
+        return getEventsEntity().findByUser(userId,getUsersEntity(),getUserTypesEntity());
+    }
+
     public boolean createEvent(Event event) {
         if(connection==null) return false;
         return getEventsEntity().create(event);

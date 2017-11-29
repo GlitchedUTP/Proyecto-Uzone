@@ -17,7 +17,6 @@
 <body>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -27,38 +26,31 @@
             </button>
             <s:a class="navbar-brand" href="home">UZone</s:a>
         </div>
-
-
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="main.jsp">Inicio</a></li>
                 <li><s:a href="contribution">Mis Aportaciones</s:a></li>
             </ul>
-            <form class="navbar-form navbar-left">
-
-
-            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><s:a href="self">${sessionScope.username}</s:a></li>
                 <li><s:a href="logout">Cerrar sesión</s:a></li>
             </ul>
+            <div class="navbar-header">
+                <s:form theme="simple" action="searchVideo">
+                    <ul class="nav navbar-nav">
+                        <li><s:textfield name="model.title"  class="form-control" placeholder="Buscar"/></li>
+                        <li><s:submit type="submit" class="btn btn-default" value="Buscar"/></li>
+                    </ul>
+                </s:form>
+            </div>
         </div>
     </div>
 </nav>
 <div class="container">
     <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
-        <li role="presentation"><a href="#">Màs Videos</a></li>
+        <li role="presentation" class="active"><a href="home">Últimos</a></li>
         <s:if test="#session.userType==1"><li role="presentation"><s:a href="redirectCreatePost">Enviar Video</s:a></li></s:if>
-        <li role="presentation"><a href="#">Más Votados</a></li>
         <s:if test="#session.userType==2"><li role="presentation"><s:a href="redirectCreateEvent">Crea un evento</s:a></li></s:if>
         <li role="presentation"><a href="listEvents">Eventos disponibles</a></li>
-        <s:form class="navbar-form navbar-left" action="searchVideo">
-            <div class="form-group">
-                <s:textfield name="model.title"  class="form-control" placeholder="Buscar" value=""/>
-            </div>
-            <s:submit type="submit" class="btn btn-default" value="Buscar"/>
-        </s:form>
     </ul>
 </div>
 <center>

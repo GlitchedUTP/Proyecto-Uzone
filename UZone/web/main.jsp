@@ -28,7 +28,6 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="main.jsp">Inicio</a></li>
                 <li><s:a href="contribution">Mis Aportaciones</s:a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -48,10 +47,8 @@
 </nav>
 <div class="container">
     <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="main.jsp">Últimos</a></li>
-        <li role="presentation"><a href="#">Màs Videos</a></li>
+        <li role="presentation" class="active"><a href="home">Últimos</a></li>
         <s:if test="#session.userType==1"><li role="presentation"><s:a href="redirectCreatePost">Enviar Video</s:a></li></s:if>
-        <li role="presentation"><a href="#">Más Votados</a></li>
         <s:if test="#session.userType==2"><li role="presentation"><s:a href="redirectCreateEvent">Crea un evento</s:a></li></s:if>
         <li role="presentation"><a href="listEvents">Eventos disponibles</a></li>
     </ul>
