@@ -74,11 +74,17 @@
             <result name="success">listEvent.jsp</result>
             <result name="error">index.jsp</result>
         </action>
-            <action name="emailer" class="com.glitched.uzonewebprofile.actions.Emailer" method="execute">
-                <result name="success">/success.jsp</result>
-                <result name="error">/error.jsp</result>
-            </action>
-
-
+        <action name="emailer" class="com.glitched.uzonewebprofile.actions.Emailer" method="execute">
+            <result name="success">/success.jsp</result>
+            <result name="error">/error.jsp</result>
+        </action>
+        <action name="postDetails" class="com.glitched.uzonewebprofile.actions.PostDetailsAction" method="execute">
+            <result name="success">postDetails.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
+        <action name="createComment" class="com.glitched.uzonewebprofile.actions.NewCommentAction" method="execute">
+            <result name="success">postDetails.jsp</result>
+            <result name="error">index.jsp</result>
+        </action>
     </package>
 </struts>

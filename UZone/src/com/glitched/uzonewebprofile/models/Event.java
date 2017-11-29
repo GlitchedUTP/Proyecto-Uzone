@@ -84,8 +84,8 @@ public class Event {
             event.setPictureUrl(rs.getString("picture_url"));
             event.setTitle(rs.getString("title"));
             event.setUbication(rs.getString("ubication"));
-            event.setDate(rs.getDate("date").toString());
-            event.setDateLimit(rs.getDate("date_limit").toString());
+            event.setDate(rs.getString("date"));
+            event.setDateLimit(rs.getString("date_limit"));
             event.setDescription(rs.getString("description"));
             event.setTags(rs.getString("tags"));
             event.setWebsites(rs.getString("websites"));

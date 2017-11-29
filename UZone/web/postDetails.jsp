@@ -17,6 +17,7 @@
 <body>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
+
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -26,23 +27,21 @@
             </button>
             <s:a class="navbar-brand" href="home">UZone</s:a>
         </div>
+
+
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="main.jsp">Inicio</a></li>
                 <li><s:a href="contribution">Mis Aportaciones</s:a></li>
             </ul>
+            <form class="navbar-form navbar-left">
+
+
+            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><s:a href="self">${sessionScope.username}</s:a></li>
                 <li><s:a href="logout">Cerrar sesión</s:a></li>
             </ul>
-            <div class="navbar-header">
-                <s:form theme="simple" action="searchVideo">
-                    <ul class="nav navbar-nav">
-                        <li><s:textfield name="model.title"  class="form-control" placeholder="Buscar"/></li>
-                        <li><s:submit type="submit" class="btn btn-default" value="Buscar"/></li>
-                    </ul>
-                </s:form>
-            </div>
         </div>
     </div>
 </nav>
@@ -54,70 +53,58 @@
         <li role="presentation"><a href="#">Más Votados</a></li>
         <s:if test="#session.userType==2"><li role="presentation"><s:a href="redirectCreateEvent">Crea un evento</s:a></li></s:if>
         <li role="presentation"><a href="listEvents">Eventos disponibles</a></li>
+        <s:form class="navbar-form navbar-left" action="searchVideo">
+            <div class="form-group">
+                <s:textfield name="model.title"  class="form-control" placeholder="Buscar" value=""/>
+            </div>
+            <s:submit type="submit" class="btn btn-default" value="Buscar"/>
+        </s:form>
     </ul>
 </div>
 <center>
-<s:iterator value="posts">
-    <div class="container">
-        <div class="row">
-            <br><br>
-            <div class="col-md-4">
-                <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="user.username"/></s:param></s:url>
-                <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="user.username"/></a> en <s:property value="date"/></p>
-                <s:url action="postDetails" var="showPostDetails"><s:param name="postId"><s:property value="id"/></s:param></s:url>
-                <a href="${showPostDetails}"><h4><s:property value="title"/></h4></a>
-                <p>
-                    <s:property value="description"/>
-                </p>
+        <div class="container">
+            <div class="container">
+                <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="model.user.username"/></s:param></s:url>
+                <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="model.user.username"/></a> en <s:property value="model.date"/></p>
             </div>
-            <div class="col-md-8">
-                <div class="vid">
-                    <iframe width="560" height="315" src="<s:property value='url'/>" allowfullscreen=""></iframe>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <s:url action="postDetails" var="showPostDetails"><s:param name="postId"><s:property value="id"/></s:param></s:url>
+                        <a href="${showPostDetails}"><h4><s:property value="title"/></h4></a>
+                        <p>
+                            <s:property value="model.description"/>
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="vid">
+                            <iframe width="560" height="315" src="<s:property value='model.url'/>" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</s:iterator>
 </center>
-<%--<s:property value="trying"/>
-<s:iterator value="posts" var="post">
-    <s:property value="title" /><p>a</p>
-    <s:property value="#post.title" /><p>c</p>
-    <s:property value="#post.getTitle" /><p>e</p>
-    <s:property value="%{title}" /><p>j</p>
-    <s:property value="%{#post.title}" /><p>l</p>
-    <s:property value="%{#post.getTitle}" /><p>n</p></br>
-</s:iterator>
-   <%-- <div><s:property value="posts[0].title"/></div>--%>
-<footer class="footer-bs">
-    <div class="row">
-        <div class="col-md-3 footer-brand animated fadeInLeft">
-            <h2>Uzone</h2>
-            <p></p>
-            <p>© 2017 Todos los derechos reservados</p>
-        </div>
-        <div class="col-md-4 footer-nav animated fadeInUp">
-            <h4>Menu —</h4>
-            <div class="col-md-6">
-                <ul class="pages">
-                    <li><a href="aboutUs.jsp">Acerca de Uzone</a></li>
-                    <li><a href="termsOfUse.jsp">Terminos de Uso</a></li>
-                    <li><a href="privacyPolicy.jsp">Política de privacidad</a></li>
-                    <li><a href="#">Feedback</a></li>
-
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul class="list">
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Contáctanos</a></li>
-                </ul>
-            </div>
-        </div>
-
-
+<h3>Comentarios:</h3>
+<s:form  theme="simple" cssClass="well" action="createComment">
+    <s:hidden name="postId" value="%{model.id}"/>
+    <s:textarea name="description" placeholder="Deja tu comentario"/>
+    <s:submit value="Enviar Commentario"/>
+</s:form>
+<s:iterator value="comments">
+    <div class="container">
+        <table>
+            <tr>
+                <td><h4>Comentario hecho por <s:property value="user.username"/> en <s:property value="date"/>:</h4></td>
+            </tr>
+            <tr>
+                <td><s:property value="description"/></td>
+                <hr>
+            </tr>
+        </table>
     </div>
-</footer>
+</s:iterator>
+
 <script src="Add-ons/vendor/jquery/jquery.min.js"></script>
 <script src="Add-ons/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

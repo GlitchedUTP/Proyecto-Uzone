@@ -170,6 +170,12 @@ public class UZoneDataStore {
         if(connection==null) return null;
         return getPostsEntity().findByUser(getUsersEntity().findById(user_id,getUserTypesEntity()),getUsersEntity(),getUserTypesEntity());
     }
+
+    public Post findPostById(int id) {
+        if(connection==null) return null;
+        return getPostsEntity().findById(id,getUsersEntity(),getUserTypesEntity());
+    }
+
     public List<Post> showSearch(String title) {
         if(connection==null) return null;
         return getPostsEntity().showSearch(title, getUsersEntity(), getUserTypesEntity());
@@ -183,6 +189,17 @@ public class UZoneDataStore {
     public boolean createPost(int id,String title,String date,String description,String url) {
         if(connection==null) return false;
         return getPostsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),title,date,description,url);
+    }
+
+    //Comment methods
+    public List<Comment> findCommentByPost(int postId) {
+        if(connection==null) return null;
+        return getCommentsEntity().findByPost(postId,getPostsEntity(),getUsersEntity(),getUserTypesEntity());
+    }
+
+    public boolean createComment(int postId,String description,String date,int userId) {
+        if(connection==null) return false;
+        return getCommentsEntity().create(postId,description,date,userId,getPostsEntity(),getUsersEntity(),getUserTypesEntity());
     }
 
     //Event methods

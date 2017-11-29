@@ -97,6 +97,10 @@ public class UZoneService {
 
     public List<Post> findByUser(int user_id) { return dataStore.findByUser(user_id); }
 
+    public Post findPostById(int id) {
+        return dataStore.findPostById(id);
+    }
+
     public boolean createPost(Post post) {
         return dataStore.createPost(post);
     }
@@ -106,6 +110,15 @@ public class UZoneService {
     }
 
     public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
+
+    //Comment methods
+    public List<Comment> findCommentByPost(int postId) {
+        return dataStore.findCommentByPost(postId);
+    }
+
+    public boolean createComment(int postId,String description,String date,int userId) {
+        return dataStore.createComment(postId,description,date,userId);
+    }
 
     //Events methods
     public List<Event> showEvents() {

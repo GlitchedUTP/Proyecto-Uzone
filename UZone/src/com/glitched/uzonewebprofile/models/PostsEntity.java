@@ -49,13 +49,10 @@ public class PostsEntity extends BaseEntity{
         return findByCriteria(String.format("WHERE id=%d",id),usersEntity,userTypesEntity).get(0);
     }
 
-<<<<<<< HEAD
     public boolean deleteByID (int id) {
         return executeUpdate(String.format("DELETE FROM %s WHERE id=%d",getTableName(),id));
     }
 
-=======
->>>>>>> 940998d1287fa31ce1d6149b5498108cbdda494f
     public Post findByName (String title, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         return findByCriteria(String.format("WHERE title=%d",title),usersEntity,userTypesEntity).get(0);
     }

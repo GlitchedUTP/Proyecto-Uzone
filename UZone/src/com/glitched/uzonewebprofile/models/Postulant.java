@@ -47,7 +47,7 @@ public class Postulant {
         try {
             postulant.setEvent(eventsEntity.findById(rs.getInt("event_id"),usersEntity,userTypesEntity));
             postulant.setUser(usersEntity.findById(rs.getInt("user_id"),userTypesEntity));
-            postulant.setDate(rs.getDate("date").toString());
+            postulant.setDate(rs.getString("date"));
             return postulant;
         } catch (SQLException e) {
             e.printStackTrace();

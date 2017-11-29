@@ -60,19 +60,17 @@
                 <div class="col-md-4">
                     <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="user.username"/></s:param></s:url>
                     <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="user.username"/></a> en <s:property value="date"/></p>
-                    <h4><s:property value="title"/></h4>
+                    <s:url action="postDetails" var="showPostDetails"><s:param name="postId"><s:property value="id"/></s:param></s:url>
+                    <a href="${showPostDetails}"><h4><s:property value="title"/></h4></a>
                     <p>
                         <s:property value="description"/>
                     </p>
-<<<<<<< HEAD
                     <s:url action="delete" var="delete">
                         <s:param name="postId">
                             <s:property value="id"/>
                         </s:param>
                     </s:url>
                     <a href="${delete}" class="btn btn-success">Borrar Video</a>
-=======
->>>>>>> 940998d1287fa31ce1d6149b5498108cbdda494f
                 </div>
                 <div class="col-md-8">
                     <div class="vid">

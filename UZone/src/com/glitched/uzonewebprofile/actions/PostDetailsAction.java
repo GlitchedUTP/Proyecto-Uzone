@@ -1,5 +1,6 @@
 package com.glitched.uzonewebprofile.actions;
 
+import com.glitched.uzonewebprofile.models.Comment;
 import com.glitched.uzonewebprofile.models.Post;
 import com.glitched.uzonewebprofile.models.UZoneService;
 import com.opensymphony.xwork2.ActionSupport;
@@ -9,24 +10,18 @@ import org.apache.struts2.interceptor.SessionAware;
 import java.util.List;
 import java.util.Map;
 
-public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post>,SessionAware {
+public class PostDetailsAction extends ActionSupport implements ModelDriven<Post>,SessionAware {
     private Map<String, Object> sessionMap;
-    private Post post= new Post();
-    private List<Post> posts;
+    private Post post;
+    private List<Comment> comments;
     int postId;
 
-    public List<Post> getPosts() {
-        return posts;
+    public List<Comment> getComments() {
+        return comments;
     }
 
-    public void setPosts(List<Post> posts) {
-        this.posts = posts;
-    }
-
-    @Override
-    public Post getModel()
-    {
-        return post;
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
     public int getPostId() {
@@ -42,12 +37,17 @@ public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post
         this.sessionMap = sessionMap;
     }
 
-    public String execute() throws Exception
-    {
-        UZoneService service = new UZoneService();
-        if (true/*service.deleteById(postId)*/){
-            post.setUser(service.findUserById((int)sessionMap.get("id")));
-            setPosts(service.findByUser(post.getUser().getId()));
+    @Override
+    public Post getModel() {
+        return post;
+    }
+
+    @Override
+    public String execute() {
+        UZoneService service=new UZoneService();
+        if(sessionMap.containsKey("username")) {
+            post=service.findPostById(postId);
+            setComments(service.findCommentByPost(postId));
             return SUCCESS;
         } else return ERROR;
     }
