@@ -13,6 +13,7 @@ public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post
     private Map<String, Object> sessionMap;
     private Post post= new Post();
     private List<Post> posts;
+    int postId;
 
     public List<Post> getPosts() {
         return posts;
@@ -28,6 +29,14 @@ public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post
         return post;
     }
 
+    public int getPostId() {
+        return postId;
+    }
+
+    public void setPostId(int postId) {
+        this.postId = postId;
+    }
+
     @Override
     public void setSession(Map<String, Object> sessionMap) {
         this.sessionMap = sessionMap;
@@ -36,8 +45,7 @@ public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post
     public String execute() throws Exception
     {
         UZoneService service = new UZoneService();
-        int id=post.getId();
-        if (service.deleteById(id)){
+        if (service.deleteById(postId)){
             post.setUser(service.findUserById((int)sessionMap.get("id")));
             setPosts(service.findByUser(post.getUser().getId()));
             return SUCCESS;

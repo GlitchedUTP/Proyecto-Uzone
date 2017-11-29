@@ -54,20 +54,22 @@
 
 
 <s:iterator value="posts">
-    <div class="container">
-        <div class="container">
-            <s:url action="profile" var="profileLink"><s:param name="model.username"><s:property value="user.username"/></s:param></s:url>
-            <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="user.username"/></a> en <s:property value="date"/></p>
-        </div>
-
         <div class="container">
             <div class="row">
+                <br><br>
                 <div class="col-md-4">
+                    <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="user.username"/></s:param></s:url>
+                    <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="user.username"/></a> en <s:property value="date"/></p>
                     <h4><s:property value="title"/></h4>
                     <p>
                         <s:property value="description"/>
                     </p>
-                    <s:a href="delete?param1=%{'id'}">Borrar Video</s:a>
+                    <s:url action="delete" var="delete">
+                        <s:param name="postId">
+                            <s:property value="id"/>
+                        </s:param>
+                    </s:url>
+                    <a href="${delete}" class="btn btn-success">Borrar Video</a>
                 </div>
                 <div class="col-md-8">
                     <div class="vid">
@@ -76,7 +78,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </s:iterator>
 
 </body>

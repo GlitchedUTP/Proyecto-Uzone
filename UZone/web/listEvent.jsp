@@ -79,6 +79,11 @@
                             <s:property value="description"/>
                         </p>
                     </div>
+                    <div class="col-md-8">
+                        <div class="vid">
+                            <iframe width="560" height="315" src="<s:property value='url'/>" allowfullscreen=""></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

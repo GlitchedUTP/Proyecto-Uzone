@@ -48,7 +48,7 @@ public class PostsEntity extends BaseEntity{
     }
 
     public boolean deleteByID (int id) {
-        return executeUpdate(String.format("DELETE FROM %s".concat("WHERE id=%d"),getTableName(),id));
+        return executeUpdate(String.format("DELETE FROM %s WHERE id=%d",getTableName(),id));
     }
 
     public Post findByName (String title, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
