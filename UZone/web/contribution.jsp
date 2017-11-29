@@ -19,7 +19,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Contributions</title>
+    <title>Tus Aportaciones</title>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
@@ -38,7 +38,7 @@
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="contribution.jsp">Mis Aportaciones</a></li>
+                <li><s:a href="contribution">Mis Aportaciones</s:a></li>
             </ul>
             <form class="navbar-form navbar-left">
 
@@ -67,6 +67,7 @@
                     <p>
                         <s:property value="description"/>
                     </p>
+                    <s:a href="delete?param1=%{'id'}">Borrar Video</s:a>
                 </div>
                 <div class="col-md-8">
                     <div class="vid">
@@ -80,5 +81,7 @@
 
 </body>
 </html>
+
+
 
 

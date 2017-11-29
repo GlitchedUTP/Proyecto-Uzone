@@ -1,7 +1,5 @@
 package com.glitched.uzonewebprofile.models;
 
-import javafx.geometry.Pos;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -49,6 +47,10 @@ public class PostsEntity extends BaseEntity{
         return findByCriteria(String.format("WHERE id=%d",id),usersEntity,userTypesEntity).get(0);
     }
 
+    public boolean deleteByID (int id) {
+        return executeUpdate(String.format("DELETE FROM %s".concat("WHERE id=%d"),getTableName(),id));
+    }
+
     public Post findByName (String title, UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         return findByCriteria(String.format("WHERE title=%d",title),usersEntity,userTypesEntity).get(0);
     }
@@ -58,7 +60,7 @@ public class PostsEntity extends BaseEntity{
     }
 
     public List<Post> showSearch(String title,UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
-        return findByCriteria(String.format("WHERE title=%d ORDER BY id DESC, date DESC",title),usersEntity,userTypesEntity);
+        return findByCriteria(String.format("WHERE title LIKE '%s'",title),usersEntity,userTypesEntity);
     }
 
     public boolean create(Post post) {
@@ -78,4 +80,3 @@ public class PostsEntity extends BaseEntity{
         return create(post);
     }
 }
-
