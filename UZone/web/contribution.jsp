@@ -24,7 +24,6 @@
 <body>
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
-
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Toggle navigation</span>
@@ -34,20 +33,22 @@
             </button>
             <s:a class="navbar-brand" href="home">UZone</s:a>
         </div>
-
-
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="contribution.jsp">Mis Aportaciones</a></li>
+                <li><s:a href="contribution">Mis Aportaciones</s:a></li>
             </ul>
-            <form class="navbar-form navbar-left">
-
-
-            </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><s:a href="self">${sessionScope.username}</s:a></li>
                 <li><s:a href="logout">Cerrar sesión</s:a></li>
             </ul>
+            <div class="navbar-header">
+                <s:form theme="simple" action="searchVideo">
+                    <ul class="nav navbar-nav">
+                        <li><s:textfield name="model.title"  class="form-control" placeholder="Buscar"/></li>
+                        <li><s:submit type="submit" class="btn btn-default" value="Buscar"/></li>
+                    </ul>
+                </s:form>
+            </div>
         </div>
     </div>
 </nav>
@@ -87,11 +88,11 @@
             <s:url action="profile" var="profileLink"><s:param name="username"><s:property value="user.username"/></s:param></s:url>
             <p class="navbar-text">Publicado por <a href="${profileLink}"><s:property value="user.username"/></a> en <s:property value="date"/></p>
         </div>
-
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h4><s:property value="title"/></h4>
+                    <s:url action="eventPostulants" var="showEventPostulants"><s:param name="eventId"><s:property value="id"/></s:param></s:url>
+                    <a href="${showEventPostulants}"><h4><s:property value="title"/></h4></a>
                     <p>
                         <s:property value="ubication"/>
                     </p>

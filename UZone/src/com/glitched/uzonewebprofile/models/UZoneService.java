@@ -135,6 +135,10 @@ public class UZoneService {
         return dataStore.findEventByUser(userId);
     }
 
+    public Event findEventById(int eventId) {
+        return dataStore.findEventById(eventId);
+    }
+
     public boolean createEvent(Event event) { return dataStore.createEvent(event); }
 
     public boolean createEvent(int id,String picture_url,String title,String ubication, String tags, String websites,String date, String dateLimit, String description, double salary) {
@@ -146,8 +150,11 @@ public class UZoneService {
     }
 
     //Postulant methods
-    public boolean createPostulant(String date,int eventId,int userId) {
-        return dataStore.createPostulant(date,eventId,userId);
+    public List<Postulant> findPostulantByEvent(int eventId) {
+        return dataStore.findPostulantByEvent(eventId);
+    }
+    public boolean createPostulant(int eventId,int userId,String date) {
+        return dataStore.createPostulant(eventId,userId,date);
     }
 
     public boolean checkPostulant(int eventId, int userId) {

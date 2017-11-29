@@ -217,6 +217,11 @@ public class UZoneDataStore {
         return getEventsEntity().showEvents(getUsersEntity(),getUserTypesEntity());
     }
 
+    public Event findEventById(int eventId) {
+        if(connection==null) return null;
+        return getEventsEntity().findById(eventId,getUsersEntity(),getUserTypesEntity());
+    }
+
     public List<Event> findEventByUser(int userId) {
         if(connection==null) return null;
         return getEventsEntity().findByUser(userId,getUsersEntity(),getUserTypesEntity());
@@ -238,9 +243,14 @@ public class UZoneDataStore {
     }
 
     //Postulant methods
-    public boolean createPostulant(String date,int eventId,int userId) {
+    public List<Postulant> findPostulantByEvent(int eventId) {
+        if(connection==null) return null;
+        return getPostulantsEntity().findByEvent(eventId,getEventsEntity(),getUsersEntity(),getUserTypesEntity());
+    }
+
+    public boolean createPostulant(int eventId,int userId,String date) {
         if(connection==null) return false;
-        return getPostulantsEntity().create(date,eventId,userId);
+        return getPostulantsEntity().create(eventId,userId,date);
     }
 
     public boolean checkPostulant(int eventId, int userId) {

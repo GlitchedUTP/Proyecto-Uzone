@@ -17,7 +17,7 @@ public class PostulantsEntity extends BaseEntity {
         setTableName("Postulants");
     }
 
-    public List<Postulant> findByCriteria (String criteria, UsersEntity usersEntity, UserTypesEntity userTypesEntity, EventsEntity eventsEntity) {
+    public List<Postulant> findByCriteria (String criteria, EventsEntity eventsEntity,UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
         try {
             ResultSet rs = getConnection()
                     .createStatement()
@@ -31,6 +31,10 @@ public class PostulantsEntity extends BaseEntity {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public List<Postulant> findByEvent(int eventId, EventsEntity eventsEntity,UsersEntity usersEntity, UserTypesEntity userTypesEntity) {
+        return findByCriteria(String.format("WHERE event_id=%d",eventId),eventsEntity,usersEntity,userTypesEntity);
     }
 
     public boolean check(int eventId,int userId) {
@@ -48,7 +52,7 @@ public class PostulantsEntity extends BaseEntity {
         return true;
     }
 
-    public boolean create(String date, int eventId, int userId) {
-        return executeUpdate(String.format("INSERT INTO %s VALUES('%s',%d,%d)",getTableName(),date,eventId,userId));
+    public boolean create(int eventId, int userId,String date) {
+        return executeUpdate(String.format("INSERT INTO %s VALUES(%d,%d,'%s')",getTableName(),eventId,userId,date));
     }
 }
