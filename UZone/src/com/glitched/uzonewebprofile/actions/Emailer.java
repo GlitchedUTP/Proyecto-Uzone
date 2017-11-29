@@ -10,7 +10,7 @@ import javax.mail.internet.MimeMessage;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class ForgotPassAction extends ActionSupport{
+public class Emailer extends ActionSupport{
     private String from;
     private String password;
     private String to;
@@ -102,7 +102,7 @@ public class ForgotPassAction extends ActionSupport{
     }
 
     public static void setProperties(Properties properties) {
-        ForgotPassAction.properties = properties;
+        Emailer.properties = properties;
     }
 }
 
