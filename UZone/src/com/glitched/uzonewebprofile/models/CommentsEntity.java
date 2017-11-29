@@ -56,4 +56,8 @@ public class CommentsEntity extends BaseEntity {
         comment.setUser(usersEntity.findById(userId,userTypesEntity));
         return create(comment);
     }
+
+    public boolean deleteByPost(int postId) {
+        return executeUpdate(String.format("DELETE FROM %s WHERE post_id=%d",getTableName(),postId));
+    }
 }

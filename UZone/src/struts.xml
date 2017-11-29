@@ -88,7 +88,7 @@
         </action>
         <action name="delete" class="com.glitched.uzonewebprofile.actions.DeleteVideoAction" method="execute">
             <result name="success">contribution.jsp</result>
-            <result name="error">contribution.jsp</result>
+            <result name="error">index.jsp</result>
         </action>
     </package>
 </struts>

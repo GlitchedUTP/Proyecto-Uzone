@@ -191,7 +191,7 @@ public class UZoneDataStore {
         return getPostsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),title,date,description,url);
     }
 
-    public boolean deleteById(int id) {
+    public boolean deletePostById(int id) {
         if(connection==null) return false;
         return getPostsEntity().deleteByID(id);
     }
@@ -204,6 +204,11 @@ public class UZoneDataStore {
     public boolean createComment(int postId,String description,String date,int userId) {
         if(connection==null) return false;
         return getCommentsEntity().create(postId,description,date,userId,getPostsEntity(),getUsersEntity(),getUserTypesEntity());
+    }
+
+    public boolean deleteCommentByPost(int postId) {
+        if(connection==null) return false;
+       return getCommentsEntity().deleteByPost(postId);
     }
 
     //Event methods

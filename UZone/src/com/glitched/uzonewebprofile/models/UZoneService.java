@@ -111,7 +111,7 @@ public class UZoneService {
 
     public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
 
-    public boolean deleteById(int id){return dataStore.deleteById(id);}
+    public boolean deletePostById(int id){return dataStore.deletePostById(id);}
 
     //Comment methods
     public List<Comment> findCommentByPost(int postId) {
@@ -120,6 +120,10 @@ public class UZoneService {
 
     public boolean createComment(int postId,String description,String date,int userId) {
         return dataStore.createComment(postId,description,date,userId);
+    }
+
+    public boolean deleteCommentByPost(int postId) {
+        return dataStore.deleteCommentByPost(postId);
     }
 
     //Events methods

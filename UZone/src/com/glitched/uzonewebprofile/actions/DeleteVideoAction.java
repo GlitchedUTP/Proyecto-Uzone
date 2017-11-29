@@ -9,9 +9,8 @@ import org.apache.struts2.interceptor.SessionAware;
 import java.util.List;
 import java.util.Map;
 
-public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post>,SessionAware {
+public class DeleteVideoAction extends ActionSupport implements SessionAware {
     private Map<String, Object> sessionMap;
-    private Post post = new Post();
     private List<Post> posts;
     int postId;
 
@@ -21,11 +20,6 @@ public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post
 
     public void setPosts(List<Post> posts) {
         this.posts = posts;
-    }
-
-    @Override
-    public Post getModel() {
-        return post;
     }
 
     public int getPostId() {
@@ -43,10 +37,14 @@ public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post
 
     public String execute() throws Exception {
         UZoneService service = new UZoneService();
-            if (service.deleteById(postId)) {
-                post.setUser(service.findUserById((int) sessionMap.get("id")));
-                setPosts(service.findByUser(post.getUser().getId()));
-                return SUCCESS;
-            } else return ERROR;
+        if (sessionMap.containsKey("username")) {
+            if (service.deleteCommentByPost(postId)) {
+                if(service.deletePostById(postId)) {
+                    setPosts(service.findByUser(postId));
+                    return SUCCESS;
+                }
+            }
+        }
+        return ERROR;
     }
 }
