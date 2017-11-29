@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post>,SessionAware {
     private Map<String, Object> sessionMap;
-    private Post post= new Post();
+    private Post post = new Post();
     private List<Post> posts;
     int postId;
 
@@ -24,8 +24,7 @@ public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post
     }
 
     @Override
-    public Post getModel()
-    {
+    public Post getModel() {
         return post;
     }
 
@@ -42,13 +41,12 @@ public class DeleteVideoAction extends ActionSupport implements ModelDriven<Post
         this.sessionMap = sessionMap;
     }
 
-    public String execute() throws Exception
-    {
+    public String execute() throws Exception {
         UZoneService service = new UZoneService();
-        if (true/*service.deleteById(postId)*/){
-            post.setUser(service.findUserById((int)sessionMap.get("id")));
-            setPosts(service.findByUser(post.getUser().getId()));
-            return SUCCESS;
-        } else return ERROR;
+            if (service.deleteById(postId)) {
+                post.setUser(service.findUserById((int) sessionMap.get("id")));
+                setPosts(service.findByUser(post.getUser().getId()));
+                return SUCCESS;
+            } else return ERROR;
     }
 }

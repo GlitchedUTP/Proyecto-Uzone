@@ -191,6 +191,10 @@ public class UZoneDataStore {
         return getPostsEntity().create(getUsersEntity().findById(id,getUserTypesEntity()),title,date,description,url);
     }
 
+    public boolean deleteById(int id) {
+        if(connection==null) return false;
+        return getPostsEntity().deleteByID(id);
+    }
     //Comment methods
     public List<Comment> findCommentByPost(int postId) {
         if(connection==null) return null;

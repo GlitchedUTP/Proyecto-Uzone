@@ -111,6 +111,8 @@ public class UZoneService {
 
     public List<Post> showSearch(String title) {return dataStore.showSearch(title); }
 
+    public boolean deleteById(int id){return dataStore.deleteById(id);}
+
     //Comment methods
     public List<Comment> findCommentByPost(int postId) {
         return dataStore.findCommentByPost(postId);

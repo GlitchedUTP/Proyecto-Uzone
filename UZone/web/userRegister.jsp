@@ -54,6 +54,7 @@
               list="#{'1':'Artista', '2':'Dueño de un local'}"/>
         </div>
     <s:submit value="Registrarse" cssClass="btn btn-primary"/>
+    <s:a href="index.jsp" cssClass="btn btn-primary">Iniciar sesion</s:a>
 </div>
 </s:form>
     <h4> *Al registrarte aceptas nuestras Condiciones y nuestra Política de privacidad</h4>
@@ -61,7 +62,8 @@
 
 <style>
     body {
-        background-color: #1b1e21;
+        background-size: cover;
+        background: url(Add-ons/img/header.jpg) no-repeat fixed center center;
     }
 </style>
 </body>
