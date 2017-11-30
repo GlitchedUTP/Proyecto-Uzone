@@ -79,4 +79,8 @@ public class UsersEntity extends BaseEntity{
         user.setUserType(userType);
         return create(user);
     }
+
+    public boolean update(int id,String name,String lastname,String phone) {
+        return executeUpdate(String.format("UPDATE %s SET name='%s',lastname='%s',phone='%s' WHERE id=%d",getTableName(),name,lastname,phone,id));
+    }
 }

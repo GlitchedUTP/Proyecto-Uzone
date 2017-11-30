@@ -75,27 +75,22 @@
                 <h3>de <s:property value="model.voteQuantity"/> <s:if test="model.voteQuantity==1">voto</s:if><s:else>votos</s:else>.</h3>
         </div>
         <div class="col-md-8">
-            <s:form action="updateProfile" theme="bootstrap" class="well form-vertical" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <s:if test="model.userType.id==1">Artista</s:if><s:if test="model.userType.id==2">Empresario</s:if> <s:property value="model.username"/>
-                </div>
-                <s:textfield id="name" name="model.user.name" placeholder="Nombres" label="Nombres"/>
-                <s:textfield id="lastName" name="model.user.lastName" placeholder="Apellidos" label="Apellidos"/>
-                <s:textfield id="email" name="model.user.email" placeholder="Email" label="E-mail" disabled="true"/>
-                <s:textfield id="birthDate" name="model.user.birthDate" placeholder="Fecha de Nacimiento" label="Fecha de Nacimiento" disabled="true"/>
-                <s:select id="genre"
-                          name="model.user.genre"
-                          label="Selecciona tu genero"
-                          headerKey="0"
-                          headerValue="--- Select ---"
-                          list="#{'M':'Masculino', 'F':'Femenino'}"
-                disabled="true"/>
-                <s:textfield id="phone" name="model.user.phone" placeholder="Telefono" label="Telefono"/>
-                <s:if test="model.user.username==#session.username">
-                    <s:file id="photoUrl" label="Cambiar foto"/>
-                    <s:submit id="save" class="btn btn-success">Guardar Cambios</s:submit>
-                </s:if>
-            </s:form>
+                <s:form theme="bootstrap" class="well form-vertical" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <s:if test="model.userType.id==1">Artista</s:if><s:if test="model.userType.id==2">Empresario</s:if> <s:property value="model.username"/>
+                    </div>
+                    <s:textfield name="model.user.name" placeholder="Nombres" label="Nombres" disabled="true"/>
+                    <s:textfield name="model.user.lastName" placeholder="Apellidos" label="Apellidos" disabled="true"/>
+                    <s:textfield name="model.user.email" placeholder="Email" label="E-mail" disabled="true"/>
+                    <s:textfield name="model.user.birthDate" placeholder="Fecha de Nacimiento" label="Fecha de Nacimiento" disabled="true"/>
+                    <s:select name="model.user.genre"
+                              label="Selecciona tu genero"
+                              headerKey="0"
+                              headerValue="--- Select ---"
+                              list="#{'M':'Masculino', 'F':'Femenino'}"
+                              disabled="true"/>
+                    <s:textfield name="model.user.phone" placeholder="Telefono" label="Telefono" disabled="true"/>
+                </s:form>
         </div>
     </div>
 </div>

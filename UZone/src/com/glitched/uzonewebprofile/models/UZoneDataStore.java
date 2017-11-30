@@ -138,6 +138,11 @@ public class UZoneDataStore {
         return getUsersEntity().create(username,password,name,lastName,email,birthDate,genre,getUserTypesEntity().findById(id));
     }
 
+    public boolean updateUser(int id, String name,String lastname,String phone) {
+        if(connection==null) return false;
+        return getUsersEntity().update(id,name,lastname,phone);
+    }
+
     //Information methods
     public Information findInformationByUserId(int userId) {
         if(connection==null) return null;
