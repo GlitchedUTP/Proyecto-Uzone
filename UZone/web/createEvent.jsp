@@ -52,21 +52,42 @@
         <li role="presentation" class="active"><a href="home">Últimos</a></li>
         <s:if test="#session.userType==1"><li role="presentation"><s:a href="redirectCreatePost">Enviar Video</s:a></li></s:if>
         <s:if test="#session.userType==2"><li role="presentation"><s:a href="redirectCreateEvent">Crea un evento</s:a></li></s:if>
-        <li role="presentation"><a href="listEvents">Eventos disponibles</a></li>
+        <li role="presentation"><s:a href="listEvents">Eventos disponibles</s:a></li>
     </ul>
 </div>
 <h2>Publica un Evento</h2>
 <h3>Publica un evento para poder capturar la atencion de los mejores artistas</h3>
+<div class="col-md-8">
 <s:form action="createEvent" theme="bootstrap">
-    <s:textfield id="title" name="model.title" placeholder="Ingresa un titulo" requerid="true" />
-    <s:textfield id="ubication" name="model.ubication" placeholder="¿Donde se realizara tu evento?" requerid="true" />
-    <s:textfield id="evntime" name="model.date" placeholder="Fecha incio" requerid="true" />
-    <s:textfield id="evntimelimit" name="model.dateLimit" placeholder="Fecha fin" requerid="true" />
-    <s:textarea id="description" name="model.description" placeholder="Describe lo que tendra tu publicacion" requerid="true" rows="3"/>
-    <s:textfield id="tags" name="model.tags" placeholder="Etiquetas" requerid="true"/>
-    <s:textfield id="websites" name="model.websites" placeholder="Ingresa algun sitio web asociado a tu evento" requerid="true"/>
-    <s:textfield id="salary" name="model.salary" placeholder="Ingrese una remuneracion para tu artista" />
+    <div class="form-group">
+    <s:textfield id="title" name="model.title" cssClass="form-control" placeholder="Ingresa un titulo" requerid="true" />
+    </div>
+    <div class="form-group">
+    <s:textfield id="ubication" name="model.ubication" cssClass="form-control" placeholder="¿Donde se realizara tu evento?" requerid="true" />
+    </div>
+    <div class="form-group">
+    <s:textfield id="url" name="model.pictureUrl" cssClass="form-control" placeholder="Ingresa la url de tu imagen" requerid="true" />
+    </div>
+    <div class="form-group">
+    <s:textfield id="evntime" name="model.date" cssClass="form-control" placeholder="Fecha incio" requerid="true" />
+    </div>
+    <div class="form-group">
+    <s:textfield id="evntimelimit" name="model.dateLimit" cssClass="form-control" placeholder="Fecha fin" requerid="true" />
+    </div>
+    <div class="form-group">
+    <s:textarea id="description" name="model.description" cssClass="form-control" placeholder="Describe lo que tendra tu publicacion" requerid="true" rows="3"/>
+    </div>
+    <div class="form-group">
+    <s:textfield id="tags" name="model.tags" cssClass="form-control" placeholder="Etiquetas" requerid="true"/>
+    </div>
+    <div class="form-group">
+    <s:textfield id="websites" name="model.websites" cssClass="form-control" placeholder="Ingresa algun sitio web asociado a tu evento" requerid="true"/>
+    </div>
+    <div class="form-group">
+    <s:textfield id="salary" name="model.salary" cssClass="form-control" placeholder="Ingrese una remuneracion para tu artista" />
+    </div>
     <s:submit value="Publicar" cssClass="btn btn-default"/>
 </s:form>
+</div>
 </body>
 </html>
